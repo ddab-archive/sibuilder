@@ -1,0 +1,476 @@
+Release v3.4.2 of 17 September 2008
+SIBuilder.exe v3.4.2 (build 31) of 17 September 2008
+InstallLib.dll v3.2.4 (build 27) of 16 September 2008
+UnInstall.exe v3.0.3 (build 20) of 16 September 2008
+PkgInstallStub.exe v1.0.4 (build 13) 16 September 2008
+RegCOMSvrs.dll v3.0.2 (build 19) of 16 September 2008
+SITLicenseDlg.dll v1.1.2 (build 17) of 16 September 2008
+RegInProcSvr.exe v1.0.2 (build 17) of 16 September 2008
+Shortcutter.exe v1.0.1 (build 9) of 16 September 2008
+BZInflate.dll v1.0.1 (build 13) of 16 September 2008
+BZDeflate.dll v1.0.1 (build 13) of 16 September 2008
+ZInflate.dll v1.0.1 (build 13) of 16 September 2008
+ZDeflate.dll v1.0.1 (build 13) of 16 September 2008
++ Made minimised program preview correctly in Vista task bar and in Flip 3D task switcher.
++ Made dialog boxes stay on top when task bar button clicked.
++ Updated copyright date range on welcome page.
++ Made minor change to text of about box.
+
+Release v3.4.1 of 11 April 2008
+SIBuilder.exe v3.4.1 (build 30) of 11 April 2008
+InstallLib.dll v3.2.4 (build 26) of 11 April 2008
+UnInstall.exe v3.0.3 (build 19) of 11 April 2008
+PkgInstallStub.exe v1.0.4 (build 12) 11 April 2008
+RegCOMSvrs.dll v3.0.2 (build 18) of 10 April 2008
+SITLicenseDlg.dll v1.1.2 (build 16) of 11 April 2008
+RegInProcSvr.exe v1.0.2 (build 16) of 11 April 2008
+Shortcutter.exe v1.0.1 (build 8) of 11 April 2008
+BZInflate.dll v1.0.1 (build 12) of 10 April 2008
+BZDeflate.dll v1.0.1 (build 12) of 10 April 2008
+ZInflate.dll v1.0.1 (build 12) of 10 April 2008
+ZDeflate.dll v1.0.1 (build 12) of 10 April 2008
++ Made various Windows Vista compatibility changes, some to fix bugs:
+  - SIBuilder no longer requires elevation to run. A manifest was included to enforce this.
+  - Generated install program and Uninstall program and now have manifests that require admin privileges and elevation since they need full access to registry and protected folders.
+  - RegInprocSvr fixed to require elevation and admin privileges since these are needed to register COM servers.
+  - Shortcutter now has manifest ensuring it runs at same elevation as invoker, which is assumed to have required privileges.
++ Support for specifying Vista as a supported OS added to SIBuilder and Installers. Support for Win32s removed.
++ Fixed minor display problems in SIBuilder's group edit, about and message dialog boxes.
++ SITLicenseDlg.dll can now read license files that do not have write permissions.
++ RegInprocServer now supports XP and Vista themes.
++ Updated help file re changes.
++ Fixed minor bug in help file style sheet.
+
+Release v3.4 of 01 March 2008
+SIBuilder.exe v3.4 (build 29) of 01 March 2008
+InstallLib.dll v3.2.3 (build 25) of 01 March 2008
+UnInstall.exe v3.0.2 (build 18) of 01 March 2008
+PkgInstallStub.exe v1.0.3 (build 11) 01 March 2008
+RegCOMSvrs.dll v3.0.2 (build 17) of 01 March 2008
+SITLicenseDlg.dll v1.1.1 (build 15) of 01 March 2008
+RegInProcSvr.exe v1.0.1 (build 15) of 01 March 2008
+Shortcutter.exe v1.0 (build 7) of 01 March 2008
+BZInflate.dll v1.0.1 (build 11) of 01 March 2008
+BZDeflate.dll v1.0.1 (build 11) of 01 March 2008
+ZInflate.dll v1.0.1 (build 11) of 01 March 2008
+ZDeflate.dll v1.0.1 (build 11) of 01 March 2008
++ Changed help system from WinHelp to HTML help.
+
+Release v3.3.2 of 24 February 2008
+SIBuilder.exe v3.3.2 (build 28) of 24 February 2008
+InstallLib.dll v3.2.3 (build 24) of 23 February 2008
+UnInstall.exe v3.0.2 (build 17) of 23 February 2008
+PkgInstallStub.exe v1.0.3 (build 10) 23 February 2008
+RegCOMSvrs.dll v3.0.2 (build 16) of 23 February 2008
+SITLicenseDlg.dll v1.1.1 (build 14) of 23 February 2008
+RegInProcSvr.exe v1.0.1 (build 14) of 23 February 2008
+Shortcutter.exe v1.0 (build 6) of 20 February 2008
+BZInflate.dll v1.0.1 (build 10) of 20 February 2008
+BZDeflate.dll v1.0.1 (build 10) of 20 February 2008
+ZInflate.dll v1.0.1 (build 10) of 20 February 2008
+ZDeflate.dll v1.0.1 (build 10) of 20 February 2008
++ Some refactoring:
+  - Replaced include files with units.
+  - Replaced some literal strings with resource strings.
+  - Relocated some source files.
++ Added build batch files for each program / library.
++ Some bugs were fixed:
+  - Fixed minor error reporting bug in tagged text lexical analyser used by SIBuilder's hot text component.
+  - Fixed bug in SIBuilder's registry templates dialog box.
+  - Fixed minor registry file import bug in SIBuilder.
+  - Removed some debug code left in source code in error.
++ Changed so that fixed registry data is now read from HKLM leaving only user-modifiable data in HKCU.
++ Moved user settings in registry to new Options registry subkey.
++ Moved default project settings file from application installation directory to a subdirectory of the user's application data directory.
+
+Release v3.3.1 of 10 June 2007
+SIBuilder.exe v3.3.1 (build 27) of 10 June 2007
+InstallLib.dll v3.2.2 (build 23) of 10 June 2007
+UnInstall.exe v3.0.1 (build 16) of 10 June 2007
+PkgInstallStub.exe v1.0.2 (build 9) of 10 June 2007
+RegCOMSvrs.dll v3.0.1 (build 15) of 10 June 2007
+SITLicenseDlg.dll v1.1 (build 13) of 10 June 2007
+RegInProcSvr.exe v1.0 (build 13) of 10 June 2007
+Shortcutter.exe v1.0 (build 5) of 10 June 2007
+BZInflate.dll v1.0.1 (build 9) of 10 June 2007
+BZDeflate.dll v1.0.1 (build 9) of 10 June 2007
+ZInflate.dll v1.0.1 (build 9) of 10 June 2007
+ZDeflate.dll v1.0.1 (build 9) of 10 June 2007
++ Increased size of license dialog box.
++ Changed to new executable file license and released source code under MPL.
++ Updated copyright and licensing help topic to contain new license.
+
+Release v3.3 of 01 April 2007
+SIBuilder.exe v3.3 (buil 26) of 01 April 2007
+InstallLib.dll v3.2.2 (build 22) of 01 April 2007
+UnInstall.exe v3.0.1 (build 15) of 01 April 2007
+PkgInstallStub.exe v1.0.2 (build 8) of 01 April 2007
+RegCOMSvrs.dll v3.0.1 (build 14) of 01 April 2007
+SITLicenseDlg.dll v1.1 (build 12) of 01 April 2007
+RegInProcSvr.exe v1.0 (build 12) of 01 April 2007
+Shortcutter.exe v1.0 (build 4) of 01 April 2007
+BZInflate.dll v1.0.1 (build 8) of 01 April 2007
+BZDeflate.dll v1.0.1 (build 8) of 01 April 2007
+ZInflate.dll v1.0.1 (build 8) of 01 April 2007
+ZDeflate.dll v1.0.1 (build 8) of 01 April 2007
++ Removed facility to compile install programs using Delphi. Compilation using built in packager is now the only option.
++ Refactored some custom component code to remove direct dependency on DelphiDabbler library code.
++ Updated help file re changes.
+
+Release v3.2.2 of 17 July 2006
+SIBuilder.exe v3.2.2 (build 25) of 17 July 2006
+InstallLib.dll v3.2.1 (build 21) of 17 July 2006
+UnInstall.exe v3.0 (build 14) of 17 July 2006
+Install.exe v3.0.1 (build 17) of 17 July 2006
+PkgInstallStub.exe v1.0.1 (build 7) of 17 July 2006
+RegCOMSvrs.dll v3.0.1 (build 13) of 17 July 2006
+SITLicenseDlg.dll v1.1 (build 11) of 17 July 2006
+RegInProcSvr.exe v1.0 (build 11) of 17 July 2006
+Shortcutter.exe v1.0 (build 3) of 17 July 2006
+BZInflate.dll v1.0.1 (build 7) of 17 July 2006
+BZDeflate.dll v1.0.1 (build 7) of 17 July 2006
+ZInflate.dll v1.0.1 (build 7) of 17 July 2006
+ZDeflate.dll v1.0.1 (build 7) of 17 July 2006
++ Fixed bugs in SIBuilder:
+  - Fixed registry data handling UI and binary registry data processing bugs.
+  - Fixed help system bugs. F1 and common dialog box help buttons were not working and help system was not always closing when program closed.
++ Improved clipboard paste operation in SIBuilder's registry data dialog box.
+
+Release v3.2.1 of 16 January 2006
+SIBuilder.exe v3.2.1 (build 24) of 16 January 2006
+InstallLib.dll v3.2.1 (build 20) of 16 January 2006
+UnInstall.exe v3.0 (build 13) of 16 January 2006
+Install.exe v3.0.1 (build 16) of 16 January 2006
+PkgInstallStub.exe v1.0.1 (build 6) of 16 January 2006
+RegCOMSvrs.dll v3.0.1 (build 12) of 16 January 2006
+SITLicenseDlg.dll v1.1 (build 10) of 16 January 2006
+RegInProcSvr.exe v1.0 (build 10) of 16 January 2006
+Shortcutter.exe v1.0 (build 2) of 16 January 2006
+BZInflate.dll v1.0.1 (build 6) of 16 January 2006
+BZDeflate.dll v1.0.1 (build 6) of 16 January 2006
+ZInflate.dll v1.0.1 (build 6) of 16 January 2006
+ZDeflate.dll v1.0.1 (build 6) of 16 January 2006
++ Made installer always extract files into a unique sub-folder of Windows Temp folder rather than just to Temp. This enables two installs to run at the same time without file name clashes.
++ Changed to find actual location of InstallLib.dll when copying to install folder rather than assuming DLL is in temp folder.
++ Added new [ScratchPad] path macro that maps to the file extraction folder. Changed installer to use [ScratchPad] rather than [Temp] for working files.
++ Ensured that license files are deleted when user refuses license.
++ Updated version number expected in installation script to 302 from 301 to reflect because there are new script items that will not be understood by earlier versions.
++ Removed options to compile with Delphi 2 and 3 since these compilers now fail to build install project.
++ Updated copyright date in installer sign on messages
++ Updated help file re changes.
+
+Release v3.2 of 25 November 2005
+SIBuilder.exe v3.2 (build 23) of 25 November 2005
+InstallLib.dll v3.2 (build 19) of 25 November 2005
+UnInstall.exe v3.0 (build 12) of 25 November 2005
+Install.exe v3.0 (build 15) of 25 November 2005
+PkgInstallStub.exe v1.0 (build 5) of 25 November 2005
+RegCOMSvrs.dll v3.0.1 (build 11) of 25 November 2005
+SITLicenseDlg.dll v1.1 (build 9) of 25 November 2005
+RegInProcSvr.exe v1.0 (build 9) of 24 November 2005
+Shortcutter.exe v1.0 (build 1) of 24 November 2005
+BZInflate.dll v1.0.1 (build 5) of 24 November 2005
+BZDeflate.dll v1.0.1 (build 5) of 24 November 2005
+ZInflate.dll v1.0.1 (build 5) of 24 November 2005
+ZDeflate.dll v1.0.1 (build 5) of 24 November 2005
++ Added new [Desktop] and [Programs Menu] path macros.
++ Changed to use custom help handling class to fix help display problems introduced when compiled with Delphi 7. Custom help processing replaces Delphi's default help system.
++ Improved appearance of main window's button list in all colour schemes.
++ Embedded code to access DelphiDabbler website and removed dependency on DDNet.dll and removed file from distribution.
++ Rewrote code that accesses 2rd part compression libraries with same functionality (original source was lost).
++ Added new extra program - Shortcutter.exe - that can be used to create shortcuts (aka shell links).
+
+Unreleased v3.1.2 of 28 November 2003
+SIBuilder.exe v3.1.2 (build 22) of 28 November 2003
+InstallLib.dll v3.1.1 (build 18) of 28 November 2003
+UnInstall.exe v3.0 (build 11) of 19 November 2003
+Install.exe v3.0 (build 14) of 19 November 2003
+PkgInstallStub.exe v1.0 (build 4) of 19 November 2003
+RegCOMSvrs.dll v3.0.1 (build 10) of 19 November 2003
+SITLicenseDlg.dll v1.1 (build 8) of 19 November 2003
+RegInProcSvr.exe v1.0 (build 8) of 19 November 2003
+BZInflate.dll v1.0 (build 4) of 19 November 2003
+BZDeflate.dll v1.0 (build 4) of 19 November 2003
+ZInflate.dll v1.0 (build 4) of 19 November 2003
+ZDeflate.dll v1.0 (build 4) of 19 November 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Code of SIBuilder and InstallLib refactored by removing references to unused units and moving some unit references to implementation sections. Functionality unchanged.
++ Unaffected executables were not rebuilt.
+
+Release v3.1.1 of 19 November 2003
+SIBuilder.exe v3.1.1 (build 21) of 19 November 2003
+InstallLib.dll v3.1 (build 17) of 19 November 2003
+UnInstall.exe v3.0 (build 11) of 19 November 2003
+Install.exe v3.0 (build 14) of 19 November 2003
+PkgInstallStub.exe v1.0 (build 4) of 19 November 2003
+RegCOMSvrs.dll v3.0.1 (build 10) of 19 November 2003
+SITLicenseDlg.dll v1.1 (build 8) of 19 November 2003
+RegInProcSvr.exe v1.0 (build 8) of 19 November 2003
+BZInflate.dll v1.0 (build 4) of 19 November 2003
+BZDeflate.dll v1.0 (build 4) of 19 November 2003
+ZInflate.dll v1.0 (build 4) of 19 November 2003
+ZDeflate.dll v1.0 (build 4) of 19 November 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Replaced the rich edit based active RTF classes with a new dedicated hot text component. This fixes a bug that occurs on some systems where it is not possible to trigger hot-links due to differences in the rich edit control. The new component has no dependence on rich edit controls.
+
+Release v3.1 of 23 February 2003
+SIBuilder.exe v3.1 (build 20) of 23 February 2003
+InstallLib.dll v3.1 (build 16) of 23 February 2003
+UnInstall.exe v3.0 (build 10) of 23 February 2003
+Install.exe v3.0 (build 13) of 23 February 2003
+PkgInstallStub.exe v1.0 (build 3) of 23 February 2003
+RegCOMSvrs.dll v3.0.1 (build 9) of 23 February 2003
+SITLicenseDlg.dll v1.1 (build 7) of 23 February 2003
+RegInProcSvr.exe v1.0 (build 7) of 23 February 2003
+BZInflate.dll v1.0 (build 3) of 23 February 2003
+BZDeflate.dll v1.0 (build 3) of 23 February 2003
+ZInflate.dll v1.0 (build 3) of 23 February 2003
+ZDeflate.dll v1.0 (build 3) of 23 February 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Added facility to uninstall any specified project (that is registered with Windows) before proceeding with installation.
++ Added access to online tutorial from help menu.
+
+Unreleased v3.0.1 of 24 January 2003
+SIBuilder.exe v3.0.1 (build 19) of 24 January 2003
+InstallLib.dll v3.0 (build 15) of 24 January 2003
+UnInstall.exe v3.0 (build 9) of 24 January 2003
+Install.exe v3.0 (build 12) of 24 January 2003
+PkgInstallStub.exe v1.0 (build 2) of 24 January 2003
+RegCOMSvrs.dll v3.0.1 (build 8) of 24 January 2003
+SITLicenseDlg.dll v1.1 (build 6) of 24 January 2003
+RegInProcSvr.exe v1.0 (build 6) of 24 January 2003
+BZInflate.dll v1.0 (build 2) of 24 January 2003
+BZDeflate.dll v1.0 (build 2) of 24 January 2003
+ZInflate.dll v1.0 (build 2) of 24 January 2003
+ZDeflate.dll v1.0 (build 2) of 24 January 2003
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Fixed spurious license validation bug.
+
+Release v3.0 of 29 December 2002
+SIBuilder.exe v3.0 (build 18) of 29 December 2002
+InstallLib.dll v3.0 (build 14) of 29 December 2002
+UnInstall.exe v3.0 (build 8) of 29 December 2002
+Install.exe v3.0 (build 11) of 29 December 2002
+PkgInstallStub.exe v1.0 (build 1) of 29 December 2002
+RegCOMSvrs.dll v3.0.1 (build 7) of 29 December 2002
+SITLicenseDlg.dll v1.1 (build 5) of 29 December 2002
+RegInProcSvr.exe v1.0 (build 5) of 29 December 2002
+BZInflate.dll v1.0 (build 1) of 29 December 2002
+BZDeflate.dll v1.0 (build 1) of 29 December 2002
+ZInflate.dll v1.0 (build 1) of 29 December 2002
+ZDeflate.dll v1.0 (build 1) of 29 December 2002
+DDNet.dll v1.0 (build 1) of 18 November 2002
++ Major rewrite
++ No longer requires Borland Delphi to compile install programs - although option to use it has been retained.
++ Can now configure type of compression used - two compressions types provided (ZLib and BZip2) and system is extensible.
++ Added ability to register applications and shared DLLs with Windows.
++ Can now configure installer to detect operating system and customise installation accordingly.
++ Redesigned user interface giving quick access to an increased number of pages.
++ Now provides access to delphiDabbler rather than PJSoft website.
+
+Unreleased v2.6.2 of 08 August 2002
+SIBuilder.exe v2.6.2 (build 17) of 08 August 2002
+InstallLib.dll v2.5.1 (build 13) of 08 August 2002
+UnInstall.exe v2.0.1 (build 7) of 08 August 2002
+Install.exe v2.1 (build 10) of 08 August 2002
+RegCOMSvrs.dll v3.0 (build 6) of 08 August 2002
+SITLicenseDlg.dll v1.0 (build 4) of 08 August 2002
+RegInProcSvr.exe v1.0 (build 4) of 08 August 2002
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Fixed bug where on some occasions program main window was displaying at incorrect size when an older version of the program was overwritten by a newer version.
+
+Unreleased v2.6.1 of 05 August 2002
+SIBuilder.exe v2.6.1 (build 16) of 05 August 2002
+InstallLib.dll v2.5.1 (build 12) of 05 August 2002
+UnInstall.exe v2.0.1 (build 6) of 05 August 2002
+Install.exe v2.1 (build 9) of 05 August 2002
+RegCOMSvrs.dll v3.0 (build 5) of 05 August 2002
+SITLicenseDlg.dll v1.0 (build 3) of 05 August 2002
+RegInProcSvr.exe v1.0 (build 3) of 05 August 2002
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Fixed bug where spurious empty folders were created in same folder as install program on Windows NT O/Ss.
++ Updated project and install file version numbers from 205 to 206 (should have been done at release 2.6 and was potential source of bugs).
+
+Release v2.6 of 01 April 2002
+SIBuilder.exe v2.6 (build 15) of 01 April 2002
+InstallLib.dll v2.5.(build 11) of 01 April 2002
+UnInstall.exe v2.0.1 (build 5) of 01 April 2002
+Install.exe v2.1 (build 8) of 01 April 2002
+RegCOMSvrs.dll v3.0 (build 4) of 01 April 2002
+SITLicenseDlg.dll v1.0 (build 2) of 01 April 2002
+RegInProcSvr.exe v1.0 (build 2) of 01 April 2002
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Added new "Common Files" path macro to allow files to be installed in Common Files folder.
++ Fixed hot link bug on details page where hot linked phrases were ignored when word wrapped.
++ Prevented user from deleting Program Files or Common File folders.
+
+Release v2.5.5 of 25 November 2001
+SIBuilder.exe v2.5.4 of 25 November 2001
+InstallLib.dll v2.4.1 of 25 November 2001
+UnInstall.exe v2.0.1 of 15 September 2001
+Install.exe v2.1 of 28 June 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Made used appropriate folder for program files according to locale.
+
+Release v2.5.4 of 16 September 2001
+SIBuilder.exe v2.5.3 of 15 September 2001
+InstallLib.dll v2.4 of 28 June 2001
+UnInstall.exe v2.0.1 of 15 September 2001
+Install.exe v2.1 of 28 June 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Fixed bug in Welcome screen that was raising exception and preventing hotlinks from working under Windows 2000.
++ Fixed bug in UnInstall.exe which was failing to link to InstallLib.dll under Windows 2000.
+
+Release v2.5.3 of 28 June 2001
+SIBuilder.exe v2.5.2 of 25 June 2001
+InstallLib.dll v2.4 of 28 June 2001
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.1 of 28 June 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Fixed bug where install program was deleting DLL and data file required to perform uninstallation when installation path of the application being installed was same as path where install program was run.
+
+Unreleased v2.5.2 of 25 June 2001
+SIBuilder.exe v2.5.2 of 25 June 2001
+InstallLib.dll v2.3 of 21 January 2001
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.4 of 21 January 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Replaced custom dialog box for choosing folders with standard windows Browse for Folder dialog.
+
+Unreleased v2.5.1 of 25 June 2001
+SIBuilder.exe v2.5.1 of 25 June 2001
+InstallLib.dll v2.3 of 21 January 2001
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.4 of 21 January 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Fixed bug where detection of installed versions of Delphi was failing in certain locales.
++ Updated to use release 2 of PJSoft drop files components.
+
+Release v2.5 of 21 January 2001
+SIBuilder.exe v2.5 of 21 January 2001
+InstallLib.dll v2.3 of 21 January 2001
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.4 of 21 January 2001
+RegCOMSvrs.dll v3.0 of 20 January 2001
+SITLicenseDlg.dll v1.0 of 21 January 2001
+RegInProcSvr.exe v1.0 of 21 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Added facility to installer to display a license dialog box and for installation to be aborted if user does not accept.
++ Enabled SIBuilder to get required information from user to customise license dialog box
++ Added menu option to SIBuilder to show its own license agreement
++ Added new COM server DLL that third parties can use to display license dialog box.
++ Converted RegCOMSvrs.dll to be a COM server.
++ Added new utility to distribution - RegInprocSvr.exe - that can register and unregister in-process COM servers visually. This uses RegCOMSvrs.dll via COM.
+
+Unreleased v2.4 of 06 January 2001
+SIBuilder.exe v2.4 of 06 January 2001
+InstallLib.dll v2.2.1 of 06 January 2001
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.3 of 06 January 2001
+RegCOMSvrs.dll v2.0 of 06 January 2001
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Added option for Inproc COM servers not to be un-registered by uninstaller.
++ Rewrote DLL that registers/unregisters Inproc servers - it is now interface based.
+
+Unreleased v2.3 of 29 December 2000
+SIBuilder.exe v2.3 of 29 December 2000
+InstallLib.dll v2.2 of 29 December 2000
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.2 of 29 December 2000
+RegCOMSvrs.dll v1.0 of 28 December 2000
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Added ability to for installer and uninstaller to register and unregister certain COM servers. New DLL added to distribution to assist with this.
++ Added ability for programs to be run by uninstaller in addition (or instead of) installer.
++ Provided pop-up menus for SIBuilder's info pane and side bar.
++ File format updated to version 203. Earlier versions can still be read by SITools 2.3
+
+Unreleased v2.2 of 24 December 2000
+SIBuilder.exe v2.2 of 24 December 2000
+InstallLib.dll v2.1 of 24 December 2000
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.1 of 20 December 2000
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Added ability to expand path macros stored as registry strings. This lets installer record installation paths on local system in registry.
+
+Unreleased v2.1 of 20 December 2000
+SIBuilder.exe v2.1 of 20 December 2000
+InstallLib.dll v2.0.1 of 20 December 2000
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0.1 of 20 December 2000
+PJSoftUtils.dll v1.1 of 29 October 2000
++ Improved program's handling and display of Delphi command line compiler:
+  - Added new option to control appearance of compiler.
+  - Captured compiler's error output to display to user.
++ Added success / failure "icons" to build page.
++ Fixed potential bug in code that exceutes compiler
+
+Release v2.0a of 13 September 2000
+SIBuilder.exe v2.0 of 04 September 2000
+InstallLib.dll v2.0 of 04 September 2000
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0 of 04 September 2000
+PJSoftUtils.dll v1.0 of 07 May 2000
++ Added PJSoftUtils.dll to distribution (was missing from release 2.0 causing SIBuilder to fail to start).
++ Updated documentation.
+
+Release v2.0 of 07 September 2000
+SIBuilder.exe v2.0 of 04 September 2000
+InstallLib.dll v2.0 of 04 September 2000
+UnInstall.exe v2.0 of 04 September 2000
+Install.exe v2.0 of 04 September 2000
+PJSoftUtils.dll v1.0 of 07 May 2000
++ Major re-write.
++ New install path options
++ Other programs can now be executed by the installer.
++ Control of file overwriting
++ Improved handling of registry data
++ New (XML-based) file format adopted and a conversion dialogue box provided for old-style files.
++ Re-written install and un-install programs
++ Smaller overhead in the self-extracting installer
++ The user interface has been over-hauled and is now in a wizard format.
++ The Welcome screen has been revised to include HotLinks to various help topics, the PJSoft website, and to provide a short cut to starting a new project or opening an existing one.
+
+Release v1.1.2 of 29 July 2000
+SIBuilder.exe v1.1.2 of 29 July 2000
+InstallLib.dll v1.0.1 of 29 July 2000
+UnInstall.exe v1.0.1 of 29 July 2000
+Install.exe v1.0 of 09 March 2000
++ Fixed serious bug that was attempting to open original source files while saving project file for use by UnInstall.exe. The installation crashed on systems where source files were not present.
+
+Release v1.1.1 of 15 July 2000
+SIBuilder.exe v1.1.1 of 15 July 2000
+InstallLib.dll v1.0 of 09 March 2000
+UnInstall.exe v1.0 of 09 March 2000
+Install.exe v1.0 of 09 March 2000
++ Fixed bug which meant projects with spaces in path names wouldn't compile
+
+Release v1.1 of 04 April 2000
+SIBuilder.exe v1.1 of 04 April 2000
+InstallLib.dll v1.0 of 09 March 2000
+UnInstall.exe v1.0 of 09 March 2000
+Install.exe v1.0 of 09 March 2000
++ Added file manifest report.
++ Added access to PJSoft website.
+
+Release v1.0 of 18 March 2000
+SIBuilder.exe v1.0 of 09 March 2000
+InstallLib.dll v1.0 of 09 March 2000
+UnInstall.exe v1.0 of 09 March 2000
+Install.exe v1.0 of 09 March 2000
++ Original version.
++ Compiled with Delphi 4.
