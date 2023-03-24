@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-editprog.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-editprog.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_PROGEDIT
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Edit Program Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Edit Program Details Dialog Box
+	</h1>
+
+
+	<p>
+		This dialog box enables the editing details of a program that is to be
+		run by the installer, uninstaller or both. The dialog is displayed when
+		either the <span class="ui">Add Program</span> or <span class="ui">Edit
+		Program</span> button on the
+		<a href="page-programs.htm">Programs Page</a> is clicked.
+	</p>
+
+	<p>
+		The information to be entered is divided into two sections, with
+		corresponding group boxes on the dialog: <span class="ui">Program
+		Details</span> and <span class="ui">Command Line Parameters</span>. Each
+		of these sections is discussed below.
+	</p>
+
+	<h2>
+		Program Details
+	</h2>
+
+	<p>
+		The <span class="ui">Program Details</span> group box is where the name
+		of the program to be run is specified, along with when it is to be run
+		and whether it should be deleted after execution. The controls are
+		explained below.
+	</p>
+
+	<p>
+		The program to be run is specified in the
+		<span class="ui">Program</span> combo box. All executable programs
+		currently included in the project are listed in the combo box's drop
+		down list, so to choose an included program simply select it from the
+		list. Alternatively an external program on the target system can be
+		specified. To do this enter the program's full path on the target
+		system.
+		<a href="def-pathmacros.htm">Path macros</a> can be used and the
+		combo box lists them in the drop down list to ease entry. An external
+		program can also be chosen from the local computer by selecting the
+		<span class="ui">Browse for file</span> item from the combo list and
+		choosing the file from the resulting
+		<a href="dlg-progfile.htm">Choose Program File</a>
+		dialog box. Any standard paths in the chosen file are converted to path
+		macros.
+	</p>
+
+	<p>
+		The <span class="ui">Execute on</span> drop down list should be used to
+		determine when the selected program is to be run. The options are:
+	</p>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Installation&nbsp;only</span>
+			</td>
+			<td>
+				The program is run by the installer after all files have been
+				installed.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Uninstallation&nbsp;only</span>
+			</td>
+			<td>
+				The program is run by the uninstaller before any files are
+				deleted.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">
+				Installation&nbsp;and&nbsp;Uninstallation</span>
+			</td>
+			<td>
+				The program is run by the installer after installing files and
+				by the uninstaller before deleting any files.
+			</td>
+		</tr>
+	</table>
+	
+	<p>
+		Do not specifiy a program to be run by the uninstaller if either:
+	</p>
+	
+	<ol class="unspaced">
+		<li>
+			the program is being installed by the installer in a temporary group
+			(since the program will be deleted by the installer and therefore be
+			unavailable to the uninstaller), or
+		</li>
+		<li>
+			if no uninstall program is included in the project.
+		</li>
+	</ol>
+
+	<p>
+		If either of these mistakes are made then a message (preceeded by a
+		<img src="../Images/bomb.gif"
+			style="width:16px;height:16px;vertical-align:bottom;"
+			alt="bomb symbol"
+		> symbol) will be displayed alongside the <span class="ui">Execute
+		on</span> combo box. Click the message's
+		<a href="def-hottext.htm">hot link</a> to read about possible causes of
+		problems.
+	</p>
+
+	<h2>
+		Command Line Parameters
+	</h2>
+
+	<p>
+		The controls in this group box are used to enter details of the commands
+		to pass to the program described in the <span class="ui">Program
+		Details</span> group box. Each parameter or switch is entered separately
+		and is displayed on its own line in the <span class="ui">All
+		parameters</span> list box.
+	</p>
+	
+	<p>
+		Zero or more command line parameters can be passed to the program.
+		Parameters that contain spaces will be quoted before being passed to the
+		program, so there is no need to include quotes.
+		<a href="def-pathmacros.htm">Path macros</a> may be embedded in
+		parameters and will be expanded by the installer. The parameters will be
+		passed in the order they are specified.
+	</p>
+
+	<p>
+		To add a parameter enter it in the <span class="ui">Parameter</span>
+		combo box and click the <span class="ui">Add</span> button. The
+		parameter now appears in the <span class="ui">All parameters</span> list
+		box. (File parameters may include path macros).
+	</p>
+
+	<p>
+		To edit an existing parameter, select it in the <span class="ui">All
+		parameters</span> list box and click the <span class="ui">Edit</span>
+		button (or double click the parameter). The parameter is copied to the
+		<span class="ui">Parameters</span> combo box and can be edited there.
+		The <span class="ui">Add</span> button's caption changes to
+		<span class="ui">Update</span> and this is clicked to accept the edit
+		and to update the selected parameter.
+	</p>
+
+	<p>
+		Delete a parameter by selecting it in the <span class="ui">All
+		parameters</span> list box and clicking the
+		<span class="ui">Delete</span> button.
+	</p>
+
+	<p>
+		Parameters can be re-ordered by selecting the parameter to be moved and
+		changing its position in the list using the 
+		<img src="../Images/upbtn.gif"
+			style="width:16px;height:8px;vertical-align:middle;"
+			alt="up button"
+		> and
+		<img src="../Images/downbtn.gif"
+			style="width:16px;height:8px;vertical-align:middle;"
+			alt="down button"
+		> buttons. (Keyboard alternative: <span class="smallcaps">CTRL+UP</span>
+		and <span class="smallcaps">CTRL+DOWN</span>).
+	</p>
+
+	<p>
+		Ensure that no temporary file is included in a parameter of a program
+		that is to be run by the uninstaller since the file will have been
+		deleted by the installer. If this is the case then an error message
+		(preceeded by a 
+		<img src="../Images/bomb.gif"
+			style="width:16px;height:16px;vertical-align:bottom;"
+			alt="bomb symbol"
+		> symbol) will be displayed above the parameters list. Click the
+		<a href="def-hottext.htm">hot link</a> contained in the message to get
+		more information.
+	</p>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+@ROOT                   ..\..\Src\Apps\Shortcutter
+@PROJECT_NAME           SITools: Shortcutter
+@PROJECT_DESC           Applet that can create / delete shortcuts (shell links).
+@COPYRIGHT              Copyright © Peter Johnson, 2005-2008
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               24/11/2005
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 7
+                        + Borland Resource Compiler
+                        + Version Information Editor v2.11
+    @FILES(
+      @NEW(
+        @FILE           Shortcutter.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           USCParams.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UShellLink.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VShortcutter.vi
+        @DATE           24/11/2005
+        @COMMENTS       Version information file. Original version.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 2)
+    @DATE               16/01/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Borland Resource Compiler
+                        + Version Information Editor v2.11
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           15/01/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 3)
+    @DATE               17/07/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Borland Resource Compiler
+                        + Version Information Editor v2.11
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           17/07/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 4)
+    @DATE               01/04/2007
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Borland Resource Compiler 5.4
+                        + Version Information Editor v2.11
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           25/03/2007
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 5)
+    @DATE               10/06/2007
+    @COMMENTS           Unchanged other than to update product, build number and
+                        comments in version information.
+    @COMPILERS          + Delphi 7
+                        + Borland Resource Compiler 5.4
+                        + Version Information Editor v2.11
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           10/06/2007
+        @COMMENTS       + Updated product and build number.
+                        + Updated comments to refer to new license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 6)
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information and addition of build batch file.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @DATE               20/02/2008
+    @FILES(
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           10/02/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 7)
+    @DATE               01/03/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 8)
+    @DATE               11/04/2008
+    @COMMENTS           Added manifest file to ensure program runs at same
+                        elevation level as invoker.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           11/04/2008
+        @COMMENTS       Updated file, product and build number.
+      )
+      @NEW(
+        @FILE           UIResources.rc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Assets\Shortcutter.manifest
+        @VERSION        1.0
+        @COMMENTS       Manifest file that ensures program runs at same
+                        elevation level as invoker on Vista.
+      )
+      @UPDATED(
+        @FILE           Shortcutter.dpr
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 9)
+    @DATE               16/09/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11.2
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VShortcutter.vi
+        @DATE           16/09/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+)

@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-files.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-files.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_FILEGROUPS
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Files Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Files Page
+	</h1>
+
+	<p>
+		The files page is where files to be installed are assembled. Files are
+		collected together in
+		<a href="def-groups.htm">Groups</a>.
+	</p> 
+
+	<p>
+		The page contains a tree view of the project's files &ndash; groups are
+		represented by folder icons and the name of the group is displayed.
+		Files contained within groups are displayed under groups. Each file is
+		represented by an icon according to its type along with the full path to
+		the source file.
+	</p>
+
+	<p>
+		By default a blank project comes with just one predefined group &ndash; 
+		&quot;Main&quot;. This group will install files into the installation
+		folder specified on the
+		<a href="page-details.htm">Project Details page</a>.
+		The &quot;Main&quot; group can be changed or deleted as required.
+	</p>
+
+	<p>
+		Groups are updated by using the buttons on the right of the page, or by
+		the equivalent items on group tree view's popup menu. The following
+		commands are available:
+	</p>
+	
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Add&nbsp;Group</span>
+			</td>
+			<td>
+				Adds a new group. The
+				<a href="dlg-editgroup.htm">Edit Group Properties</a>
+				dialog box is displayed where the details of the new group can
+				be entered. 
+				<a href="def-pathmacros.htm">Path macros</a>
+				can be included in the group's installation path.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Edit&nbsp;Group</span>
+			</td>
+			<td>
+				Edits the selected group, again using the
+				<a href="dlg-editgroup.htm">Edit Group Properties</a>
+				dialog box.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Delete&nbsp;Group</span>
+			</td>
+			<td>
+				Deletes the selected group, after seeking confirmation.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Add&nbsp;Files</span>
+			</td>
+			<td>
+				Adds one or more files to the currently selected group. Displays
+				the
+				<a href="dlg-addfiles.htm">Add Files</a>
+				dialog box in which multiple files can be selected. The files
+				added have default properties assigned to them (see
+				<span class="ui">Edit File</span> below). The properties can be
+				changed by editing the file.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Edit&nbsp;File</span>
+			</td>
+			<td>
+				Edits the file's installation properties using the
+				<a href="dlg-editfile.htm">Edit File Install Properties</a>
+				dialog box. The options which can be configured are those for
+				overwriting existing files and whether file is registered in the
+				Windows registry.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Remove&nbsp;File</span>
+			</td>
+			<td>
+				Removes the currently selected file from the group without
+				prompting.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">File&nbsp;Properties</span>
+			</td>
+			<td>
+				Displays the
+				<a href="dlg-fileproperties.htm">File Properties</a>
+				dialog box which shows modification date, file attributes,
+				modification date and size, along with any version information.
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		Files can also be added to a group by dragging and dropping files from
+		explorer and dropping them over a group in the tree view. If no group is
+		under the cursor when the files are dropped a message is displayed to
+		say the drop has been unsuccessful. <strong>Note:</strong> Dropping any
+		file outside the treeview causes SIBuilder to attempt to open it as a
+		project file.
+	</p>
+
+	<p>
+		An empty folder can be created as part of the installation (say a folder
+		for a users work files). To do this create a group that contains no
+		files.
+	</p>
+
+	<p>
+		When a file or group is selected a
+		<a href="def-infopopups.htm">pop-up information window</a>
+		may appear that displays key information about the selected item. These
+		pop-up windows can be prevented from appearing using the
+		<a href="dlg-options.htm">Options</a>
+		dialog box.
+	</p>
+
+	<p>
+		If there are any problems with any of the files on the page then its
+		icon is replaced by a
+		<img src="../Images/bomb.gif"
+			style="vertical-align:bottom;width:16px;height:16px;"
+			alt="bomb image"
+		>
+		symbol and a clickable prompt appears under the page's buttons which
+		leads to help on what may be wrong.
+	</p>
+</body>
+
+</html>

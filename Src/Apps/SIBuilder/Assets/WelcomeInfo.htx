@@ -1,0 +1,12 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=24 color=clPurple style=bold>
+
+<p><font size=4> </font></p>
+<p align=center>Welcome to <font size=28 style=bold,italic>SIBuilder v3</font></p>
+
+</parafont>
+
+</body>
+</hottext>

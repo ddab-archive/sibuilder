@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * err-runprogs.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is err-runprogs.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_ERR_RUNPROGS
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Error - Run Programs</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Program Errors
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder</span> has detected one or more problems
+		with the programs that have been set to run by the installer or
+		uninstaller. These problems can be caused either by programs or their
+		parameters. The offending items are marked with a 
+		<img src="../Images/bomb.gif"
+			style="width:16px;height:16px;vertical-align:middle;"
+			alt="bomb symbol"
+		> symbol in the tree view on the
+		<a href="page-programs.htm">Programs page</a>.
+		The likely causes of the problems, and solutions, are listed below.
+	</p>
+
+	<h2>
+		Programs
+	</h2>
+
+	<p>
+		There are two possible reasons why there is a problem with a program and
+		both occur when the program has been set to run by the uninstaller:
+	</p>
+	
+	<ol class="spaced lower-roman">
+		<li>
+			<div>
+				The program file is to be installed from a temporary
+				<a href="def-groups.htm">group</a>
+				(and will therefore be deleted by the installer).
+			</div>
+			<div class="para-space">
+				<em>Solutions:</em>
+				<ol class="unspaced lower-alpha no-para-space">
+					<li>
+						edit the program to make sure it is run only by the
+						installer;
+					</li>
+					<li>
+						install the program file into a different non-temporary
+						group using the <a href="page-files.htm">Files page</a>.
+					</li>
+				</ol>
+			</div>
+		</li>
+		<li>
+			<div>
+				The project does not include an uninstaller.
+			</div>
+			<div class="para-space">
+				<em>Solution:</em> include an uninstall program in the project
+				using the
+				<a href="page-details.htm">Project Details page</a>.
+			</div>
+		</li>
+	</ol>
+
+	<h2>
+		Parameters
+	</h2>
+	
+	<p>
+		A parameter belongs to a program that is to be run by the uninstaller.
+		The parameter references a file that will be installed from a temporary
+		group.
+	</p>
+	
+	<p>
+		<em>Solutions:</em>
+	</p>
+
+	<ol class="unspaced lower-alpha no-para-space">
+		<li>
+			change the program to run only from the installer;
+		</li>
+		<li>
+			install the parameter file into a different non-temporary
+			folder (using the
+			<a href="page-files.htm">Files page</a>);
+		</li>
+		<li>
+			edit the parameter to refer to a non-temporary file.
+		</li>
+	</ol>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * sip2-runprogmoved.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is sip2-runprogmoved.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_SIP2_RUNPROGMOVED
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>SIP2: Run Program Group Changed</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		v2 File Conversion Comment:<br>
+		Program Moved to Temporary Install Group
+	</h1>
+
+	<p>
+		Programs specified to be run by the installer under
+		<span class="prog">SIBuilder 2</span> could be set to be deleted after
+		execution. These were the only files the the installer was able to
+		delete (other than the license file), so, for example, any documents
+		displayed by the program had to remain on the system. The programs to be
+		deleted were specified on the
+		<a href="page-programs.htm">Programs page</a>.
+	</p>
+
+	<p>
+		With <span class="prog">SIBuilder 3</span> the facility has been
+		extended so that the installer can now delete any installed file. To
+		acheive this the files to be deleted are included in a new deletable 
+		<a href="def-groups.htm">group</a> on the
+		<a href="page-files.htm">Files page</a>.
+		This means that programs themselves are no longer marked as deletable.
+	</p>
+	
+	<p>
+		When loading a <span class="prog">SIBuilder 2</span> project file that
+		specifies an installed program for deletion we need to use the new
+		method to ensure they are actually deleted. This is done by creating a
+		special deletable group to install the program file from and moving it
+		to there from its original group.
+	</p>
+
+	<p>
+		<strong>Note 1:</strong> if the program accesses any other files
+		(possibly specified as command line parameters) and those files are not
+		required elsewhere in the installed program then the user may wish to
+		also move those files to a temporary group. Such files are not moved
+		automatically by <span class="prog">SIBuilder 3</span> since there is no
+		way of knowing if the files are needed elsewhere.
+	</p>
+
+	<p>
+		<strong>Note 2:</strong> For security reasons
+		<span class="prog">SIBuilder</span> no longer allows external programs
+		(i.e. those not included on the install project) to be deleted after
+		being run.
+	</p>
+</body>
+
+</html>

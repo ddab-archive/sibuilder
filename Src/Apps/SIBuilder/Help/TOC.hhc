@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x227">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Overview">
+		<param name="Local" value="HTML\overview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Using SIBuilder">
+		<param name="Local" value="HTML\using.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Project Wizard">
+			<param name="Local" value="HTML\wizard.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Welcome Page">
+				<param name="Local" value="HTML\page-welcome.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Project Details Page">
+				<param name="Local" value="HTML\page-details.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="License Information Page">
+				<param name="Local" value="HTML\page-license.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Target OS Page">
+				<param name="Local" value="HTML\page-os.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Files Page">
+				<param name="Local" value="HTML\page-files.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Programs Page">
+				<param name="Local" value="HTML\page-programs.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Registry Page">
+				<param name="Local" value="HTML\page-registry.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Build Installer Page">
+				<param name="Local" value="HTML\page-build.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Main Menu">
+			<param name="Local" value="HTML\menu.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="File Menu">
+				<param name="Local" value="HTML\menu-file.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Tools Menu">
+				<param name="Local" value="HTML\menu-tools.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Help Menu">
+				<param name="Local" value="HTML\menu-help.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Info Pane">
+			<param name="Local" value="HTML\infopane.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using Install and Uninstall">
+			<param name="Local" value="HTML\install-progs.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="What's New In SIBuilder 3">
+		<param name="Local" value="HTML\new-features.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="User Interface Enhancements">
+			<param name="Local" value="HTML\new-ui.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Extra Programs">
+		<param name="Local" value="HTML\extraprogs.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="RegInProcSvr">
+			<param name="Local" value="HTML\extra-reginprocsvr.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Shortcutter">
+			<param name="Local" value="HTML\extra-shortcutter.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="About SIBuilder">
+		<param name="Local" value="HTML\about.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="End User License Agreement">
+			<param name="Local" value="HTML\eula.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Author">
+			<param name="Local" value="HTML\author.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Credits">
+			<param name="Local" value="HTML\credits.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="DelphiDabbler Website">
+			<param name="Local" value="HTML\website.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Installation Information">
+			<param name="Local" value="HTML\install.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Feedback &amp; Bug Reports">
+			<param name="Local" value="HTML\feedback.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Source Code">
+			<param name="Local" value="HTML\sourcecode.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

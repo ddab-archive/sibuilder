@@ -1,0 +1,17 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>Target Operating Systems</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Choose the operating system(s) you wish to target by checking them in list.
+To target all operating systems, click the
+<font color=clNavy style=underline><link cmd="AllOSs">All OSs</link></font> button.</p>
+
+</parafont>
+
+</body>
+</hottext>

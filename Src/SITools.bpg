@@ -1,0 +1,58 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = SIBuilder.exe InstallLib.dll UnInstall.exe PkgInstallStub.exe \
+  SITLicenseDlg.dll RegCOMSvrs.dll RegInprocSvr.exe Shortcutter.exe BZInflate.dll \
+  BZDeflate.dll ZInflate.dll ZDeflate.dll SIBCmp.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+SIBuilder.exe: Apps\SIBuilder\SIBuilder.dpr
+  $(DCC)
+
+InstallLib.dll: Apps\InstallLib\InstallLib.dpr
+  $(DCC)
+
+UnInstall.exe: Apps\UnInstall\UnInstall.dpr
+  $(DCC)
+
+SITLicenseDlg.dll: Apps\SITLicenseDlg\SITLicenseDlg.dpr
+  $(DCC)
+
+RegCOMSvrs.dll: Apps\RegCOMSvrs\RegCOMSvrs.dpr
+  $(DCC)
+
+RegInprocSvr.exe: Apps\RegInProcSvr\RegInprocSvr.dpr
+  $(DCC)
+
+BZInflate.dll: Apps\BZInflate\BZInflate.dpr
+  $(DCC)
+
+ZInflate.dll: Apps\ZInflate\ZInflate.dpr
+  $(DCC)
+
+BZDeflate.dll: Apps\BZDeflate\BZDeflate.dpr
+  $(DCC)
+
+ZDeflate.dll: Apps\ZDeflate\ZDeflate.dpr
+  $(DCC)
+
+PkgInstallStub.exe: Apps\PkgInstallStub\PkgInstallStub.dpr
+  $(DCC)
+
+Shortcutter.exe: Apps\Shortcutter\Shortcutter.dpr
+  $(DCC)
+
+SIBCmp.bpl: Pkg\SIBCmp.dpk
+  $(DCC)
+
+

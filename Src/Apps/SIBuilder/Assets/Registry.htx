@@ -1,0 +1,19 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>Registry</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Specify the registry keys you want to create along with any data you need to
+write to the registry. You can also
+<font color=clNavy style=underline><link cmd="btnRegImport">import</link></font>
+registry files and create entries from
+<font color=clNavy style=underline><link cmd="btnRegTemplates">templates</link></font>.</p>
+
+</parafont>
+
+</body>
+</hottext>

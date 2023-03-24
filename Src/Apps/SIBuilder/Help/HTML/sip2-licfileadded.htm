@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * sip2-licfileadded.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is sip2-licfileadded.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_SIP2_LICFILEADDED
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>SIP2: License File Added</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		v2 File Conversion Comment:<br>
+		License File Added to Project
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder 3</span> always deletes license files after
+		use. By default, <span class="prog">SIBuilder 2</span> acted in the same
+		way, but the user could specify that the file should be kept after use
+		and be deleted by the uninstaller. The file would be installed in a
+		user-defined folder.
+	</p>
+
+	<p>
+		This is the case here, so <span class="prog">SIBuilder 3</span> has
+		created a new
+		<a href="def-groups.htm">group</a>
+		&ndash; &quot;SIP2 CONVERTER: License File&quot;
+		which contains the license file and installs it to the appropriate
+		folder, flagging it for deletion by the uninstaller.
+	</p>
+
+	<p>
+		In this case the DLL used to display the license will also have been
+		added to the project in the &quot;SIP2 CONVERTER: License DLL&quot;
+		<a href="def-groups.htm">group</a>.
+	</p>
+
+	<p>
+		If the license and/or the DLL are not required in the project, they can
+		be deleted from the
+		<a href="page-files.htm">Files page</a> by selecting the group(s)
+		and clicking the <span class="ui">Delete Group</span> button.
+	</p>
+</body>
+
+</html>

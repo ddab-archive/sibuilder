@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="author">
+		<param name="Name" value="Author">
+		<param name="Local" value="HTML\author.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="com server applications">
+		<param name="Name" value="Delphi COM Servers">
+		<param name="Local" value="HTML\comserverapps.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="compression">
+		<param name="Name" value="Compression Systems">
+		<param name="Local" value="HTML\def-compression.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="credits">
+		<param name="Name" value="Credits">
+		<param name="Local" value="HTML\credits.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="default project">
+		<param name="Name" value="Default Project">
+		<param name="Local" value="HTML\def-defaultproject.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="delphidabbler logo (see: logo)">
+		<param name="See Also" value="logo">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="eula">
+		<param name="Name" value="EULA">
+		<param name="Local" value="HTML\eula.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="extra programs">
+		<param name="Name" value="Extra Programs">
+		<param name="Local" value="HTML\extraprogs.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="reginprocsvr.exe">
+			<param name="Name" value="RegInProcSvr">
+			<param name="Local" value="HTML\extra-reginprocsvr.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="shortcutter.exe">
+			<param name="Name" value="Shortcutter">
+			<param name="Local" value="HTML\extra-shortcutter.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="feedback">
+		<param name="Name" value="Feedback">
+		<param name="Local" value="HTML\feedback.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="file groups">
+		<param name="Name" value="File Groups">
+		<param name="Local" value="HTML\def-groups.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="groups (see: file groups)">
+		<param name="See Also" value="file groups">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="hot links">
+		<param name="Name" value="Hot Text">
+		<param name="Local" value="HTML\def-hottext.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="info pane">
+		<param name="Name" value="Info Pane">
+		<param name="Local" value="HTML\infopane.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="installation information">
+		<param name="Name" value="Installation">
+		<param name="Local" value="HTML\install.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="interface enhancements">
+		<param name="Name" value="Interface Enhancements">
+		<param name="Local" value="HTML\new-ui.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="license files">
+		<param name="Name" value="License Files">
+		<param name="Local" value="HTML\licensefile.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="previewing">
+			<param name="Name" value="License Text">
+			<param name="Local" value="HTML\licensetest.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="logo">
+		<param name="Name" value="DelphiDabbler logo">
+		<param name="Local" value="HTML\logo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="main menu">
+		<param name="Name" value="Main Menu">
+		<param name="Local" value="HTML\menu.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="file menu">
+			<param name="Name" value="File Menu">
+			<param name="Local" value="HTML\menu-file.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="help menu">
+			<param name="Name" value="Help Menu">
+			<param name="Local" value="HTML\menu-help.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="tools menu">
+			<param name="Name" value="Tools Menu">
+			<param name="Local" value="HTML\menu-tools.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="new features">
+		<param name="Name" value="New Features">
+		<param name="Local" value="HTML\new-features.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="(see also: interface enhancements)">
+			<param name="See Also" value="interface enhancements">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="overview">
+		<param name="Name" value="Overview">
+		<param name="Local" value="HTML\overview.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="page selector">
+		<param name="Name" value="Page Selector">
+		<param name="Local" value="HTML\pageselector.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="pascal identifiers">
+		<param name="Name" value="Pascal Identifiers">
+		<param name="Local" value="HTML\def-pascalidents.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="path macros">
+		<param name="Name" value="Path Macros">
+		<param name="Local" value="HTML\def-pathmacros.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="popup information windows">
+		<param name="Name" value="Popup Information Windows">
+		<param name="Local" value="HTML\def-infopopups.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="project wizard">
+		<param name="Name" value="Wizard">
+		<param name="Local" value="HTML\wizard.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="(see also: info pane)">
+			<param name="See Also" value="info pane">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="build installer page">
+			<param name="Name" value="Build Installer Page">
+			<param name="Local" value="HTML\page-build.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="files page">
+			<param name="Name" value="Files Page">
+			<param name="Local" value="HTML\page-files.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="license info page">
+			<param name="Name" value="License Information Page">
+			<param name="Local" value="HTML\page-license.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="programs page">
+			<param name="Name" value="Programs Page">
+			<param name="Local" value="HTML\page-programs.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="project details page">
+			<param name="Name" value="Project Details Page">
+			<param name="Local" value="HTML\page-details.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="registry page">
+			<param name="Name" value="Registry Page">
+			<param name="Local" value="HTML\page-registry.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="target os page">
+			<param name="Name" value="Target OS Page">
+			<param name="Local" value="HTML\page-os.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="welcome page">
+			<param name="Name" value="Welcome Page">
+			<param name="Local" value="HTML\page-welcome.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="registry templates">
+		<param name="Name" value="Registry Templates">
+		<param name="Local" value="HTML\def-regtemplates.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="macros">
+			<param name="Name" value="Registry Template Macros">
+			<param name="Local" value="HTML\regtpltmacros.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="source code">
+		<param name="Name" value="Source Code">
+		<param name="Local" value="HTML\sourcecode.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="using install and uninstall">
+		<param name="Name" value="Install and Uninstall">
+		<param name="Local" value="HTML\install-progs.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="using sibuilder">
+		<param name="Name" value="Using SIBuilder">
+		<param name="Local" value="HTML\using.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="(see also: main menu)">
+			<param name="See Also" value="main menu">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="(see also: project wizard)">
+			<param name="See Also" value="project wizard">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="(see also: using install and uninstall)">
+			<param name="See Also" value="using install and uninstall">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="website">
+		<param name="Name" value="Website">
+		<param name="Local" value="HTML\website.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="wizard (see: project wizard)">
+		<param name="Name" value="Redirect to Project Wizard">
+		<param name="See Also" value="project wizard">
+		</OBJECT>
+</UL>
+</BODY></HTML>

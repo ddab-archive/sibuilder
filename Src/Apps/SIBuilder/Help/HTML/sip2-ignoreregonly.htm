@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * sip2-ignoreregonly.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is sip2-ignoreregonly.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_SIP2_IGNOREREGONLY
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>SIP2: InProc Server Register Only Ignored</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		v2 File Conversion Comment:<br>
+		Ignored &quot;Register Only&quot; Property for COM Server
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder 2</span> provided a &quot;register
+		only&quot; property for in-process COM servers that enabled a COM server
+		to be registered by the installer but ignored by the uninstaller. It was
+		left to the user to ensure that the server wasn't deleted by the
+		uninstaller!
+	</p>
+
+	<p>
+		<span class="prog">SIBuilder 3</span> does not support this property.
+		This conversion comment indicates that such a property was encountered
+		in the project file and has been ignored by
+		<span class="prog">SIBuilder</span>. The uninstaller will automatically
+		unregister any COM server that was registered by the program before
+		deleting the file. If the file is not deleted then it is not
+		unregistered. 
+	</p>
+
+	<p>
+		The server file's entry on the
+		<a href="page-files.htm">Files page</a>
+		will show that the installer will register it as before.
+	</p>
+
+	<p>
+		It is recommended that all In-process COM servers are flagged to be
+		registered as shared DLLs as well as being registered as COM servers.
+		This way the server will only be deleted once it is no longer required
+		by programs. To do this select the file on the
+		<a href="page-files.htm">Files page<a>
+		and edit it using the <span class="ui">Edit File</span> button to
+		display the
+		<a href="dlg-editfile.htm">Edit Install File Properties</a> dialog box.
+	</p>
+</body>
+
+</html>

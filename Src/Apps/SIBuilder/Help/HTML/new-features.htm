@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * new-features.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is new-features.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: NEWFEATURES
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>New Features</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		What's New in SIBuilder 3
+	</h1>
+
+	<p>
+		New features of SIBuilder release 3.x are:
+	</p>
+	
+	<ul class="spaced">
+		<li>
+			The program now natively creates install programs using its built in
+			packager technology. This means <span class="prog">SIBuilder</span>
+			is no longer dependent on <span class="prog">Borland Delphi</span>
+			to compile its install programs. The &quot;old&quot; method of
+			compiling with <span class="prog">Delphi</span>, was removed in
+			release 3.3.
+		</li>
+		<li>
+			There are now two different compression systems available for
+			reducing the size of install files &ndash; and an extensible
+			architecture means that additional compressor systems could be
+			plugged in in the future. The install and uninstall programs now
+			rely on a separate inflator DLL that is included in the install
+			package to expand the install files and data. Despite requiring an
+			additional DLL the total install program size has been reduced
+			slightly.<br>
+			<a href="def-compression.htm">More info</a>
+		</li>
+		<li>
+			Installation can now be made conditional on the target operating
+			system. A set of valid operating systems can be defined for the
+			whole project. The installer will refuse to run on any system that
+			is not included. Additionally,
+			<a href="def-groups.htm">file groups</a> can be individually
+			configured to install only on certain operating systems. This means
+			that different versions of files can be installed on different
+			operating systems.
+		</li>
+		<li>
+			Any existing installation in the same folder can now be properly
+			uninstalled by the installer before proceeding with an installation.
+		</li>
+		<li>
+			A facility to register applications with Windows has been added.
+		</li>
+		<li>
+			There is now support for usage of counted shared DLLs. The installer
+			increments the usage count of shared DLLs and the uninstaller
+			decreases the count and deletes the DLL only if the count reaches
+			zero.
+		</li>
+		<li>
+			File version information can now be tested by the installer and used
+			to determine whether a file should be overwritten. This is an
+			alternative to testing the file age.
+		</li>
+		<li>
+			Registry files that have been exported from the Windows registry
+			editor can now be imported. This makes it easy to set the installer
+			to update the registry for a program &ndash; the program's actual
+			registry entries are simply exported from the registry and imported
+			into <span class="prog">SIBuilder</span>, where any changes can be
+			made. Registry files can also be exported.
+		</li>
+		<li>
+			The generation of frequently used registry keys is eased by adding
+			new predefined registry templates that can create the keys.
+			The templates can be parameterized to enable parts of the key to be
+			easily customised.<br>
+			<a href="def-regtemplates.htm">More info</a>
+		</li>
+		<li>
+			The uninstaller can now optionally delete empty registry keys.
+		</li>
+		<li>
+			Build reports can now be produced either in HTML or in the new plain
+			text format.
+		</li>
+		<li>
+			The old tutorials were very out of date and have been removed, along
+			with the sample files. A new online tutorial has been created in PDF
+			format. This available from the <span class="menuref">Help | Online
+			Tutorial</span> menu option.<br>
+			<a class="weblink"
+				target="_blank"
+				href="http://www.delphidabbler.com/sibuilder/tutorial"
+			>View the tutoral</a>
+		</li>
+		<li>
+			Many enhancements have been applied to the user interface.<br>
+			<a href="new-ui.htm">More info</a>
+		</li>
+	</ul>
+</body>
+
+</html>

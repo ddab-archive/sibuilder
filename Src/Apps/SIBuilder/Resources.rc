@@ -1,0 +1,105 @@
+/*
+ * Resources.rc
+ *
+ * Resource file containing various image, RCDATA and manifest resources for the
+ * SIBuilder program.
+ *
+ * v1.0 of 09 Mar 2000  - Original version. Named Images.rc.
+ * v2.0 of 29 Dec 2002  - New version of resource file: now contains various
+ *                        resources in addition to images
+ *                      - Renamed from Images.rc to Resources.rc.
+ *                      - Added CheckBoxes.bmp: checkboxes used in OS tree
+ *                        views.
+ *                      - Added DDGreyLogo.bmp: logo displayed in info bar.
+ *                      - Added RCDATA containing tagged rich text files for use
+ *                        in info panes.
+ *                      - Added RCDATA containing tagged rich text for the
+ *                        Welcome page.
+ *                      - Added RCDATA containing tagged rich text for the About
+ *                        box.
+ *                      - Added RCDATA containing tagged rich text for various
+ *                        error messages and prompts.
+ * v2.1 of 19 Nov 2003  - Made changes due to change from active rtf to hot text
+ *                        components.
+ *                      - Removed RCDATA items that referenced WelcomePage.rtf,
+ *                        LicenseTest.rtf and RegTpltDlg.rtf. The relevant code
+ *                        is now stored directly in THotText components.
+ *                      - Renamed all *.rtf files included in RCDATA to *.txt
+ *                        files that store hot text code rather than rtf.
+ *                      - Also deleted RCDATA reference to COMServers.rtf since
+ *                        this was included in resource but not actually used by
+ *                        program.
+ * v2.2 of 11 Apr 2008  - Added SIBuilder.manifest file that is used to inform
+ *                        Windows Vista to run the program without elevation.
+ *                      - Modified to find all included files in Assets folder
+ *                        rather than Misc folder.
+ *                      - Renamed all hot text file references to have .htx
+ *                        rather than .txt extensions.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is Resources.rc.
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2000-2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * ***** END LICENSE BLOCK *****
+ */
+
+
+/* -----------------------------------------------------------------------------
+Bitmaps
+----------------------------------------------------------------------------- */
+
+/* Bitmaps used by image lists */
+SMALLIMAGE BITMAP "Assets\Small.bmp"
+CHECKBOXES BITMAP "Assets\CheckBoxes.bmp"
+
+/* Logo bitmap */
+LOGO BITMAP "Assets\DDLogoGrey.bmp";
+
+
+/* -----------------------------------------------------------------------------
+Hot text
+----------------------------------------------------------------------------- */
+
+/* Info pane hot text */
+100 RCDATA "Assets\WelcomeInfo.htx"
+101 RCDATA "Assets\ProjDetails.htx"
+102 RCDATA "Assets\LicenseInfo.htx"
+103 RCDATA "Assets\TargetOS.htx"
+104 RCDATA "Assets\Groups.htx"
+105 RCDATA "Assets\RunProgs.htx"
+107 RCDATA "Assets\Registry.htx"
+108 RCDATA "Assets\Build.htx"
+
+/* About box dialog text */
+160 RCDATA "Assets\AboutDlg.htx"
+
+/* Error messages used with warner objects */
+172 RCDATA "Assets\PrgDlgProgErr.htx"
+173 RCDATA "Assets\PrgDlgParamErr.htx"
+174 RCDATA "Assets\RunTabProgErr.htx"
+175 RCDATA "Assets\GroupsTabErr.htx"
+
+
+/* -----------------------------------------------------------------------------
+Hot text
+----------------------------------------------------------------------------- */
+
+1 24 "Assets\SIBuilder.manifest"
+

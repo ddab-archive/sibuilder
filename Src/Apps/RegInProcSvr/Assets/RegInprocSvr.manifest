@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+ * RegInprocSvr.manifest
+ *
+ * Manifest file enabling theme support for XP and Vista and Vista execution
+ * elavation required to enable COM servers to be registered.
+ *
+ * Based on a sample manifest in "Windows Vista User Account Control (UAC) and
+ * Delphi" by Fredrik Haglund, CodeGear and content of Delphi 7's WindowsXP.res.
+ *
+ * v1.0 of 10 Apr 2008  - Original version. Requires administrator privileges.
+-->
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+    type="win32"
+    name="RegInProgSvr"
+    version="1.0.0.0"
+    processorArchitecture="*"
+  />
+  <description>
+    Register COM Servers using a GUI.
+  </description>
+  <dependency>
+    <dependentAssembly>
+      <assemblyIdentity
+        type="win32"
+        name="Microsoft.Windows.Common-Controls"
+        version="6.0.0.0"
+        publicKeyToken="6595b64144ccf1df"
+        language="*"
+        processorArchitecture="x86"
+      />
+    </dependentAssembly>
+  </dependency>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel
+          level="requireAdministrator"
+        />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+

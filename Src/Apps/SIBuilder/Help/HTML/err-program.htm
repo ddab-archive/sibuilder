@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * err-program.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is err-program.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_ERR_PROGRAM (renamed from IDH_POPUP_PROGERR)
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Error - Run Program</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Program Error
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder</span> has detected a problem with the
+		program currently being edited. There are two possible reasons for this:
+	</p>
+	
+	<ol class="spaced lower-roman">
+		<li>
+			<div>
+				The program file is to be installed from a temporary
+				<a href="def-groups.htm">group</a>
+				(and will therefore be deleted by the installer), but it is
+				flagged for running under the uninstaller.
+			</div>
+			<div class="para-space">
+				<em>Solutions:</em>
+				<ol class="unspaced lower-alpha no-para-space">
+					<li>
+						change the value of the <span class="ui">Execute on drop
+						down list</span> to <span class="ui">Installation
+						only</span>;
+					</li>
+					<li>
+						cancel this dialog box and install the program file into
+						a different non-temporary 
+						<a href="def-groups.htm">group</a>
+						using the
+						<a href="page-files.htm">Files page</a>.
+					</li>
+			</div>
+		</li>
+		<li>
+			<div>
+				The program is being run from the uninstaller but there is no
+				uninstaller included in the project.
+			</div>
+			<div class="para-space">
+				<em>Solution:</em> cancel this dialog box and use the
+				<a href="page-details.htm">Project Details page</a>
+				to ensure an uninstall program that is included in the project.
+			</div>
+		</li>
+	</ol>
+
+</body>
+
+</html>

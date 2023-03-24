@@ -1,0 +1,154 @@
+// Help.map
+//
+// Maps help topic IDs to constants. Has two purposes:
+// 1) Provides help contexts for use in SIBuilder when calling into the HTML
+//    help file.
+// 2) used in help build process to autop-generate a C style header file,
+//    help.h that is required by HTML help project file.
+//
+// v1.0 of 09 Mar 2000  - Original version.
+// v1.1 of 04 Sep 2000  - Added further topic ids and constants required by
+//                        release 2 of SIBuilder.
+// v1.2 of 24 Dec 2000  - Added new help context for registry data insert file
+//                        dialogue box.
+// v1.3 of 29 Dec 2000  - Added help contexts for new COM server registration
+//                        related dialog boxes.
+//                      - Added help contexts for new pop-up topics.
+//                      - Renumbered everything, grouped by function.
+// v1.4 of 06 Jan 2001  - Changed topic ID for Inproc server details edit dlg
+//                        box to suit new dlg box function.
+// v1.5 of 21 Jan 2001  - Added topics for new license dialog boxes.
+// v1.6 of 29 Dec 2002  - Updated for release 3 of SIBuilder and a complete
+//                        re-hash of help file.
+//                      - Added help contexts for various new topics.
+//                      - Deleted contexts for deleted topics.
+//                      - Renumbered help contexts for dialog boxes that have
+//                        now become wizard pages.
+//                      - Added new sections for error topics and additional
+//                        explanations from conversions.
+// v1.7 of 23 Feb 2003  - Added topic for new projects to be uninstalled.
+// v1.8 of 01 Mar 2008  - Revised to work with HTML help.
+//                      - Deleted IDH_OVERVIEW and IDH_POPUP_RUNTABERR consts.
+//                      - Renamed several consts:
+//                        - IDH_CREDITS as IDH_CREDIT;
+//                        - IDH_DLG_DELPHICOMAPP as IDH_DLG_DELPHICOMSVRAPP;
+//                        - IDH_POPUP_ABOUTINFOPANE as IDH_INFOPANE;
+//                        - IDH_POPUP_REGMACROS as IDH_REGMACROS;
+//                        - IDH_POPUP_AUTHOR as IDH_AUTHOR;
+//                        - IDH_POPUP_ABOUTLIC as IDH_LICENSEFILE;
+//                        - IDH_POPUP_PAGESELECTOR as IDH_PAGESELECTOR;
+//                        - IDH_POPUP_LOGO as IDH_LOGO;
+//                        - IDH_POPUP_LICTEST as IDH_LICENSETEST;
+//                        - IDH_POPUP_OUTPROCCOMSERVERS as IDH_COMSERVERAPPS;
+//                        - IDH_POPUP_PROGERR as IDH_ERR_PROGRAM (renumbered);
+//                        - IDH_POPUP_PARAMERR as IDH_ERR_PARAMS (renumbered);
+//                        - IDH_POPUP_FILEERR as IDH_ERR_FILES (renumbered).
+//
+//
+// ***** BEGIN LICENSE BLOCK *****
+//
+// Version: MPL 1.1
+//
+// The contents of this file are subject to the Mozilla Public License Version
+// 1.1 (the "License"); you may not use this file except in compliance with
+// the License. You may obtain a copy of the License at
+// http://www.mozilla.org/MPL/
+//
+// Software distributed under the License is distributed on an "AS IS" basis,
+// WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+// for the specific language governing rights and limitations under the
+// License.
+//
+// The Original Code is Help.map.
+//
+// The Initial Developer of the Original Code is Peter Johnson
+// (http://www.delphidabbler.com/).
+//
+// Portions created by the Initial Developer are Copyright (C) 2000-2008 Peter
+// Johnson. All Rights Reserved.
+//
+// ***** END LICENSE BLOCK *****
+
+
+// -----------------------------------------------------------------------------
+// !! IMPORTANT !!
+// All topic identifiers *must* begin in the first column with "IDH_"
+// Each line must be a valid Delphi Pascal constant declaration.
+// -----------------------------------------------------------------------------
+
+// Note: The HTML source file containing the help topic referenced by each help
+// context number is noted in comment at the end of each constant declaration.
+
+// Main topics
+IDH_COPYRIGHT                  = 103;   // eula.htm
+IDH_CREDIT                     = 104;   // credits.htm
+
+// Wizard pages topics
+IDH_PROJECTDETAILS             = 201;   // page-details.htm
+IDH_FILEGROUPS                 = 202;   // page-files.htm
+IDH_RUNPROGRAMS                = 203;   // page-programs.htm
+IDH_REGISTRY                   = 204;   // page-registry.htm
+IDH_BUILDPROJECT               = 205;   // page-build.htm
+IDH_LICENSEINFO                = 206;   // page-license.htm
+IDH_WELCOME                    = 207;   // page-welcome.htm
+IDH_TARGETOS                   = 208;   // page-os.htm
+
+// Dialog box help topics
+IDH_DLG_OPTIONS                = 401;   // dlg-options.htm
+IDH_DLG_CHOOSEFOLDER           = 402;   // dlg-folder.htm
+IDH_DLG_EDITGROUP              = 403;   // dlg-editgroup.htm
+IDH_DLG_FILEPROPERTIES         = 404;   // dlg-fileproperties.htm
+IDH_DLG_SAVEPROJECT            = 405;   // dlg-saveproject.htm
+IDH_DLG_OPENPROJECT            = 406;   // dlg-openproject.htm
+IDH_DLG_ADDFILES               = 407;   // dlg-addfiles.htm
+IDH_DLG_EDITREGKEY             = 408;   // dlg-editregkey.htm
+IDH_DLG_EDITREGVALUE           = 409;   // dlg-editregvalue.htm
+IDH_DLG_EDITFILE               = 411;   // dlg-editfile.htm
+IDH_DLG_OPTIONSCOLOUR          = 412;   // dlg-infopanecolour.htm
+IDH_DLG_PROGEDIT               = 413;   // dlg-editprog.htm
+IDH_DLG_PROGEDITOPEN           = 414;   // dlg-progfile.htm
+IDH_DLG_EDITREGVALUEOPEN       = 415;   // dlg-openbindata.htm
+IDH_DLG_EDITREGVALUEINSERT     = 418;   // dlg-insertfilename.htm
+IDH_DLG_DELPHICOMSVRAPP        = 419;   // dlg-comserverapp.htm
+IDH_DLG_TESTLICENSE            = 423;   // dlg-testlicense.htm
+IDH_DLG_BROWSELICENSE          = 424;   // dlg-browselicense.htm
+IDH_DLG_LICENSE                = 425;   // dlg-license.htm
+IDH_DLG_ABOUT                  = 426;   // dlg-about.htm
+IDH_DLG_OSOPTIONS              = 427;   // dlg-osoptions.htm
+IDH_DLG_REGIMPORTOPEN          = 428;   // dlg-importregfile.htm
+IDH_DLG_REGEXPORTOPEN          = 429;   // dlg-exportregfile.htm
+IDH_DLG_REGMACROS              = 430;   // dlg-editregmacro.htm
+IDH_DLG_REGTEMPLATE            = 431;   // dlg-chooseregtplt.htm
+IDH_DLG_REGMACROVALUE          = 432;   // dlg-newregmacrovalue.htm
+IDH_DLG_V2CONVRESULTS          = 433;   // dlg-sip2convmsg.htm
+IDH_DLG_UNINSTPROJECTS         = 434;   // dlg-uninstprojects.htm
+
+// Help called from "what's this" menus and hot links
+IDH_COMSERVERAPPS              = 501;   // comserverapps.htm
+IDH_INFOPANE                   = 502;   // infopane.htm
+IDH_REGMACROS                  = 505;   // regtpltmacros.htm
+IDH_PAGESELECTOR               = 506;   // pageselector.htm
+IDH_LOGO                       = 507;   // logo.htm
+IDH_AUTHOR                     = 508;   // author.htm
+IDH_LICENSETEST                = 509;   // licensetest.htm
+IDH_LICENSEFILE                = 513;   // licensefile.htm
+
+// Error help topics
+IDH_ERR_RUNPROGS               = 601;   // err-runprogs.htm
+IDH_ERR_PROJECTID              = 602;   // err-projectid.htm
+IDH_ERR_CANTREGSHAREDDLL       = 603;   // err-cantregdll.htm
+IDH_ERR_PROGRAM                = 604;   // err-program.htm
+IDH_ERR_PARAMS                 = 605;   // err-params.htm
+IDH_ERR_FILES                  = 606;   // err-files.htm
+
+// SIBuilder version 2 conversion comments
+IDH_SIP2_IGNOREINPROCSVR       = 701;   // sip2-ignoreinprocsvr.htm
+IDH_SIP2_IGNOREREGONLY         = 702;   // sip2-ignoreregonly.htm
+IDH_SIP2_LICDLLADDED           = 703;   // sip2-licdlladded.htm
+IDH_SIP2_LICDLLREMOVED         = 704;   // sip2-licdllremoved.htm
+IDH_SIP2_LICDLLRETAINED        = 705;   // sip2-licdllretained.htm
+IDH_SIP2_LICFILEADDED          = 706;   // sip2-licfileadded.htm
+IDH_SIP2_LICDLLREGASCOM        = 707;   // sip2-licdllregascom.htm
+IDH_SIP2_RUNPROGMOVED          = 708;   // sip2-runprogmoved.htm
+IDH_SIP2_RUNPROGDELIGNORED     = 709;   // sip2-runprogdelignored.htm
+

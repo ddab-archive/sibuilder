@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-editgroup.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-editgroup.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_EDITGROUP
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Edit Group Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Edit Group Properties Dialog Box
+	</h1>
+
+	<p>
+		This dialog box is displayed when the <span class="ui">Add Group</span>
+		or <span class="ui">Edit Group</span> buttons on the
+		<a href="page-files.htm">Files page</a>
+		are clicked. It is used to either define the properties of a new file
+		group or to edit the properties of an existing
+		<a href="def-groups.htm">group</a>.
+	</p>
+
+	<p>
+		The various group properties that can be edited are explained below.
+	</p>
+
+	<h2>
+		Name of Group
+	</h2>
+
+	<p>
+		The name of the group is entered in the <span class="ui">Group
+		name</span> edit box. This name must be unique.
+	</p>
+
+	<h2>
+		Installation Path
+	</h2>
+
+	<p>
+		The path where the files in this group are to be installed are entered
+		in the <span class="ui">Installation path</span> combo box. These paths
+		can include
+		<a href="def-pathmacros.htm">path macros</a>,
+		which can be selected from the combo box's drop down list. Alternatively
+		the folder can be chosen from the
+		<a href="dlg-folder.htm">Choose Folder</a>
+		dialog box by clicking the <span class="ui">Browse for folder</span>
+		entry in the combo box. The folder selected is entered in the combo box
+		and can be edited.
+	</p>
+
+	<h2>
+		Deletion Options
+	</h2>
+
+	<p>
+		The various options for deleting the group or its files are specified in
+		the <span class="ui">Folders</span> and <span class="ui">Files</span>
+		radio button groups.
+	</p>
+
+	<p>
+		The options for deletion of folder are:
+	</p>
+	
+	<ul class="unspaced">
+		<li>
+			<span class="ui">Do not remove folder</span> &ndash; the folder is
+			never deleted.
+		</li>
+		<li>
+			<span class="ui">Remove folder if empty</span> &ndash; folder is
+			removed by the uninstaller only if it contains no files or sub
+			folders.
+		</li>
+		<li>
+			<span class="ui">Remove folder and all contents</span> &ndash; the
+			uninstaller forcibly removes the folder and all its files and sub
+			folders.
+		</li>
+	</ul>
+
+	<p>
+		Similarly the choices available for deletion of files in the group are:
+	</p>
+
+	<ul class="unspaced">
+		<li>
+			<span class="ui">Do not delete files</span> &nbsp; these files are
+			never deleted.
+		</li>
+		<li>
+			<span class="ui">Delete only files that were installed</span>
+			&ndash; only files installed by the installer are deleted by the
+			uninstaller - any other files are left intact.
+		</li>
+		<li>
+			<span class="ui">Delete all files in folder</span> &ndash; all files
+			in the folder, regardless of whether they were installed by the
+			installer, are deleted by the uninstaller.
+		</li>
+		<li>
+			<span class="ui">Temporary files deleted by installer</span> &ndash;
+			once the files have been used by the installer it deletes them (e.g.
+			use this option for a program and/or file to be run by the installer
+			on installation only).
+		</li>
+	</ul>
+
+	<p>
+		If you have chosen to remove the folder and its contents the
+		<span class="ui">Files</span> radio buttons are disabled and the 
+		<span class="ui">delete all files</span> option is implied. If any of
+		the Windows, System, Program Files or Common Files folders are specified
+		then it is not permitted to remove the folder or delete all files.
+		If the group's install folder is a special system folder then several
+		deletion operations are not permitted.
+	</p>
+
+	<p>
+		For further information about file and folder removal options see the
+		<a href="def-groups.htm">File Groups</a> help topic.
+	</p>
+
+	<h2>
+		Operating System Options
+	</h2>
+
+	<p>
+		Each group can be set so that it installs only on certain operating
+		systems. This enables different files to be installed on different
+		operating systems. The selected operating systems for this group are
+		listed in the <span class="ui">Operating system options</span> group
+		box. The supported operating systems can be edited using the
+		<a href="dlg-osoptions.htm">Operating System Options</a>
+		dialog box which is accessed using the <span class="ui">Select
+		Options</span> button.
+	</p>
+</body>
+
+</html>

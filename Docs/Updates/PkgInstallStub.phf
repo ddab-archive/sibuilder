@@ -1,0 +1,369 @@
+@PROJECT_NAME           SITools: PkgInstallStub
+@PROJECT_DESC           This console application is a program stub that knows
+                        how to extract and process payload data appended to the
+                        stub by SIBuilder. The payload includes the files to be
+                        installed, an installation information file and required
+                        installation DLLs appended to it as payload data.
+@ROOT                   ..\..\Src\Apps\PkgInstallStub
+@COPYRIGHT              Copyright © Peter Johnson, 2002-2008.
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.8.2
+                        + Borland Resource Compiler v5.3
+    @COMMENTS           Original version.
+    @DATE               29/12/2002
+    @FILES(
+      @NEW(
+        @FILE           PkgInstallStub.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPackageExtractor.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UExtractor.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UEmbeddedData.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInflater.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInstProcs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UPayload.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInstallBody.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInstExcept.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VPkgInstallStub.vi
+        @DATE           29/12/2002
+        @COMMENTS       Version information resource.
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.7
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 2)
+    @DATE               24/01/2003
+    @COMMENTS           Unchanged other than to increment product number to
+                        3.0.1.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.8.2
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           24/01/2003
+        @COMMENTS       Updated product number to 3.0.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 3)
+    @DATE               23/02/2003
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.8.2
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           23/02/2003
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.8
+        @COMMENTS       Change in this file does not affect this program.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 4)
+    @DATE               19/11/2003
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.10
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           19/11/2003
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0 (build 5)
+    @DATE               25/11/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           25/11/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 6)
+    @DATE               16/01/2006
+    @COMMENTS           + Changed to use a unique sub-folder of the local
+                          computer's temporary folder to store extracted files
+                          instead of temporary folder itself.
+                        + Fixed memory leek.
+                        + Updated displayed copyrght date to 2000-2006.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           15/01/2006
+        @COMMENTS       Updated file, product and build number.
+      )
+      @UPDATED(
+        @FILE           PkgInstallStub.dpr
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UFileProcsLite.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Install\UInstallBody.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.9
+        @COMMENTS       Change in this file does not affect this project.
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInstallerFiles.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Install\UExtractor.pas
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 7)
+    @DATE               17/07/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           17/07/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.2 (build 8)
+    @DATE               01/04/2007
+    @COMMENTS           Removed conditional compilation code no longer required
+                        now some source code is no longer compiled from
+                        SIBuilder.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Install\UInstallBody.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Install\UInstallerFiles.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.10
+      )
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           25/03/2007
+        @COMMENTS       Updated file, product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.2 (build 9)
+    @DATE               10/06/2007
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           10/06/2007
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.3 (build 10)
+    @COMMENTS           + Replaced include files with units.
+                        + Added batch file used to build program.
+                        + Moved some units.
+                        + Replaced some literal strings with resource strings,
+                          including program messages.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @DATE               23/02/2008
+    @FILES(
+      @UPDATED(
+        @FILE           PkgInstallStub.dpr
+        @VERSION        1.2
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           UExtractor.pas
+        @VERSION        1.2
+        @RENAMED_FROM   ..\..\Shared\Install\UExtractor.pas
+      )
+      @UPDATED(
+        @FILE           UInstallBody.pas
+        @VERSION        1.3
+        @RENAMED_FROM   ..\..\Shared\Install\UInstallBody.pas
+      )
+      @UPDATED(
+        @FILE           UInstExcept.pas
+        @VERSION        1.1
+        @RENAMED_FROM   ..\..\Shared\Install\UInstExcept.pas
+      )
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           20/02/2008
+        @COMMENTS       Updated file, product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Install\UInstallerFiles.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\Params\FileNames.inc
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.3 (build 11)
+    @DATE               01/03/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information and change to UFileNames.pas that
+                        don't affect this project.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.1
+        @COMMENTS       Changes have no effect on this project.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.4 (build 12)
+    @DATE               11/04/2008
+    @COMMENTS           Added manifest that requires the installer to be run
+                        elevated with admistrator privileges under Windows
+                        Vista.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.2
+        @COMMENTS       Changes have no impact in this program.
+      )
+      @NEW(
+        @FILE           ISResources.rc
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           Build.bat
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           PkgInstallStub.dpr
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           10/04/2008
+      )
+      @NEW(
+        @FILE           Assets\InstallStub.manifest
+        @VERSION        1.0
+        @COMMENTS       Manifest file that requires elevation of program under
+                        Vista.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.4 (build 13)
+    @DATE               16/09/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11.2
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VPkgInstallStub.vi
+        @DATE           16/09/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+)

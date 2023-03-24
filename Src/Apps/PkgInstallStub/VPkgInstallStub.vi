@@ -1,0 +1,28 @@
+[Fixed File Info]
+File Version #=1, 0, 4, 13
+Product Version #=3, 4, 2, 0
+File OS=4
+File Type=1
+File Sub-Type=0
+File Flags Mask=63
+File Flags=0
+[Variable File Info]
+Language=2057
+Character Set=1252
+[String File Info]
+Comments=This program has been created by SIBuilder © P.D.Johnson, 2000-<YEAR> specifically to install this software.
+Company Name=DelphiDabbler
+File Description=SITools Packaged Installer Stub.
+File Version=v<#F1>.<#F2>.<#F3> build <#F4>
+Internal Name=<SHORTFNAME>
+Legal Copyright=SITools: Copyright © P D Johnson,  2000-<YEAR>. Software being installed  - see owner's documentation for copyright.
+Legal Trademark=
+Original File Name=PkgInstallStub.exe
+Private Build=
+Product Name=SITools: Packaged self-extracting installer.
+Product Version=Release <#P1>.<#P2>.<#P3><SPECIALBUILD>
+Special Build=
+[Configuration Details]
+Identifier=
+NumRCComments=0
+

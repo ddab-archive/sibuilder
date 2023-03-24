@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * sip2-licdllremoved.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is sip2-licdllremoved.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_SIP2_LICDLLREMOVED
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>SIP2: License DLL Removed</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		v2 File Conversion Comment:<br>
+		License Dialog DLL Removed from Project
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder</span> uses a DLL &ndash;
+		<span class="file">SITLicenseDlg.dll</span> &ndash; to display any
+		license required by the installer. <span class="prog">SIBuilder 3</span>
+		deletes the DLL once the license has been displayed, while
+		<span class="prog">SIBuilder 2</span> stores the DLL in the installation
+		folder and only (optionally) deletes it with the uninstaller.
+	</p>
+
+	<p>
+		The current case is one where the DLL would have been deleted by the
+		uninstaller under <span class="prog">SIBuilder 2</span>. However, it is
+		assumed that the current project does not need the dialog DLL since the
+		license file itself was flagged for deletion by the installer once it
+		had been displayed. Therefore <span class="prog">SIBuilder 3</span> has
+		not taken any steps to retain the DLL after it has been used to display
+		the license. 
+	</p>
+
+	<p>
+		If it is known that the DLL is required by the project then the DLL
+		should be added to the project either into an existing
+		<a href="def-groups.htm">group</a>
+		or into a newly created one. Use the 
+		<a href="page-files.htm">Files page</a>
+		to make these changes.</p>
+	
+	<p>
+		<span class="file">SITLicenseDlg.dll</span> forms part of the core
+		<span class="prog">SIBuilder</span> installation and may freely be
+		copied and distributed with your application.
+	</p>
+</body>
+
+</html>

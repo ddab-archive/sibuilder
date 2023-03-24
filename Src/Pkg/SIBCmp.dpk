@@ -1,0 +1,134 @@
+{ ##
+  @PROJECT_NAME             SI Tools
+  @PROJECT_DESC             Simple program installation tools - project manager
+                            and creator with installation and un-installation
+                            programs.
+  @FILE                     SIBCmp.dpk
+  @COMMENTS                 Package file for custom SIBuilder components.
+  @OTHER_NAMES              SIBilder.dpk
+  @HISTORY(
+    @REVISION(
+      @VERSION              1.0
+      @DATE                 15/12/2002
+      @COMMENTS             Original version.
+    )
+    @REVISION(
+      @VERSION              1.1
+      @DATE                 17/11/2003
+      @COMMENTS             Added hot text components, property editor and
+                            support units.
+    )
+    @REVISION(
+      @VERSION              1.2
+      @DATE                 24/11/2005
+      @COMMENTS             + Removed hot text component property editor
+                            + Removed UFileProcs, UCommonTypes and UStringProcs
+                              units.
+                            + Changed name from SIBilder.dpk to SIBCmp.dpk.
+                            + Modified package description.
+    )
+    @REVISION(
+      @VERSION              1.3
+      @DATE                 15/01/2006
+      @COMMENTS             + Added UStringProcs, UFileProcs and UCommonTypes
+                              units back in again.
+                            + Replaced DDabDsgn package dependency with
+                              DelphiDabbler package.
+    )
+    @REVISION(
+      @VERSION              1.4
+      @DATE                 25/03/2007
+      @COMMENTS             + Removed dependency on DelphiDabbler package.
+                            + Removed all required Delphi packages except rtl
+                              and vcl.
+    )
+    @REVISION(
+      @VERSION              1.5
+      @DATE                 19/02/2008
+      @COMMENTS             + Included version information resource.
+                            + Removed reference to unused SIBCmp.res.
+                            + Added URegistry unit.
+    )
+  )
+}
+
+
+{
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is SIBCmp.dpk.
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2002-2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * ***** END LICENSE BLOCK *****
+}
+
+
+package SIBCmp;
+
+{$R 'VSIBCmp.res'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'DelphiDabbler SIBuilder Components'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  rtl;
+
+contains
+  CmpActionComboBox in 'CmpActionComboBox.pas',
+  CmpBrowseEdit in 'CmpBrowseEdit.pas',
+  CmpButtonList in 'CmpButtonList.pas',
+  CmpFileEditors in 'CmpFileEditors.pas',
+  CmpGroupBox in 'CmpGroupBox.pas',
+  CmpHotText in 'CmpHotText.pas',
+  UFontEx in 'UFontEx.pas',
+  UHotTextDoc in 'UHotTextDoc.pas',
+  UHotTextLink in 'UHotTextLink.pas',
+  UHotTextParaStyle in 'UHotTextParaStyle.pas',
+  UHotTextParser in 'UHotTextParser.pas',
+  UHotTextView in 'UHotTextView.pas',
+  ULists in 'ULists.pas',
+  UStacks in 'UStacks.pas',
+  UTaggedTextLexer in 'UTaggedTextLexer.pas',
+  UCommonTypes in '..\Shared\Params\UCommonTypes.pas',
+  UFileProcs in '..\Shared\Utils\UFileProcs.pas',
+  UStringProcs in '..\Shared\Utils\UStringProcs.pas',
+  URegistry in '..\Shared\Params\URegistry.pas';
+
+end.
+

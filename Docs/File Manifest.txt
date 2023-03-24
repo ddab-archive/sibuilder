@@ -1,0 +1,41 @@
+*************************************************************
+**                                                         **
+**  Installation report for DelphiDabbler SIBuilder 3.4.2  **
+**                                                         **
+*************************************************************
+
+----------------------------------------------------------------
+File Manifest
+----------------------------------------------------------------
+
+Folder: [Common Files]\DelphiDabbler\
+  +  RegCOMSvrs.dll
+  +  SITLicenseDlg.dll
+
+Folder: [Install Path]\
+  +  InstallLib.dll
+  +  SIBuilder.chm
+  +  SIBuilder.exe
+  +  UnInstall.exe
+  +  UnInstall.xml
+
+Folder: [Install Path]\Docs\
+  +  File Manifest.txt
+  +  ReadMe.html
+  +  SIBuilder.lic
+
+Folder: [Install Path]\Extras\
+  +  RegInprocSvr.exe
+  +  Shortcutter.exe
+
+Folder: [Install Path]\Install\
+  +  BZDeflate.dll
+  +  BZInflate.dll
+  +  InstallLib.dll
+  +  PkgInstallStub.exe
+  +  SITLicenseDlg.dll
+  +  UnInstall.exe
+  +  ZDeflate.dll
+  +  ZInflate.dll
+
+--- End of report ---

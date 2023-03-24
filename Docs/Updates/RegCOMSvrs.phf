@@ -1,0 +1,368 @@
+@ROOT                   ..\..\Src\Apps\RegCOMSvrs
+@PROJECT_NAME           SITools: RegCOMSvrs
+@PROJECT_DESC           COM Server DLL that registers and unregisters in-process
+                        COM server DLLs.
+@COPYRIGHT              Copyright © Peter Johnson, 2000-2008
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               28/12/2000
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @NEW(
+        @FILE           RegCOMSvrs.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 2)
+    @DATE               06/01/2001
+    @COMMENTS           Major rewrite of code to provide registration /
+                        unregistration via an object accessed by interface
+                        rather than exporting registration / unregistration
+                        functions. Exported a single function to get interface
+                        object.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @UPDATED(
+        @FILE           RegCOMSvrs.dpr
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           ..\..\Intf\IntfRegCOMSvrs.pas
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 3)
+    @DATE               20/01/2001
+    @COMMENTS           Further re-write to convert the DLL into a COM server.
+                        The functionality of the server registration object
+                        remains unchanged from v2.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @UPDATED(
+        @FILE           RegCOMSvrs.dpr
+        @VERSION        3.0
+      )
+      @NEW(
+        @FILE           URegCOMSvrs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URegCOMSvrsExp.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Intf\IntfRegCOMSvrs.pas
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 4)
+    @DATE               01/04/2002
+    @COMMENTS           Unchanged other than to updated product number to 2.6 in
+                        version information. Version resource now contains a
+                        product version that echoes the SITools release number
+                        rather than the version of the RegCOMSvrs.dll executable
+                        file. File version number now contains the build number
+                        of the executable file.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.7
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.3
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 5)
+    @DATE               05/08/2002
+    @COMMENTS           Unchanged other than to updated product number to 2.6.1
+                        in version information.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.4
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 6)
+    @DATE               08/08/2002
+    @COMMENTS           Unchanged other than to updated product number to 2.6.2
+                        in version information.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.rc
+        @VERSION        1.5
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 7)
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @COMMENTS           Modified to use registration code from separate
+                        UCOMSvrRegProcs unit rather than that hard wired into
+                        URegCOMSvrs. There is no functional change to the
+                        program.
+    @DATE               29/12/2002
+    @FILES(
+      @NEW(
+        @FILE           ..\..\Shared\Support\UCOMSvrRegProcs.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           RegCOMSvrs.dpr
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           URegCOMSvrs.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           29/12/2002
+        @COMMENTS       No longer use the .rc file for version info resource -
+                        now use .vi file. Updated product number to 3.0.0.0 and
+                        file number to 3.0.1.7 changed company from PJSoft to
+                        DelphiDabbler.
+        @RENAMED_FROM   VRegCOMSvrs.rc
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 8)
+    @DATE               24/01/2003
+    @COMMENTS           Unchanged other than to increment product number to
+                        3.0.1.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.8.2
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           24/01/2003
+        @COMMENTS       Updated product number to 3.0.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 9)
+    @DATE               23/02/2003
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.8.2
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           23/02/2003
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 10)
+    @DATE               19/11/2003
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.10
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           19/11/2003
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 11)
+    @DATE               25/11/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           25/11/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 12)
+    @DATE               16/01/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           15/01/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 13)
+    @DATE               17/07/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           17/07/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 14)
+    @DATE               01/04/2007
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           25/03/2007
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 15)
+    @DATE               10/06/2007
+    @COMMENTS           Unchanged other than to update product, build number and
+                        comments in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           10/06/2007
+        @COMMENTS       + Updated product and build number.
+                        + Updated comments to refer to new license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 16)
+    @COMMENTS           Removed debugging error dialog box.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @DATE               23/02/2008
+    @FILES(
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           URegCOMSvrsExp.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           23/02/2008
+        @COMMENTS       Updated file, product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 17)
+    @DATE               01/03/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 18)
+    @DATE               10/04/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           10/04/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 19)
+    @DATE               16/09/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11.2
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VRegCOMSvrs.vi
+        @DATE           16/09/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+)

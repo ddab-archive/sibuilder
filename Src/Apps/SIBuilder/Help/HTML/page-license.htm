@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-license.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-license.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_LICENSEINFO
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>License Information Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		License Information Page
+	</h1>
+	
+	<p>
+		This page is used to define which, if any license is displayed by the
+		installer.
+	</p>
+	
+	<p>
+		If a license is to be displayed a special DLL required by the installer
+		to display the license is automatically included in the installation.
+		The user must provide the license file to that is to be displayed. The
+		installer deletes both the license and the DLL once the license has been
+		shown. 
+	</p>
+	
+	<p>
+		If the
+		<a href="licensefile.htm">license file</a>
+		is also to be used by the program being installed it must be explicitly
+		added to the project on the
+		<a href="page-files.htm">Files page</a>.
+		Developers are free to use the license DLL with their programs &ndash;
+		again the DLL needs to be explicitly added to the project in such cases.
+		In either case no additional overhead is incurred since each file is
+		included only once in the install program, regardless of the number of
+		copies to be installed.
+	</p>
+
+	<p>
+		The license page is divided into four main areas. Each of the key areas
+		is described below. 
+	</p>
+
+	<h2>
+		Display License Check Box
+	</h2>
+	
+	<p>
+		Check the <span class="ui">Display license</span> check box if a license
+		is to be displayed by the installer. If this check box is clear then the
+		remainder of the page is disabled and there is no more to do. If the box
+		is checked then, at a mimimum, a license file must be provided.
+	</p>
+
+	<h2>
+		License File Group Box
+	</h2>
+
+	<p>
+		Information about the license file to be displayed is entered here.
+		Enter the source license file name and path in the
+		<span class="ui">Source license file</span> edit box, or click the
+		button embedded in the edit box to display the
+		<a href="dlg-browselicense.htm">Browse for License File</a>
+		standard windows dialog and use that to find the license file. 
+	</p>
+
+	<p>
+		The license file can be dragged and dropped onto the group box from
+		Explorer.
+	</p>
+
+	<h2>
+		Dialog Box Properties Group Box
+	</h2>
+
+	<p>
+		In this group box the characteristics of the license dialog box are
+		defined.
+	</p>
+
+	<p>
+		The <span class="ui">Which buttons</span> drop-down list allows you to
+		choose the buttons that are displayed as follows:
+	</p>
+	
+	<ol class="spaced">
+		<li>
+			<span class="ui">Accept and Decline:</span> two buttons are
+			displayed and the user is required to accept the license before
+			proceeding with the installation. Should the user decline then the
+			installation is halted.
+		</li>
+		<li>
+			<span class="ui">Close only:</span> a single button is displayed and
+			installation simply continues when the dialog box is closed.
+		</li>
+	</ol>
+
+	<p>
+		The dialog box can be displayed in one of three sizes &ndash; small,
+		medium and large. Choose the required size from the
+		<span class="ui">Dialog size</span> drop-down list.
+	</p>
+
+	<h2>
+		Test Group Box
+	</h2>
+
+	<p>
+		Click the <span class="ui">Display License</span> button to display the
+		<a href="dlg-testlicense.htm">Test License</a>
+		dialog box according to the defined properties. If no license file has
+		been selected, or the chosen file doesn't exist a message to this effect
+		is displayed in the dialog box.
+	</p>
+
+	<p>
+		The license dialog box displays a <span class="ui">Help</span> button to
+		enable you to get further information about the dialog box. This button
+		will not appear when the dialog box is displayed by the installer. The
+		buttons requested in the Which buttons drop down list are displayed but
+		serve only to close the dialog box.
+	</p>
+</body>
+
+</html>

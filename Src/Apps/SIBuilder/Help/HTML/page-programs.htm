@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-programs.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-programs.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_RUNPROGRAMS
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Programs Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Programs Page
+	</h1>
+
+	<p>
+		The installer and uninstaller are both able to run external programs*.
+		These can either be programs known to be available on the target
+		computer (e.g. <span class="prog">NotePad</span>) or programs that are
+		included in the installation project. This facility enables the
+		functionalilty of the installer to be extended by calling the external
+		programs. Files required only by the installer can be deleted after they
+		have been run. This page is used to determine which programs are run by
+		the installer/uninstaller.
+	</p>
+
+	<p>
+		The programs that are to be run are displayed in a tree, listed under
+		the <span class="ui">Install Programs</span> and
+		<span class="ui">Uninstall programs</span> nodes, depending on when the
+		program is to be run. Programs that are included in the install project
+		are indicated by icons according to their file type. External programs
+		are indicated by a special exclamation icon, because their type is not
+		known.
+	</p>
+
+	<p>
+		Parameters that are to be passed to the program are listed under its
+		entry in the tree and are preceeded by a diamond shaped icon.
+	</p>
+
+	<p>
+		If there are any problems with a program or a parameter then its icon is
+		replaced by a
+		<img src="../Images/bomb.gif"
+			style="vertical-align:bottom;width:16px;height:16px;">
+		symbol and a clickable prompt appears under the page's buttons which
+		leads to help on what may be wrong.
+	</p>
+
+	<p>
+		Programs are updated by using the buttons on the right of the page, or
+		by the equivalent items on the tree view's popup menu. The following
+		commands are available:
+	</p>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Add&nbsp;Program</span>
+			</td>
+			<td>
+				Adds a new program using the
+				<a href="dlg-editprog.htm">Edit Program Details</a>
+				dialog box. Whether the program defaults to running on
+				installation or uninstallation depends which of these nodes has
+				the current selection, but this can be changed in the dialog
+				box.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Edit&nbsp;Program</span>
+			</td>
+			<td>
+				Edits details of the currently selected program using the
+				<a href="dlg-editprog.htm">Edit Program Details</a>
+				dialog box.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Delete&nbsp;Program</span>
+			</td>
+			<td>
+				Deletes the currently selected program.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Delphi&nbsp;COM&nbsp;Apps</span>
+			</td>
+			<td>
+				Adds a special entry to both the Install and Uninstall nodes
+				that will register a Delphi COM server program. The program is
+				chosen using the
+				<a href="dlg-comserverapp.htm">New Delphi COM Server
+				Application</a> dialog box. The program specified should be a
+				valid out of process COM server application that supports
+				registration using the Delphi standard
+				<span class="switch">/regserver</span> and
+				<span class="switch">/unregserver</span> command line switches.
+				The selected program is not checked for compliance. This command
+				is disabled if there are no 32 bit applications in the project.
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		* The installer can't associate documents with their registered
+		applications so only executable files can be run. Any documents should
+		be passed to applications as parameters.
+	</p>
+
+</body>
+
+</html>

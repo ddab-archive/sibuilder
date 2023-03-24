@@ -1,0 +1,3335 @@
+@PROJECT_NAME           SITools: SIBuilder
+@PROJECT_DESC           A windows application that allows user to create and
+                        edit installation programs.
+@ROOT                   ..\..\Src\Apps\SIBuilder
+@COPYRIGHT              Copyright © Peter Johnson, 2000-2008
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               09/03/2000
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.3
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @NEW(
+        @FILE           SIBuilder.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmGenericDlg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmGenericViewDlg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmGenericOKDlg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmMain.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmWelcomeDlg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmRegKeyEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmFileProperties.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmGroupEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmOptions.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmChooseFolderDlg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           USettings.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UProjectBuilder.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UDCC32.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UBaseProject.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UFiles.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UGroups.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegData.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegKeys.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegObjects.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegRootKeys.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UBinaryStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UDataStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UStreamWrapper.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UObjList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UStreamableObjList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UStringProcs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UReportingObjects.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UResWriterStreams.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Images.rc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Help\SIBuilder.hta
+        @DATE           09/03/2000
+        @COMMENTS       Help topic file.
+      )
+      @NEW(
+        @FILE           Help\Help.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Help\Help.map
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Help\SIBuilder.cnt
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           Welcome.res
+        @DATE           09/03/2000
+        @COMMENTS       RCDATA resource that contains rich text that is
+                        displayed in welcome dialog box (FmWelcomeDlg.pas).
+      )
+      @NEW(
+        @FILE           Misc\Small.bmp
+        @DATE           09/03/2000
+        @COMMENTS       Small bitmaps stored in Images.res by Images.rc.
+      )
+      @NEW(
+        @FILE           Misc\SIBuilder.ico
+        @DATE           09/03/2000
+        @COMMENTS       SIBuilder icon. Automatically included in auto-generated
+                        SIBuilder.res.
+      )
+      @NEW(
+        @FILE           Misc\Welcome.rtf
+        @DATE           09/03/2000
+        @COMMENTS       Rich text stored as RCDATA auto-generated Welcome.res.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1 (build 2)
+    @DATE               04/04/2000
+    @COMMENTS           Added:
+                        + Access the PJSoft website to menu
+                        + Ability to create a HTML file manifest report
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.3
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           04/04/2000
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1.1 (build 3)
+    @DATE               15/07/2000
+    @COMMENTS           Fixed bug that was causing compile using DCC32 to fail
+                        when a path containing spaces was passed on compiler's
+                        command line.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.3
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           UDCC32.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.2
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1.2 (build 4)
+    @DATE               29/07/2000
+    @COMMENTS           Rebuild to include a bug fixed unit. Bug has no direct
+                        impact on SIBuilder.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.3
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.3
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 5)
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.3
+                        + Microsoft Help Compiler v4.03.0002
+    @COMMENTS           Key new features of this release are:
+                        + New Install Path options. An install path option can
+                          now be set so that the install program asks the user
+                          to provide an install path. It is still possible to
+                          provide an install path on the install program's
+                          command line.
+                        + Other programs can now be executed by the installer.
+                          You can now specify programs to be executed by the
+                          installer after it has installed the required files
+                          and updated the registry. This means that such actions
+                          as displaying a license in NotePad or ActiveX
+                          component registration can easily be carried out. The
+                          install program can effectively be extended by
+                          distributing programs that provide the additional
+                          functionality with the installer, and then running
+                          them using this facility.
+                        + Control of File Overwriting. When files already exist
+                          on the target system the new file can now (a) always
+                          overwrite the existing file (as in orevious versions),
+                          (b) only overwrite older files or (c) never overwrite
+                          exiting files.
+                        + Improved handling of registry data. Binary data can
+                          now be entered into registry directly by reading small
+                          (<=2Kb) data files. String data can now be pasted from
+                          clipboard as a string registry data entry.
+                        + New file format adopted Projects are now saved in XML
+                          like files, and the install/uninstall script has now
+                          been separated from the project file - it too is
+                          XML-like. A conversion dialogue box has been made
+                          available on the Tools menu to enable old-style binary
+                          project and template files to be converted.
+                        + Re-written install and un-install programs The Install
+                          program and UnInstall program have been totally
+                          re-written. They both now access InstallLib.dll for
+                          most of their functionality. This has resulted in a
+                          smaller overhead in the self-extracting installer -
+                          install programs which include the uninstaller, are
+                          over 100Kb smaller than those created with SIBuilder
+                          1, while those without the uninstaller are 30-40Kb
+                          smaller.
+                        + The interface is now in a wizard format - the tabs
+                          below the menu bar are gone and have been replaced by
+                          Previous and Next buttons. The wizard opens on the
+                          project details page.
+                        + There is a new side bar to the window containing the
+                          SIBuilder logo. This can be switched off in the
+                          Options dialogue box accessed through the Tools |
+                          Options menu option.
+                        + A new Info Pane sits at the top of the window. The
+                          pane give a brief description of the current page and
+                          may provide clickable HotLinks. The Info Pane can be
+                          switched off or recoloured using the Options dialogue
+                          box opened via the Tools | Options menu.
+                        + The Options menu has been renamed as the Tools menu. A
+                          new Convert option has been added (to enable
+                          conversion from v1 to v2 project files) along with an
+                          extended Options dialogue box.
+                        + Registry key deletion is now achieved via the Edit
+                          Registry Key Properties dialogue box rather than via a
+                          check box on the Registry page.
+                        + The Welcome screen has been revised to include
+                          HotLinks to various help topics, the PJSoft website,
+                          and to provide a short cut to starting a new project
+                          or opening an existing one.
+    @DATE               04/09/2000
+    @FILES(
+      @REMOVED          Welcome.res
+      @REMOVED          UProjectBuilder.pas
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmGenericDlg.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmWelcomeDlg.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmRegKeyEdit.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmFileProperties.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmOptions.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UDCC32.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\UBaseProject.pas
+      )
+      @UPDATED(
+        @FILE           UFiles.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\UFiles.pas
+      )
+      @UPDATED(
+        @FILE           UGroups.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\UGroups.pas
+      )
+      @UPDATED(
+        @FILE           URegData.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\URegData.pas
+      )
+      @UPDATED(
+        @FILE           URegKeys.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\URegKeys.pas
+      )
+      @UPDATED(
+        @FILE           URegObjects.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\URegObjects.pas
+      )
+      @UPDATED(
+        @FILE           URegRootKeys.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\SIPrj\URegRootKeys.pas
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\List\UXMLObjects.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\List\UStreamableObjList.pas
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\List\UReportingObjects.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.2
+      )
+      @NEW(
+        @FILE           ..\..\Shared\XML\UXMLTag.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\XML\UTokeniser.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\XML\UCharStreamReader.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\XML\UCharStreamWriter.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\XML\UXMLFile.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UTabSheetHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URegistryTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UGroupsTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URunTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UProjFileManager.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UProjFileVerManager.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           USIBConverter.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmConvertFiles.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UActiveRTFWrapper.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmFileEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UCtrlState.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmProgEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URunProgs.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.4
+      )
+      @NEW(
+        @FILE           ImageList.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           RTF.res
+        @DATE           04/09/2000
+        @COMMENTS       RCDATA resources containing rich text used by the
+                        Welcome dialog and the info pane. This replaces and
+                        extends Welcome.res.
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\List\UObjList.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.cnt
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           04/09/2000
+      )
+      @NEW(
+        @FILE           Misc\Build.rtf
+        @DATE           04/09/2000
+        @COMMENTS       RTF code stored as RCDATA in auto-generated RTF.res.
+                        Relates to build tab.
+      )
+      @NEW(
+        @FILE           Misc\Groups.rtf
+        @DATE           04/09/2000
+        @COMMENTS       RTF code stored as RCDATA in auto-generated RTF.res.
+                        Relates to Groups tab.
+      )
+      @NEW(
+        @FILE           Misc\ProjDetails.rtf
+        @DATE           04/09/2000
+        @COMMENTS       RTF code stored as RCDATA in auto-generated RTF.res.
+                        Relates to project details tab.
+      )
+      @NEW(
+        @FILE           Misc\Registry.rtf
+        @DATE           04/09/2000
+        @COMMENTS       RTF code stored as RCDATA in auto-generated RTF.res.
+                        Relates to registry details tab.
+      )
+      @NEW(
+        @FILE           Misc\RunProgs.rtf
+        @DATE           04/09/2000
+        @COMMENTS       RTF code stored as RCDATA in auto-generated RTF.res.
+                        Relates to run programs details tab.
+      )
+      @UPDATED(
+        @FILE           Misc\Welcome.rtf
+        @DATE           04/09/2000
+        @COMMENTS       Completely rewritten as text relating to welcome page
+                        rather than dialog box. RTF is stored as RCDATA in
+                        auto-generated RTF.res.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1 (build 6)
+    @DATE               20/12/2000
+    @COMMENTS           Improved program's handling and display of Delphi
+                        command line compiler. Added new option to control
+                        appearance and captured compiler's output re compile
+                        errors for display to user. Added success / failure
+                        "icons" to build page.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.4
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UDCC32.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmOptions.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UCtrlState.pas
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           UDCC32Info.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           20/12/2000
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.2 (build 7)
+    @DATE               24/12/2000
+    @COMMENTS           + Added facility to store path macros in registry data
+                          strings that are marked for expansion by install
+                          program.
+                        + Enabled empty string data values to be inserted in
+                          registry.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.5
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           URegistryTabHandler.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URegData.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           24/12/2000
+        @COMMENTS       Updated to reflect new support for path macros in
+                        registry string data.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.3 (build 8)
+    @DATE               29/12/2000
+    @COMMENTS           + Added facility to register and unregister in-process
+                          COM server DLLs on installation and un-installation.
+                          This required an update in file version to 203.
+                        + Made it possible to run other programs before deletion
+                          of files when uninstaller runs in addition to existing
+                          ability to run programs after files installed during
+                          installation.
+                        + Added shortcut method to auto-registering
+                          Delphi-created local server applications using run
+                          programs facility.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.5
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URunProgs.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UGroups.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        2.1
+      )
+      @NEW(
+        @FILE           FmCOMServers.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmInstallFileName.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UCOMServers.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           29/12/2000
+        @COMMENTS       Added new help topics for COM server registration
+                        dialogs. Revised topics for Run programs page etc. and
+                        What's new and corrected error in Build the Project
+                        topic. Added "what's this" style topics for info pane,
+                        side bar and Run Programs page info.
+      )
+      @UPDATED(
+        @FILE           RTF.res
+        @DATE           29/12/2000
+        @COMMENTS       Updated with revised RunProgs.rtf.
+      )
+      @UPDATED(
+        @FILE           Misc\RunProgs.rtf
+        @DATE           29/12/2000
+        @COMMENTS       Updated re new COM server support.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.4 (build 9)
+    @DATE               06/01/2001
+    @COMMENTS           Added facility to prevent In process servers registered
+                        by installer from being uninstalled by uninstaller.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.5
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           FmCOMServers.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmInstallFileName.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UCOMServers.pas
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           FmCOMServer.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.8
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           06/01/2001
+        @COMMENTS       Edited topics about inprocess COM servers new
+                        unregistration choices.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.5 (build 10)
+    @DATE               21/01/2001
+    @COMMENTS           + Added facility to define a license file to be
+                          displayed in a user-configurable license dialog box by
+                          installer. Modified file format to v205 to enable
+                          this. Added menu option to display SIBuilder's own
+                          license agreement in a dialog box.
+                        + Updated installation report to show files installed
+                          for license dialog support and COM server
+                          registration.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.5
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.3
+      )
+      @NEW(
+        @FILE           FmConfigLicense.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ULicenseInfo.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           UGroups.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           UInstallReport.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        2.2
+      )
+      @NEW(
+        @FILE           ULicenseDlgHelp.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.9
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.2
+      )
+      @NEW(
+        @FILE           ..\..\Intf\IntfSITLicenseDlg.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hta
+        @DATE           21/01/2001
+        @COMMENTS       Updated with help on addition of license dialog boxes to
+                        install projects and as a SIBuilder menu item.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.5.1 (build 11)
+    @DATE               25/06/2001
+    @COMMENTS           + Fixed bug where detection of installed versions of
+                          Delphi was failing in certain locales.
+                        + Updated to use v2 of drop files components with
+                          different unit and OnDropFiles evetn handlers.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.7.5
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           FmConvertFiles.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UDCC32Info.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.10
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.5.2 (build 12)
+    @DATE               25/06/2001
+    @COMMENTS           + Replaced custom folder selection dlg box with Windows
+                          standard dlg box.
+                        + Gave bottom bevel on dlg boxes line rather than box
+                          style.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.9.2
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @REMOVED          FmChooseFolderDlg.pas
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        2.5
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.5
+      )
+      @UPDATED(
+        @FILE           FmGenericDlg.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.11
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           25/06/2001
+        @COMMENTS       Edited Choose Folder Dialog topic to describe standard
+                        Windows dlg.
+        @RENAMED_FROM   Help\SIBuilder.hta
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.5.3 (build 13)
+    @DATE               15/09/2001
+    @COMMENTS           Fixed to work properly under Windows 2000 - avoided use
+                        of WingDongs font in Welcome screen that was causing
+                        problems with hot links under Windows 2000.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.12.0
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           FmWelcomeDlg.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           RTF.res
+        @DATE           15/09/2001
+        @COMMENTS       Updated with revised Welcome.rtf.
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.12
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           15/09/2001
+        @COMMENTS       Updated welcome screen topic with new way of showing
+                        numbers in that screen and fixed an invalid topic
+                        reference in a hot spot.
+      )
+      @UPDATED(
+        @FILE           Misc\Welcome.rtf
+        @DATE           15/09/2001
+        @COMMENTS       Updated RTF code.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.5.4 (build 14)
+    @DATE               25/11/2001
+    @COMMENTS           Fixed bug which was using X:\Program Files for all
+                        program files folders instead of using required
+                        localised name.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+                        + Help Topic Author v1.12.0
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.13
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           25/11/2001
+        @COMMENTS       Changed all entries refering to hard-wired C:\Program
+                        Files. Also reformatted topics.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.6 (build 15)
+    @DATE               01/04/2002
+    @COMMENTS           + Added new Common Files path macro - installer can now
+                          store files in the Common Files folder.
+                        + Prevented user from deleting Program Files or Common
+                          File folders.
+                        + Fixed hot link bug on details page where hot linked
+                          phrases were ignored when word wrapped.
+                        + Updated PJSoft components used by program.
+                        + Included build number in version resource and made
+                          product version echo SITools release number rather
+                          than the version of the SIBuilder executable file.
+                          File version number now contains the build number of
+                          the executable file.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.7
+                        + Help Topic Author v1.12.2
+                        + Microsoft Help Compiler v4.03.0002
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.6
+      )
+      @UPDATED(
+        @FILE           FmFileProperties.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.14
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           01/04/2002
+        @COMMENTS       Added info about Common Files folder macro and made a
+                        few other corrections.
+      )
+      @UPDATED(
+        @FILE           RTF.res
+        @DATE           01/04/2002
+        @COMMENTS       Updated with changed Welcome.rtf
+      )
+      @UPDATED(
+        @FILE           Misc\Welcome.rtf
+        @DATE           01/04/2002
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.6.1 (build 16)
+    @DATE               05/08/2002
+    @COMMENTS           Updated current install file version to 206 from 205.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.2
+                        + Microsoft Help Compiler v4
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.15
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.6.2 (build 17)
+    @DATE               08/08/2002
+    @COMMENTS           Fixed bug which was causing programs installed over
+                        older versions to occasionally be displayed incorrectly.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.2
+                        + Microsoft Help Compiler v4
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        2.7
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.rc
+        @VERSION        1.16
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 18)
+    @DATE               29/12/2002
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.3
+                        + Microsoft Help Compiler v4
+    @COMMENTS           Major rewrite:
+                        + No longer requires Borland Delphi to compile install
+                          programs - although option to use it has been
+                          retained.
+                        + Can now configure type of compression used - two
+                          compressions types provided (ZLib and BZip2) and
+                          system is extensible.
+                        + Added ability to register applications and shared DLLs
+                          with Windows.
+                        + Can now configure installer to detect operating system
+                          and customise installation accordingly.
+                        + Redesigned user interface giving quick access to an
+                          increased number of pages.
+                        + Now provides access to DelphiDabbler rather than
+                          PJSoft website.
+                        + Now uses some custom design time components stored in
+                          SIBilder.bpl package. These components are
+                          incorporated into executable on compilation.
+    @FILES(
+      @REMOVED          FmCOMServer.pas
+      @REMOVED          FmCOMServers.pas
+      @REMOVED          FmConvertFiles.pas
+      @REMOVED          RTF.res
+      @REMOVED          UCOMServers.pas
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UStringProcs.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ULicenseTabHandler.pas
+        @VERSION        2.0
+        @RENAMED_FROM   FmConfigLicense.pas
+      )
+      @UPDATED(
+        @FILE           FmFileEdit.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmFileProperties.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmInstallFileName.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           FmOptions.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmRegKeyEdit.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UWelcomeTabHandler.pas
+        @VERSION        3.0
+        @RENAMED_FROM   FmWelcomeDlg.pas
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.cnt
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           29/12/2002
+        @COMMENTS       Significant rewrite into new format with various new
+                        topics (and topic deletions) for release 3 of program.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           UImageList.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ImageList.inc
+      )
+      @UPDATED(
+        @FILE           Resources.rc
+        @VERSION        2.0
+        @RENAMED_FROM   Images.rc
+      )
+      @UPDATED(
+        @FILE           UActiveRTFWrapper.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UGUIHelper.pas
+        @VERSION        2.0
+        @RENAMED_FROM   UCtrlState.pas
+      )
+      @UPDATED(
+        @FILE           UDCC32.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           UDCC32Info.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UFiles.pas
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           UGroups.pas
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           UGroupsTabHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UInstallReport.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           ULicenseInfo.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           UProjFileManager.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UProjFileVerManager.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URegData.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           URegistryTabHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           URegKeys.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           URegRootKeys.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           URunProgs.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UTabSheetHandler.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           29/12/2002
+        @RENAMED_FROM   VSIBuilder.rc
+        @COMMENTS       No longer use the .rc file for version info resource -
+                        now use .vi file. Updated file version to 3.0.0.18 and
+                        product number to 3.0.0.0 and changed company from
+                        PJSoft to DelphiDabbler.
+      )
+      @NEW(
+        @FILE           FmAbout.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmOSOptions.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmRegMacroEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmRegTemplates.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmSimpleEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           FmSIP2ConvMsg.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Intf\IntfCompressor.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UBinStrings.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UBuilders.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UCmdDispatcher.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UCompressionMgr.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UDataWriter.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UEmbeddedData.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFileValidator.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UInfoWdw.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UMessageBox.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Support\UOS.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UOSTabHandler.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UOSTreeViewMgr.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UPayload.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UPayloadStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URegEditFile.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URegTemplates.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\URegUtils.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           URunProgValidator.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           USIP2Converter.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UUnicodeConvStringList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UWarner.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           SIBilder.bpl
+        @VERSION        1.0
+        @DATE           29/12/2002
+        @COMMENTS       Desgin time package containing custom components used in
+                        GUI.
+      )
+      @NEW(
+        @FILE           Misc\CheckBoxes.bmp
+        @DATE           14/08/2002
+        @COMMENTS       Bitmap containing check box bitmaps included in
+                        Resources.res.
+      )
+      @NEW(
+        @FILE           Misc\DDLogoGrey.bmp
+        @DATE           15/09/2002
+        @COMMENTS       DelphiDabbler logo included in Resources.res.
+      )
+      @NEW(
+        @FILE           Misc\AboutDlg.rtf
+        @DATE           15/12/2002
+        @COMMENTS       Tagged rich text for about dialog.
+      )
+      @UPDATED(
+        @FILE           Misc\Build.rtf
+        @DATE           14/12/2002
+        @COMMENTS       Revised build tab RTF to tagged RTF.
+      )
+      @NEW(
+        @FILE           Misc\COMServers.rtf
+        @DATE           14/12/2002
+        @COMMENTS       Tagged RTF for COMServers page.
+      )
+      @UPDATED(
+        @FILE           Misc\Groups.rtf
+        @DATE           13/12/2002
+        @COMMENTS       Revised RTF code for Groups tab.
+      )
+      @NEW(
+        @FILE           Misc\GroupsTabErr.rtf
+        @DATE           22/12/2002
+        @COMMENTS       RTF for error message relating the groups tab.
+      )
+      @NEW(
+        @FILE           Misc\LicenseInfo.rtf
+        @DATE           20/12/2002
+        @COMMENTS       Tagged RTF for License Info tab.
+      )
+      @NEW(
+        @FILE           Misc\LicenseTest.rtf
+        @DATE           17/12/2002
+        @COMMENTS       Help link for Display License option on License tab.
+      )
+      @NEW(
+        @FILE           Misc\PrgDlgParamErr.rtf
+        @DATE           19/12/2002
+        @COMMENTS       Tagged RTF for help link for program dialog box
+                        parameter error.
+      )
+      @NEW(
+        @FILE           Misc\PrgDlgProgErr.rtf
+        @DATE           19/12/2002
+        @COMMENTS       Tagged RTF for help link for program dialog box program
+                        error.
+      )
+      @UPDATED(
+        @FILE           Misc\ProjDetails.rtf
+        @DATE           01/10/2002
+        @COMMENTS       Updated RTF code for project details page.
+      )
+      @UPDATED(
+        @FILE           Misc\Registry.rtf
+        @DATE           14/12/2002
+        @COMMENTS       Updated RTF for registry tab.
+      )
+      @NEW(
+        @FILE           Misc\RegTpltDlg.rtf
+        @DATE           12/12/2002
+        @COMMENTS       RTF explaning use of registry template dialog box.
+      )
+      @UPDATED(
+        @FILE           Misc\RunProgs.rtf
+        @DATE           14/12/2002
+        @COMMENTS       Updated RTF for run programs tab.
+      )
+      @NEW(
+        @FILE           Misc\RunTabProgErr.rtf
+        @DATE           08/04/2008
+        @COMMENTS       RTF code for help link for errors on Run programs page.
+      )
+      @NEW(
+        @FILE           Misc\TargetOS.rtf
+        @DATE           14/12/2002
+        @COMMENTS       Tagged RTF code for Target OS page.
+      )
+      @NEW(
+        @FILE           Misc\WelcomeInfo.rtf
+        @DATE           13/12/2002
+        @COMMENTS       RTF code for title of welcome page.
+      )
+      @UPDATED(
+        @FILE           Misc\WelcomePage.rtf
+        @DATE           15/12/2002
+        @COMMENTS       Revised RTF code for welcome page.
+        @RENAMED_FROM   Misc\Welcome.rtf
+      )
+      @UPDATED(
+        @FILE           Misc\Small.bmp
+        @DATE           19/12/2002
+        @COMMENTS       Updated some of the small icons.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 19)
+    @DATE               24/01/2003
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.3
+                        + Microsoft Help Compiler v4
+    @COMMENTS           Fixed bug where an error was being reported when no
+                        license file was supplied even when we weren't including
+                        a license.
+    @FILES(
+      @UPDATED(
+        @FILE           ULicenseInfo.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           24/01/2003
+        @COMMENTS       Updated file version to 3.0.1 and product version to
+                        3.0.1.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           24/01/2003
+        @COMMENTS       Update copyright date to include 2003
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.1 (build 20)
+    @DATE               23/02/2003
+    @COMMENTS           + Added ability to uninstall named programs running
+                          installer.
+                        + Added access to online tutorial from Help menu.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.3
+                        + Microsoft Help Compiler v4
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UStringProcs.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.8
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           23/02/2003
+        @COMMENTS       Added topic relating to new options relating to
+                        uninstallation of other software.
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           23/02/2003
+        @COMMENTS       Updated product and file version numbers.
+      )
+      @UPDATED(
+        @FILE           SIBilder.bpl
+        @VERSION        1.1
+        @DATE           23/02/2003
+      )
+      @NEW(
+        @FILE           FmUninstProjects.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UUninstPrevProj.pas
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.1.1 (build 21)
+    @DATE               19/11/2003
+    @COMMENTS           Fixed bug that occurs on some systems by not being able
+                        to access hot links by replacing the rich edit based
+                        active RTF classes with new dedicated hot text component
+                        that has been designed to handle "hot text" with no
+                        dependence on rich edit. This new component is accessed
+                        via SIBilder.bpl.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.10
+                        + Help Topic Author v1.12.3
+                        + Microsoft Help Compiler v4
+    @FILES(
+      @REMOVED          UActiveRTFWrapper.pas
+      @REMOVED          Misc\AboutDlg.rtf
+      @REMOVED          Misc\Build.rtf
+      @REMOVED          Misc\COMServers.rtf
+      @REMOVED          Misc\Groups.rtf
+      @REMOVED          Misc\GroupsTabErr.rtf
+      @REMOVED          Misc\LicenseInfo.rtf
+      @REMOVED          Misc\LicenseTest.rtf
+      @REMOVED          Misc\PrgDlgParamErr.rtf
+      @REMOVED          Misc\PrgDlgProgErr.rtf
+      @REMOVED          Misc\ProjDetails.rtf
+      @REMOVED          Misc\Registry.rtf
+      @REMOVED          Misc\RegTpltDlg.rtf
+      @REMOVED          Misc\RunProgs.rtf
+      @REMOVED          Misc\RunTabProgErr.rtf
+      @REMOVED          Misc\TargetOS.rtf
+      @REMOVED          Misc\WelcomeInfo.rtf
+      @REMOVED          Misc\WelcomePage.rtf
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.2
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.2
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           FmAbout.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmRegTemplates.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           UCmdDispatcher.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UGroupsTabHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UWarner.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ULicenseTabHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UTabSheetHandler.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UWelcomeTabHandler.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           Resources.rc
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           19/11/2003
+        @COMMENTS       Updated file version to 3.1.1.21 and product version to
+                        3.1.1
+      )
+      @UPDATED(
+        @FILE           SIBilder.bpl
+        @VERSION        2.0
+        @DATE           19/11/2003
+      )
+      @NEW(
+        @FILE           Misc\AboutDlg.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\Build.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\Groups.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\GroupsTabErr.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\LicenseInfo.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\PrgDlgParamErr.txt
+        @DATE           18/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\PrgDlgProgErr.txt
+        @DATE           18/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\ProjDetails.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\Registry.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\RunProgs.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\RunTabProgErr.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\TargetOS.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+      @NEW(
+        @FILE           Misc\WelcomeInfo.txt
+        @DATE           17/11/2003
+        @COMMENTS       New hot-text version of old RTF file with same base name
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.1.2 (build 22)
+    @DATE               28/11/2003
+    @COMMENTS           Refactoring only (deleted unused unit references in
+                        units and moved some references from interface to
+                        implementation). Functionality unchanged.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+                        + Help Topic Author v1.12.3
+                        + Microsoft Help Compiler v4
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.3
+      )
+      @UPDATED(
+        @FILE           FmFileEdit.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmRegTemplates.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           UDCC32.pas
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\URegUtils.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URegData.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           ULicenseTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           UGroupsTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           UGroups.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\XML\UXMLFile.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URegRootKeys.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           URegKeys.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           ULicenseInfo.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           28/11/2003
+        @COMMENTS       Updated file and product version numbers.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.2 (build 23)
+    @DATE               25/11/2005
+    @COMMENTS           + Added new [Desktop] and [Programs Menu] path macros.
+                        + Changed to use custom help handling class to fix help
+                          display problems introduced when compiled with Delphi
+                          7. Custom help processing replaces Delphi's default
+                          help system.
+                        + Improved appearance of main widnow's button list in
+                          all colour schemes.
+                        + Embedded code to access DelphiDabbler website and
+                          removed dependency on DDNet.dll.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.4
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           25/11/2005
+        @COMMENTS       Updated file, product and build numbers.
+      )
+      @UPDATED(
+        @FILE           UMessageBox.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmSIP2ConvMsg.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UCmdDispatcher.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ULicenseDlgHelp.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmGenericDlg.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.3
+      )
+      @NEW(
+        @FILE           UHelpManager.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           25/11/2005
+        @COMMENTS       + Added separate topics for RegInProcSvr.exe and
+                          Shortcutter.exe and linked from extra programs page.
+                        + Added info about [Desktop] and [Programs Menu] to path
+                          macros topic.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.cnt
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           SIBCmp.bpl
+        @VERSION        2.1
+        @DATE           25/11/2005
+        @COMMENTS       Renamed library and moved location.
+        @RENAMED_FROM   SIBilder.bpl
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.2.1 (build 24)
+    @DATE               16/01/2006
+    @COMMENTS           + Made any license file get copied to file extraction
+                          folder [ScratchPad] rather than [Temp] folder.
+                        + Changed to allow installer to be built only with
+                          Delphi 4 to 7 rather than 2 to 7 since install program
+                          will not compile with Delphi 2 and 3.
+                        + Updated help file re these changes and flagged the
+                          Delphi compilation option as deprecated.
+                        + Updated version number expected in project and
+                          installation scripts to 302 from 301.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @FILES(
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           15/01/2006
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           UDCC32Info.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           15/01/2006
+        @COMMENTS       + Changed to note that Delphi compilation method is only
+                          available for Delphi 4 to 7 as is deprecated.
+                        + Noted new [ScratchPad] path macro.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           ULicenseInfo.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.9
+      )
+      @UPDATED(
+        @FILE           SIBCmp.bpl
+        @VERSION        2.1.1
+        @DATE           15/01/2006
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.2.2 (build 25)
+    @DATE               17/07/2006
+    @COMMENTS           + Fixed bugs in registry data handling UI and binary
+                          registry data processing.
+                        + Fixed help system bugs: F1 and common dialog box help
+                          buttons were not working and help system was not
+                          always closing when program closed.
+                        + Improved clipboard paste operation in SIBuilder's
+                          registry data dialog box.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @FILES(
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           17/07/2006
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.5
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           UHelpManager.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           URegistryTabHandler.pas
+        @VERSION        2.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.3 (build 26)
+    @DATE               01/04/2007
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @COMMENTS           + Removed facility to compile install programs using
+                          Delphi. Compilation using built in packager is now the
+                          only option.
+                        + Refactored some custom component code to remove direct
+                          dependency on DelphiDabbler library code.
+                        + Updated help file re changes.
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.4
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.6
+      )
+      @UPDATED(
+        @FILE           FmOptions.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UBuilders.pas
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.10
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        3.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           25/03/2007
+        @COMMENTS       Updated file, product and build numbers.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           26/03/2007
+        @COMMENTS       Removed topics and narrative that referred to
+                        compilation of install programs using Delphi.
+      )
+      @UPDATED(
+        @FILE           SIBCmp.bpl
+        @VERSION        2.1.2
+        @DATE           25/03/2007
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.3.1 (build 27)
+    @DATE               10/06/2007
+    @COMMENTS           + Increased size of license dialog box.
+                        + Changed to new executable file license and released
+                          source code under MPL.
+                        + Updated copyright and licensing help topic to contain
+                          new license.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @FILES(
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.7
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           10/06/2007
+        @COMMENTS       + Updated file and product number.
+                        + Updated comments to refer to new license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.3.2 (build 28)
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + Help Topic Author v1.16
+                        + Microsoft Help Workshop 4.
+    @COMMENTS           + Added new build batch file.
+                        + Fixed bug in registry templates dialog box.
+                        + Refactored include files as units.
+                        + Fixed registry file import bug.
+                        + Changed so that fixed registry data is now read from
+                          HKLM in registry leaving only user-modifiable data in
+                          HKCU.
+                        + Moved user settings in registry to new Options
+                          registry subkey.
+                        + Replaced some string literals with resource strings.
+                        + Moved default project settings file from application
+                          installation directory to a subdirectory of the user's
+                          application data directory.
+    @DATE               24/02/2008
+    @FILES(
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.5
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           FmAbout.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmFileEdit.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmFileProperties.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.8
+      )
+      @UPDATED(
+        @FILE           FmOptions.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           FmOSOptions.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           FmProgEdit.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           FmRegDataItemEdit.pas
+        @VERSION        1.6
+      )
+      @UPDATED(
+        @FILE           FmRegKeyEdit.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmRegMacroEdit.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmRegTemplates.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmSIP2ConvMsg.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           FmUninstProjects.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           SIBCmp.bpl
+        @VERSION        2.1.3
+      )
+      @UPDATED(
+        @FILE           UBinaryStream.pas
+        @VERSION        1.0
+        @COMMENTS       Unit moved unchanged.
+        @RENAMED_FROM   ..\..\Shared\Stream\UBinaryStream.pas
+      )
+      @UPDATED(
+        @FILE           UBuilders.pas
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           UBuildTabHandler.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           UCmdDispatcher.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           UCompressionMgr.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UDataStream.pas
+        @VERSION        1.0
+        @COMMENTS       Unit moved unchanged.
+        @RENAMED_FROM   ..\..\Shared\Stream\UDataStream.pas
+      )
+      @UPDATED(
+        @FILE           UDetailsTabHandler.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           UFiles.pas
+        @VERSION        3.1
+      )
+      @UPDATED(
+        @FILE           UFileValidator.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UGroupsTabHandler.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           UHelpContexts.pas
+        @VERSION        2.0
+        @RENAMED_FROM   Help\Help.inc
+      )
+      @UPDATED(
+        @FILE           UHelpManager.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           ULicenseInfo.pas
+        @VERSION        2.5
+      )
+      @UPDATED(
+        @FILE           ULicenseTabHandler.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           UObjList.pas
+        @VERSION        1.2
+        @RENAMED_FROM   ..\..\Shared\List\UObjList.pas
+      )
+      @UPDATED(
+        @FILE           UOSTabHandler.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UOSTreeViewMgr.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UProject.pas
+        @VERSION        3.2
+      )
+      @UPDATED(
+        @FILE           UProjFileManager.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UProjFileVerManager.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           URegEditFile.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           URegistryTabHandler.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           URegTemplates.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UReportingObjects.pas
+        @VERSION        2.0
+        @COMMENTS       Unit moved unchanged.
+        @RENAMED_FROM   ..\..\Shared\List\UReportingObjects.pas
+      )
+      @UPDATED(
+        @FILE           UResources.pas
+        @VERSION        4.0
+        @RENAMED_FROM   ..\..\Shared\Params\ResIds.inc
+      )
+      @UPDATED(
+        @FILE           URunProgs.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        2.3
+      )
+      @UPDATED(
+        @FILE           USettings.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           USIBConverter.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           USIP2Converter.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UStreamWrapper.pas
+        @VERSION        1.0
+        @RENAMED_FROM   ..\..\Shared\Stream\UStreamWrapper.pas
+      )
+      @UPDATED(
+        @FILE           UUninstPrevProj.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UWelcomeTabHandler.pas
+        @VERSION        3.2
+      )
+      @UPDATED(
+        @FILE           UXMLObjects.pas
+        @VERSION        2.0
+        @COMMENTS       Unit moved unchanged.
+        @RENAMED_FROM   ..\..\Shared\List\UXMLObjects.pas
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           10/02/2008
+        @COMMENTS       Updated file, product and build version numbers.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hap
+        @DATE           09/02/2008
+        @COMMENTS       Changed copyright dates to include 2008.
+      )
+      @UPDATED(
+        @FILE           Help\SIBuilder.hpj
+        @VERSION        1.8
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\Params\FileNames.inc
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\URegistry.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\Params\Registry.inc
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\URegUtils.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\XML\UTokeniser.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\XML\UXMLTag.pas
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.4 (build 29)
+    @COMMENTS           Converted to HTML help from WinHelp.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + MS HTML Help Workshop 1.1
+    @DATE               01/03/2008
+    @FILES(
+      @REMOVED          Help\SIBuilder.cnt
+      @REMOVED          Help\SIBuilder.hap
+      @REMOVED          Help\SIBuilder.hpj
+      @UPDATED(
+        @FILE           SIBuilder.dpr
+        @VERSION        3.6
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.9
+      )
+      @UPDATED(
+        @FILE           UCmdDispatcher.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           UHelpManager.pas
+        @VERSION        2.0
+      )
+      @NEW(
+        @FILE           UHTMLHelp.pas
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           URunTabHandler.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated file, product and build numbers.
+      )
+      @NEW(
+        @FILE           Help\Help.h
+        @VERSION        :auto-generated
+        @COMMENTS       This file is auto-generated from the build script from
+                        Help.map.
+      )
+      @UPDATED(
+        @FILE           Help\Help.map
+        @VERSION        1.8
+      )
+      @NEW(
+        @FILE           Help\Index.hhk
+        @DATE           01/03/2008
+        @COMMENTS       New HTML Help index file.
+      )
+      @NEW(
+        @FILE           Help\SIBuilder.hhp
+        @DATE           01/03/2008
+        @COMMENTS       New HTML Help project. Replaces old SIBuilder.hpj.
+      )
+      @NEW(
+        @FILE           Help\TOC.hhc
+        @DATE           28/02/2008
+        @COMMENTS       New HTML help Table of Contents file. Replaces old
+                        SIBuilder.cnt.
+      )
+      @NEW(
+        @FILE           Help\CSS\main.css
+        @VERSION        1.0
+        @COMMENTS       HTML Help style sheet.
+      )
+      @NEW(
+        @FILE           Help\HTML\about.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\author.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\comserverapps.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\credits.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-compression.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-defaultproject.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-groups.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-hottext.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-infopopups.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-pascalidents.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-pathmacros.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\def-regtemplates.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-about.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-addfiles.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-browselicense.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-chooseregtplt.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-comserverapp.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editfile.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editgroup.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editprog.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editregkey.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editregmacro.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-editregvalue.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-exportregfile.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-fileproperties.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-folder.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-importregfile.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-infopanecolour.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-insertfilename.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-license.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-newregmacrovalue.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-openbindata.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-openproject.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-options.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-osoptions.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-progfile.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-saveproject.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-sip2convmsg.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-testlicense.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\dlg-uninstprojects.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-cantregdll.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-files.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-params.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-program.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-projectid.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\err-runprogs.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\eula.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\extra-reginprocsvr.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\extra-shortcutter.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\extraprogs.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\feedback.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\infopane.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\install-progs.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\install.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\licensefile.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\licensetest.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\logo.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\menu-file.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\menu-help.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\menu-tools.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\menu.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\new-features.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\new-ui.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\overview.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-build.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-details.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-files.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-license.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-os.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-programs.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-registry.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\page-welcome.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\pageselector.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\regtpltmacros.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-ignoreinprocsvr.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-ignoreregonly.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-licdlladded.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-licdllregascom.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-licdllremoved.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-licdllretained.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-licfileadded.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-runprogdelignored.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sip2-runprogmoved.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\sourcecode.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\using.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\website.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\HTML\wizard.htm
+        @VERSION        1.0
+        @COMMENTS       HTML Help Topic
+      )
+      @NEW(
+        @FILE           Help\Images\bomb.gif
+        @DATE           24/02/2008
+        @COMMENTS       Image used in HTML Help
+      )
+      @NEW(
+        @FILE           Help\Images\downbtn.gif
+        @DATE           24/02/2008
+        @COMMENTS       Image used in HTML Help
+      )
+      @NEW(
+        @FILE           Help\Images\upbtn.gif
+        @DATE           24/02/2008
+        @COMMENTS       Image used in HTML Help
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.4.1 (build 30)
+    @COMMENTS           + Added support for detecting Windows Vista to Target OS
+                          page and removed Win32s.
+                        + Updated project and install file version to 303.
+                        + Fixed display problem in group edit dialog box.
+                        + Made all messages used in message boxes display as
+                          correctly formed sentences.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+                        + MS HTML Help Workshop 1.1
+    @DATE               11/04/2008
+    @FILES(
+      @UPDATED(
+        @FILE           FmAbout.pas
+        @VERSION        1.3
+      )
+      @UPDATED(
+        @FILE           FmGroupEdit.pas
+        @VERSION        2.4
+      )
+      @UPDATED(
+        @FILE           Resources.rc
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           UMessageBox.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           UOSTreeViewMgr.pas
+        @VERSION        1.2
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           10/04/2008
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.2
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Support\UOS.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Assets\AboutDlg.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\AboutDlg.txt
+      )
+      @UPDATED(
+        @FILE           Assets\Build.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\Build.txt
+      )
+      @UPDATED(
+        @FILE           Assets\CheckBoxes.bmp
+        @DATE           14/08/2002
+        @COMMENTS       Moved unchanged.
+        @RENAMED_FROM   Misc\CheckBoxes.bmp
+      )
+      @UPDATED(
+        @FILE           Assets\DDLogoGrey.bmp
+        @DATE           15/09/2002
+        @COMMENTS       Moved unchanged.
+        @RENAMED_FROM   Misc\DDLogoGrey.bmp
+      )
+      @UPDATED(
+        @FILE           Assets\Groups.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\Groups.txt
+      )
+      @UPDATED(
+        @FILE           Assets\GroupsTabErr.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\GroupsTabErr.txt
+      )
+      @UPDATED(
+        @FILE           Assets\LicenseInfo.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\LicenseInfo.txt
+      )
+      @UPDATED(
+        @FILE           Assets\PrgDlgParamErr.htx
+        @DATE           18/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\PrgDlgParamErr.txt
+      )
+      @UPDATED(
+        @FILE           Assets\PrgDlgProgErr.htx
+        @DATE           18/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\PrgDlgProgErr.txt
+      )
+      @UPDATED(
+        @FILE           Assets\ProjDetails.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\ProjDetails.txt
+      )
+      @UPDATED(
+        @FILE           Assets\Registry.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\Registry.txt
+      )
+      @UPDATED(
+        @FILE           Assets\RunProgs.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\RunProgs.txt
+      )
+      @UPDATED(
+        @FILE           Assets\RunTabProgErr.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\RunTabProgErr.txt
+      )
+      @UPDATED(
+        @FILE           Assets\SIBuilder.ico
+        @DATE           09/03/2000
+        @COMMENTS       Moved unchanged.
+        @RENAMED_FROM   Misc\SIBuilder.ico
+      )
+      @NEW(
+        @FILE           Assets\SIBuilder.manifest
+        @VERSION        1.0
+        @COMMENTS       Manifest file that tells Vista not to elevate the
+                        program.
+      )
+      @UPDATED(
+        @FILE           Assets\Small.bmp
+        @DATE           19/12/2002
+        @COMMENTS       Moved unchanged.
+        @RENAMED_FROM   Misc\Small.bmp
+      )
+      @UPDATED(
+        @FILE           Assets\TargetOS.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\TargetOS.txt
+      )
+      @UPDATED(
+        @FILE           Assets\WelcomeInfo.htx
+        @DATE           17/11/2003
+        @COMMENTS       Renamed and moved unchanged.
+        @RENAMED_FROM   Misc\WelcomeInfo.txt
+      )
+      @UPDATED(
+        @FILE           Help\CSS\main.css
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\HTML\extra-reginprocsvr.htm
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           Help\HTML\install-progs.htm
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.4.2 (build 31)
+    @DATE               17/09/2008
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11.2
+                        + Borland Resource Compiler 5.4
+                        + MS HTML Help Workshop 1.1
+    @COMMENTS           + Made minimised program preview correctly in Vista task
+                          bar and in Flip 3D task switcher.
+                        + Made dialog boxes stay on top when task bar button
+                          clicked.
+                        + Updated copyright date range on welcome page.
+                        + Made minor change to text of about box.
+    @FILES(
+      @UPDATED(
+        @FILE           FmGenericDlg.pas
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           FmMain.pas
+        @VERSION        3.10
+      )
+      @UPDATED(
+        @FILE           VSIBuilder.vi
+        @DATE           16/09/2008
+      )
+      @UPDATED(
+        @FILE           Assets\AboutDlg.htx
+        @DATE           17/09/2008
+        @COMMENTS       Changed to refer to open source code instead of public
+                        domain.
+      )
+    )
+  )
+)

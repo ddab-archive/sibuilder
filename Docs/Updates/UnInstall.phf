@@ -1,0 +1,538 @@
+@ROOT                   ..\..\Src\Apps\UnInstall
+@PROJECT_NAME           SITools: UnInstall
+@PROJECT_DESC           Program that uninstalls an installation created by the
+                        SITools v2 installer. This is a console application.
+@COPYRIGHT              Copyright © Peter Johnson, 2000-2008
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               09/03/2000
+    @COMMENTS           Original version.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @NEW(
+        @FILE           UnInstall.dpr
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UUninstaller.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UBaseProject.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UFiles.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\UGroups.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegData.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegKeys.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegObjects.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\SIPrj\URegRootKeys.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UBinaryStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UDataStream.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Stream\UStreamWrapper.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UObjList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UStreamableObjList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Utils\UStringProcs.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\List\UReportingObjects.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Support\UPathMacros.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Report\UMessager.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           VUnInstall.rc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\ResIds.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\Registry.inc
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.0.1 (build 2)
+    @DATE               29/07/2000
+    @COMMENTS           Rebuild to include a bug fixed unit. Bug has no direct
+                        impact on SIBuilder.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 3)
+    @DATE               04/09/2000
+    @COMMENTS           Total rewrite. Now calls into InstallLib.dll to perform
+                        uninstall. Uninstall code is no longer physically in
+                        this program.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @REMOVED          UUninstaller.pas
+      @REMOVED          ..\..\Shared\SIPrj\UBaseProject.pas
+      @REMOVED          ..\..\Shared\SIPrj\UFiles.pas
+      @REMOVED          ..\..\Shared\SIPrj\UGroups.pas
+      @REMOVED          ..\..\Shared\SIPrj\URegData.pas
+      @REMOVED          ..\..\Shared\SIPrj\URegKeys.pas
+      @REMOVED          ..\..\Shared\SIPrj\URegObjects.pas
+      @REMOVED          ..\..\Shared\SIPrj\URegRootKeys.pas
+      @REMOVED          ..\..\Shared\Stream\UBinaryStream.pas
+      @REMOVED          ..\..\Shared\Stream\UDataStream.pas
+      @REMOVED          ..\..\Shared\Stream\UStreamWrapper.pas
+      @REMOVED          ..\..\Shared\List\UObjList.pas
+      @REMOVED          ..\..\Shared\List\UStreamableObjList.pas
+      @REMOVED          ..\..\Shared\Utils\UFileProcs.pas
+      @REMOVED          ..\..\Shared\Utils\UStringProcs.pas
+      @REMOVED          ..\..\Shared\List\UReportingObjects.pas
+      @REMOVED          ..\..\Shared\Support\UPathMacros.pas
+      @REMOVED          ..\..\Shared\Report\UMessager.pas
+      @REMOVED          ..\..\Shared\Params\ResIds.inc
+      @REMOVED          ..\..\Shared\Params\FileNames.inc
+      @REMOVED          ..\..\Shared\Params\Registry.inc
+      @UPDATED(
+        @FILE           UnInstall.dpr
+        @VERSION        2.0
+      )
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.2
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0.1 (build 4)
+    @DATE               15/09/2001
+    @COMMENTS           Fixed bug where uninstaller was crashing under Windows
+                        2000 to to InstallLib.dll not being found.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.3.32
+    @FILES(
+      @UPDATED(
+        @FILE           UnInstall.dpr
+        @VERSION        2.1
+      )
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.3
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.5
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0.1 (build 5)
+    @DATE               01/04/2002
+    @COMMENTS           Unchanged other than to updated product number to 2.6 in
+                        version information. Version resource now contains a
+                        product version that echoes the SITools release number
+                        rather than the version of the UnInstall.exe executable
+                        file. File version number now contains the build number
+                        of the executable file.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.7
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.4
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0.1 (build 6)
+    @DATE               05/08/2002
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @COMMENTS           Unchanged other than to updated product number to 2.6.1
+                        in version information.
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.5
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.6
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0.1 (build 7)
+    @DATE               08/08/2002
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @COMMENTS           Unchanged other than to updated product number to 2.6.2
+                        in version information.
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.rc
+        @VERSION        1.6
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 8)
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @DATE               29/12/2002
+    @COMMENTS           Major re-write
+                        + Added support for switch sent if being run from
+                          installer: which supresses sign-on output, success or
+                          error messages and prompt to user to press enter when
+                          finished. This enables the program to be called from
+                          an installer that needs old installation to be removed
+                          without cluttering up the installer's display or
+                          pausing it with exit prompt.
+                        + Changed sign on screen text for updated program.
+                        + Added exit code to show if result was successful or
+                          not.
+    @FILES(
+      @UPDATED(
+        @FILE           UnInstall.dpr
+        @VERSION        3.0
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.7
+      )
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           29/12/2002
+        @COMMENTS       No longer use the .rc file for version info resource -
+                        now use .vi file. Updated file version to 2.1.0.8 and
+                        product number to 3.0.0.0 and changed company from
+                        PJSoft to DelphiDabbler.
+        @RENAMED_FROM   VUnInstall.rc
+      )
+      @NEW(
+        @FILE           ..\..\Shared\Install\UInstProcs.pas
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 9)
+    @DATE               24/01/2003
+    @COMMENTS           Unchanged other than to updated product number to 3.0.1
+                        in version information and change copyright from 2002 to
+                        2000-2003.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           24/01/2003
+        @COMMENTS       Updated product number to 3.0.1 in version information
+                        and corrected copyright date.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 10)
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4.0
+                        + Borland Resource Compiler v5.3
+                        + Version Information Editor v2.8.2
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.8
+        @COMMENTS       Change in this file does not affect this program.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 11)
+    @DATE               19/11/2003
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi v4
+                        + Version Information Editor 2.10
+                        + Borland Resource Compiler v5.3
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           19/11/2003
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 12)
+    @DATE               25/11/2005
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           25/11/2005
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 13)
+    @DATE               16/01/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           15/01/2006
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.9
+        @COMMENTS       Change in this file does not affect this project.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0 (build 14)
+    @DATE               17/07/2006
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           17/07/2006
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 15)
+    @DATE               01/04/2007
+    @COMMENTS           Removed code no longer required now some source code is
+                        no longer compiled from SIBuilder.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           25/03/2007
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\FileNames.inc
+        @VERSION        1.10
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.1 (build 16)
+    @DATE               10/06/2007
+    @COMMENTS           Unchanged other than to update product, build number and
+                        comments in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           10/06/2007
+        @COMMENTS       + Updated product and build number.
+                        + Updated comments to refer to new license.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 17)
+    @COMMENTS           + Replaced include files with units.
+                        + Added batch file used to build program.
+                        + Replaced some literal strings with resource strings.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @DATE               23/02/2008
+    @FILES(
+      @UPDATED(
+        @FILE           UnInstall.dpr
+        @VERSION        3.1
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           20/02/2008
+        @COMMENTS       Updated file, product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\..\Shared\Params\FileNames.inc
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.2 (build 18)
+    @DATE               01/03/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information and change to UFileNames.pas that
+                        don't affect this project.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated product and build number.
+      )
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.1
+        @COMMENTS       Changes have no effect on this project.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.3 (build 19)
+    @DATE               11/04/2008
+    @COMMENTS           Added manifest to ensure program runs elevated with
+                        administrator privileges on Windows Vista.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           ..\..\Shared\Params\UFileNames.pas
+        @VERSION        2.2
+        @COMMENTS       Changes have no impact in this program.
+      )
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           11/04/2008
+        @COMMENTS       Updated file, product and build number.
+      )
+      @UPDATED(
+        @FILE           UnInstall.dpr
+        @VERSION        3.2
+      )
+      @NEW(
+        @FILE           Assets\UnInstall.manifest
+        @VERSION        1.0
+        @COMMENTS       Manifest file that requires elevation of program under
+                        Vista.
+      )
+      @UPDATED(
+        @FILE           Build.bat
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           UIResources.rc
+        @VERSION        1.0
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            3.0.3 (build 20)
+    @DATE               16/09/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 4
+                        + Version Information Editor 2.11.2
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VUnInstall.vi
+        @DATE           16/09/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+)

@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-comserverapp.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-comserverapp.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_DELPHICOMSVRAPP (renamed from IDH_DLG_DELPHICOMAPP)
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>New COM Server Application Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		New Delphi COM Server Application Dialog Box
+	</h1>
+
+	<p>
+		This dialog box appears when the <span class="ui">Delphi COM Apps</span>
+		button is clicked on the
+		<a href="page-programs.htm">Programs page</a>.
+		It is used to supply the name of a local COM server application to be
+		registered by the install program and un-registered by the uninstall
+		program. 
+	</p>
+
+	<p>
+		The dialog box presents a drop down list that contains details of all
+		the 32 bit executable files in the current project. A program should be
+		selected from this list.
+	</p>
+
+	<p>
+		The selected program should support the Delphi standard for registering
+		out-of-process COM servers: i.e. passing the
+		<span class="switch">/regserver</span> switch on the command line should
+		register the program and then exit while passing the
+		<span class="switch">/unregserver</span> switch on the command line
+		should unregister the server and exit.
+		<span class="prog">SIBuilder</span> cannot test for this.
+	</p>
+
+	<p>
+		On pressing the <span class="ui">OK</span> button
+		<span class="prog">SIBuilder</span> will create two program entries on
+		the
+		<a href="page-programs.htm">Programs page</a>: one to register the
+		server and the other to unregister it. If you wish to edit these entries
+		you should do so by selecting the program and editing in the usual way.
+		Should you not want the server to be un-registered by the uninstaller
+		then select the entry with the <span class="switch">/unregserver</span>
+		switch and delete it.
+	</p>
+</body>
+
+</html>

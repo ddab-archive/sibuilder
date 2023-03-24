@@ -1,0 +1,38 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=8>
+
+<p align=right><font size=9 style=italic>from
+<font color=clBlue><link cmd="HelpAuthor" hint="About the author"><b>delphi<font name="Courier New" size=13>Dabbler</font></b></link></font></font></p>
+
+<p><font size=4> </font></p>
+
+<p>[%VI_ProductVersion%]. [%VI_LegalCopyright%] [%VI_Comments%]
+<font color=clBlue style=underline><link cmd="HelpCopyright"
+  hint="Go to the 'Copyright and Licensing' topic in the help file">More
+info</link></font><font name="Wingdings" charset=symbol>&#240;</font></p>
+
+<p><font size=4> </font></p>
+
+<p>Some third party, open source, code has been used in developing the SITools
+suite.
+<font color=clBlue style=underline><link cmd="HelpCredits"
+  hint="View the 'Credits' topic in the help file">More
+info</link></font><font name="Wingdings" charset=symbol>&#240;</font></p>
+
+<p><font size=4> </font></p>
+
+<p>For revisions and updates please visit the
+<font color=clBlue style=underline><link cmd="GotoWebsite"
+  hint="Visit http://www.delphidabbler.com/">DelphiDabbler.com</link></font>.</p>
+
+<p><font size=4> </font></p>
+
+<p>The programs and DLLs that make up the SITools package are listed below.
+To get more information click on the program's file name.</p>
+
+</parafont>
+
+</body>
+</hottext>

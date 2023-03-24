@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-testlicense.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-testlicense.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_TESTLICENSE
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Test License Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Test License Dialog Box
+	</h1>
+
+	<p>
+		This dialog box shows what the license dialog box that will be displayed
+		by the installer will look like. It is displayed by clicking the
+		<span class="ui">Display License</span> button on the
+		<a href="page-license.htm">License Information page</a>,
+		where its appearance has been configured. The only difference between
+		this dialog box and the one that will be displayed by the installer is
+		that this version has a help button and the one created by the installer
+		does not.
+	</p>
+
+	<p>
+		The dialog box is user-configurable using the License Information page.
+		The configurable properties are:
+	</p>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">License&nbsp;file</span>
+			</td>
+			<td>
+				If no
+				<a href="licensefile.htm">license file</a> has been specified
+				then a message is displayed to that effect.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Span</span>
+			</td>
+			<td>
+				Small, medium and large sizes can be specified.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Number&nbsp;of&nbsp;buttons</span>
+			</td>
+			<td>
+				Either a single <span class="ui">Close</span> button is
+				displayed or a pair of <span class="ui">Accept</span> and 
+				<span class="ui">Decline</span> buttons are displayed. In the
+				first case the installer simply displays the dialog box and
+				continues when it is closed, while in the latter case
+				installation only proceeds if the <span class="ui">Accept</span>
+				button is clicked.
+			</td>
+		</tr>
+	</table>
+	
+</body>
+
+</html>

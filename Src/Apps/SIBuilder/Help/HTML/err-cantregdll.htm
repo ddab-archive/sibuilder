@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * err-cantregdll.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is err-cantregdll.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_ERR_CANTREGSHAREDDLL
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Error - Shared DLL Registration</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Shared DLL Registration Error
+	</h1>
+
+	<p>
+		It is an error for a file to be flagged as a shared DLL when the project
+		does not permit uninstallation of pre-existing programs in the same
+		folder.
+	</p>
+
+	<p>
+		This is because overwriting an existing project without properly
+		uninstalling it may cause a previously counted shared DLL to be
+		overwritten without its usage count being decreased. This would cause
+		the count to get out if sync with the number of programs actually using
+		the DLL. 
+	</p>
+
+	<p>
+		<em>Solutions</em>
+	</p>
+	
+	<ol class="unspaced lower-alpha no-para-space">
+		<li>
+			edit the file to remove the <span class="ui">Shared DLL</span> flag
+			in the
+			<a href="dlg-editfile.htm">Edit File Install Properties</a>
+			dialog box (accessed via the <span class="ui">Edit File</span>
+			button on the 
+			<a href="page-files.htm">Files page</a>;
+		</li>
+		<li>
+			go to the
+			<a href="page-details.htm">Project Details page</a>
+			and check the <span class="ui">Uninstall previous installations in
+			same folder</span> check box.
+		</li>
+	</ol>
+</body>
+
+</html>

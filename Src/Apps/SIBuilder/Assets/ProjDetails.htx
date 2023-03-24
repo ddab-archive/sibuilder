@@ -1,0 +1,20 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>Project Details</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Enter general information about your project,
+<font color=clNavy style=underline><link cmd="OpenProj">open</link></font> an existing
+project or start a
+<font color=clNavy style=underline><link cmd="NewBlankProj">new blank</link></font> or
+<font color=clNavy style=underline><link cmd="NewDefaultProj">new default</link></font>
+project.</p>
+
+</parafont>
+
+</body>
+</hottext>

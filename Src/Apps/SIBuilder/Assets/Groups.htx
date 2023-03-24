@@ -1,0 +1,16 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>Files</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Enter details of the files you want to install, grouped by the folders where
+they will be installed.</p>
+
+</parafont>
+
+</body>
+</hottext>

@@ -1,0 +1,209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-editregvalue.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-editregvalue.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_EDITREGVALUE
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Edit Registry Value Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Edit Registry Value Dialog Box
+	</h1>
+
+	<p>
+		This dialog box is displayed when the <span class="ui">Add Data
+		Item</span> or <span class="ui">Edit Data Item</span> buttons from the
+		<a href="page-registry.htm">Registry Page</a>
+		are clicked. It is used to enter new values under registry keys or to
+		edit existing values.
+	</p>
+
+	<h2>
+		Name
+	</h2>
+
+	<p>
+		The name of the data item is entered in the <span class="ui">Name</span>
+		edit box. The data item's name must be unique for the key it belongs to.
+		The empty string may be entered to denote the default data item for the
+		key.
+	</p>
+
+	<h2>
+		Data Type
+	</h2>
+
+	<p>
+		The available types are <var>Integer</var>, <var>Binary</var>,
+		<var>String</var> and <var>Expand String</var>. Choose the required type
+		by selecting the appropriate radio button. If you choose one of the
+		string types and require the installer to expand
+		<a href="def-pathmacros.htm">path macros</a>
+		then you should check the <span class="ui">Expand Path Macros</span>
+		check box.
+	</p>
+
+	<h2>
+		Value
+	</h2>
+
+	<p>
+		The data item's value is entered in the <span class="ui">Value</span>
+		text box. The format of the value must be appropriate for the data type
+		selected in the <span class="ui">Data type</span> radio group. Permitted
+		values are:
+	</p>
+	
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Integer:</span>
+			</td>
+			<td>
+				Enter a decimal whole number or a hexadecimal number preceded by
+				a <kbd>$</kbd> symbol. The value must be such that it can be
+				stored as a <var>Long Integer</var> or <var>DWORD</var>.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Binary:</span>
+			</td>
+			<td>
+				<div>
+				 	Enter the binary data as space separated hexadecimal bytes.
+				 	E.g. 
+				 </div>
+				 <div class="indent">
+				 	<kbd>FF EE 4C 43 6A 00</kbd>
+				 </div>
+				 <div>
+				 	represents six bytes of binary data.
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">String:</span>
+			</td>
+			<td>
+				Enter the string as simple text. Do not press return unless a
+				CR LF pair is required in the string. If <span class="ui">Expand
+				Path Macros</span> is checked then any
+				<a href="def-pathmacros.htm">path macro</a> entered in the text
+				box will be expanded when the installation program is run.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Expand String:</span>
+			</td>
+			<td>
+				Entry rules are the same as for
+				<span class="label">string</span> above. The <var>expand
+				string</var> type also support
+				<a href="def-pathmacros.htm">path maco</a>
+				expansion if required. An <var>expanded string</var> also
+				contains unexpanded references to environment variables
+				(delimited by <kbd>%</kbd> characters). See the Win 32
+				programmers reference for further information. Do not embed path
+				macros within environment variables as the behaviour is not
+				defined.
+			</td>
+		</tr>
+	</table>
+
+	<h2>
+		Alternative methods to enter values
+	</h2>
+
+	<p>
+		If there is text data on the clipboard it can be pasted using the
+		<span class="ui">Paste data from clipboard</span> button. The data is
+		displayed in the <span class="ui">Value</span> text box and the
+		<span class="ui">String</span> radio button will be selected. If there
+		is no string data on the clipboard the <span class="ui">Paste data from
+		clipboard</span> button is disabled.
+	</p>
+
+	<p>
+		Binary data can be read from a file. To do this click the
+		<span class="ui">Read data from file</span> button and choose the
+		required file from the resulting
+		<a href="dlg-openbindata.htm">Open Binary Data File</a>
+		dialog box. The contents of the file will be displayed in Hex notation
+		in the Value text box and the <span class="ui">Binary Data type</span>
+		radio button will be selected. <strong>Note:</strong>
+		<span class="prog">SIBuilder</span> does not permit files of more than
+		2Kb to be stored in the registry.
+	</p>
+
+	<p>
+		If the <span class="ui">String</span> or <span class="ui">Expanded
+		String</span> radio buttons are selected then a file name can be
+		inserted by clicking the <span class="ui">Insert File Name</span> button
+		and choosing a file from the resulting
+		<a href="dlg-insertfilename.htm">Insert File Name</a>
+		dialog box. 
+	</p>
+
+	<p>
+		If the <span class="ui">Expand Path Macros</span> check box is checked
+		and either the <span class="ui">String</span> or
+		<span class="ui">Expanded String</span> data types are selected then a
+		<a href="def-pathmacros.htm">path macro</a> can be inserted at the
+		current insertion point in the <span class="ui">Value</span> editor by
+		clicking the <span class="ui">Insert Path Macro</span> button to drop
+		down a menu of avaialable path macros and choosing the required macro
+		from it. 
+	</p>
+</body>
+
+</html>

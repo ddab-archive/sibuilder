@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * install.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is install.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: ABOUTINSTALLATION
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Installation</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		SIBuilder 3 Installation Information
+	</h1>
+
+	<h2>
+		SIBuilder Files
+	</h2>
+	
+	<p>
+		A <span class="prog">SIBuilder</span> installation comprises various
+		files and sub-folders. The default installation is in
+	</p>
+	
+	<p class="indent file">
+		&lt;Program Files Folder&gt;\DelphiDabbler\SIBuilder3
+	</p>
+	
+	<p>
+		where <span class="file">&lt;Program Files Folder&gt;</span> is the
+		default programs folder on your system (e.g.
+		<span class="file">C:\Program Files</span>).
+	</p>
+	
+	<p>
+		Several of the files are essential to the correct operation of
+		<span class="prog">SIBuilder</span> and should not be deleted. A full
+		list of files is provided in the file
+		<span class="file">ReadMe.html</span> which can be found in the
+		<span class="file">Docs</span> sub-folder of your
+		<span class="prog">SIBuilder</span> installation.
+	</p>
+	
+	<p>
+		<span class="prog">SIBuilder</span> also stores its default project in
+		the
+	</p>
+	
+	<p class="indent file">
+		&lt;Application Data&gt;\DelphiDabbler\SIBuilder3</span>
+	</p>
+	
+	<p>
+		folder, where <span class="file">&lt;Application Data&gt</span> is the
+		per-user application data folder.
+	</p>
+
+	<h2>
+		Registry Changes
+	</h2>
+
+	<p>
+		<span class="prog">SIBuilder</span> adds the following new registry
+		keys:
+	</p>
+	
+	<p class="indent file">
+		HKEY_CURRENT_USER\Software\DelphiDabbler\SITools\3.0\SIBuilder<br>
+		HKEY_LOCAL_MACHINE\Software\DelphiDabbler\SITools\3.0\SIBuilder
+	</p>
+
+	<h2>
+		Uninstalling SIBuilder
+	</h2>
+	
+	<p>
+		<span class="prog">SIBuilder</span> should be uninstalled via the
+		Control Panel using the Add/Remove programs applet.
+	</p>
+
+	<p>
+		If <span class="prog">SIBuilder</span> is uninstalled it is important to
+		use the provided uninstall program. This will remove installation files
+		and tidy up the registry. However
+		<span class="file">UnInstall.exe</span> will remain in the root of your
+		<span class="prog">SIBuilder</span> installation. This is because the
+		uninstaller can't delete its own file whilst executing. This file can
+		safely be deleted manually as can the
+		<span class="file">SIBuilder3</span> folder. The
+		<span class="file">DelphiDabbler</span> folder can also be deleted if it
+		is empty.
+	</p>
+	
+	<p>
+		The uninstaller leaves the default project and the application data
+		sub-directories on the system. They can be deleted manually.
+	</p>
+
+</body>
+
+</html>

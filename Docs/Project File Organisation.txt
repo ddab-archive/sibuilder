@@ -1,0 +1,67 @@
+Development folder organisation
+===============================
+
+SITools             : main folder - contains group file
+  Bin               : where binaries for apps are created (dcu, res)
+    BZDeflate       : binaries for BZDeflate.dll
+    BZInflate       : binaries for BZInflate.dll
+    InstallLib      : binaries for InstallLib.dll
+    PkgInstallStub  : binaries for PkgInstallStub.exe 
+    RegCOMSvrs      : binaries for RegCOMSvrs.dll
+    RegInprocSvr    : binaries for RegInprocSvr.exe
+    Shortcutter     : binaries for Shortcutter.exe
+    SIBCmp          : binaries and package for SIBuilder custom components
+    SIBuilder       : binaries for SIBuilder.exe
+    SITLicenseDlg   : binaries for SITLicenseDlg.dll
+    UnInstall       : binaries for UnInstall.exe
+    ZDeflate        : binaries for ZDeflate.dll
+    ZInflate        : binaries for ZInflate.dll
+  DevTools          : custom development tools
+  Docs              : project documentation
+    References      : reference documentation used in developing SITools
+    Removed         : copies of source files removed from project
+    UnusedCode      : source code created for, but never used in, SITools
+    Updates         : stores update logs
+  Exe               : where app exe's and help files are created
+    Docs            : folder for installed documentation
+    Extras          : folder where extra programs are created
+    Install         : folder where executables used by install program are created
+  Install           : the install project used to install SIBuilder
+  Release           : folder where release files are created
+  Src               : the source files for the apps
+    Apps            : source unique to an application or DLL
+      BZDeflate     : source code for BZDeflate.dll
+      BZInflate     : source code for BZInflate.dll
+      InstallLib    : install library source code & project files
+      PkgInstallStub: source code for packaged installer stub
+        Assets      : files for inclusion in various resources
+      RegCOMSvrs    : source code and project files for COM server reg DLL
+      RegInprocSvr  : source code and project files for In-proc COM server app
+        Assets      : files for inclusion in various resources
+      Shortcutter   : source code and project files for Shortcutter manipulator app
+        Assets      : files for inclusion in various resources
+      SIBuilder     : SIBuilder source code and project files
+        Assets      : files for inclusion in various resources
+        Help        : SIBuilder's HTML help source files
+          CSS       : cascading style sheets for HTML help
+          HTML      : HTML topic files for HTML help
+          Images    : Images included in HTML help
+      SITLicenseDlg : SITLicenseDlg source code and prject files
+      UnInstall     : uninstaller source code and project files
+        Assets      : files for inclusion in various resources
+      ZDeflate      : source code for ZDeflate.dll
+      ZInflate      : source code for ZInflate.dll
+    Intf            : interface units, used by other projects and externally
+    Pkg             : source code for package of custom components used by SIBuilder
+    Shared          : source code for shared units
+      Install       : units used by install program executables
+      Params        : units/include files providing system-wide parameters
+      Support       : misc supporting classes
+      Utils         : units of misc supporting routines
+      XML           : classes that handle XML-like files
+
+Release files folder organisation
+=================================
+(released under name of SIBuilder rather than SITools)
+
+These files are listed in File Manifest.txt

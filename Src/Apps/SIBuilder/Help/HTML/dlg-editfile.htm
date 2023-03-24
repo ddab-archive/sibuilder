@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-editfile.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-editfile.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_EDITFILE
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Edit File Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Edit File Install Properties Dialog Box
+	</h1>
+
+	<p>
+		This dialog box allows you to specify various actions to be taked when a
+		file is installed on the target system. The dialog is displayed when the
+		<span class="ui">Edit File</span> button on the
+		<a href="page-files.htm">Files page</a> is clicked.
+	</p>
+
+	<h2>
+		File overwriting
+	</h2>
+
+	<p>
+		The <span class="ui">File overwriting options</span> drop down list is
+		used to choose what actions to take when a file with the same name
+		already exists on the target system. The options are:
+	</p>
+	
+	<ul class="unspaced">
+		<li>
+			<span class="ui">Always overwrite file with same name</span> &ndash;
+			the file is always installed.
+		</li>
+		<li>
+			<span class="ui">Never overwrite file with same name</span> &ndash;
+			the file will not be installed if it already exists.
+		</li>
+		<li>
+			<span class="ui">Only overwrite file with older time stamp</span>
+			&ndash; the file will overwrite older files but will not replace
+			newer files.
+		</li>
+		<li>
+			<span class="ui">Only overwrite file with lower file version</span>
+			&ndash; the file version numbers are compared and the file will
+			overwrite existing files only if it has a higher version number.
+			If the existing file has no version information it is overwritten.
+			This option is only available for files containing version
+			information.
+		</li>
+	</ul> 
+
+	<h2>
+		File registration
+	</h2>
+
+	<p>
+		The controls in the <span class="ui">File registration</span> group box
+		determine if and how the file is registered with Windows, as follows:
+	</p>
+	
+	<ul class="spaced">
+		<li>
+			If the <span class="ui">Register application path with
+			Windows</span> check box is checked then the path of the installed
+			file will be registered with Windows. Doing this enables an
+			application to be started by simply providing its name without its
+			path. A file does not have to be an application to be recorded here,
+			but this may not make sense. The uninstaller de-registers any file
+			registered under this option.
+		</li>
+		<li>
+			<div>
+				Checking the <span class="ui">Register as shared DLL with
+				Windows</span> check box causes the installer to check Windows'
+				list of shared DLLs for the file. If the file is not present in
+				the list it is added with a usage count of 1 while if it is
+				present already the usage count is incremented. The uninstaller
+				will decrement any existing count and will delete the file only
+				if the count has reached zero. This option is only available if
+				the file's group is set to delete only the files it installed.
+			</div>
+			<div class="para-space">
+				<strong>Note:</strong> When this option is used for any file it
+				is important not to permit the user to repeatedly run the
+				installer without first uninstalling the project or the file may
+				never be deleted. The project's option to run the uninstaller
+				prior to instalation should be enabled (see the
+				<a href="page-details.htm">Project Details page</a> for more
+				information).
+			</div>
+		</li>
+	</ul>
+</body>
+
+</html>

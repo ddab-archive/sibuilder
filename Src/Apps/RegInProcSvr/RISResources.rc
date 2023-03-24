@@ -1,0 +1,71 @@
+/*
+ * RISResources.rc
+ *
+ * Defines resources used by RegInProcServer.
+ *
+ * Previous name: RegInprocSvrDlg.rc until v1.1
+ *
+ * v1.0 of 21 Jan 2001  - Original version. Named RegInprocSvrDlg.rc. Contained
+ *                        dialog box resource and main icon.
+ * v1.1 of 11 Apr 2008  - Renamed from RegInprocSvrDlg.rc to RISResources.rc.
+ *                      - Added manifest file for XP/Vista themes and for
+ *                        Vista user account control. Requests elevation since
+ *                        COM registration fails if not elevated.
+ *                      - Changed to read included resource files to Assets
+ *                        directory instead of Misc.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is RISResources.rc.
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2001-2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * ***** END LICENSE BLOCK *****
+ */
+
+
+#include "RegInprocSvrDlg.inc"
+
+
+/* Main program icon */
+
+MAINICON ICON "Assets\RegInprocSvr.ico"
+
+/* The registration dialog box */
+
+REGDLG DIALOG 20 20 240 62
+  STYLE WS_POPUP | WS_CAPTION | WS_BORDER | WS_SYSMENU
+  CAPTION "Register Inproc Server"
+  FONT 8 "MS Sans Serif"
+{
+  LTEXT         "Enter file name (or drag and drop):"
+    IDD_LABEL       4,  4, 232, 11
+  EDITTEXT
+    IDD_EDIT        4, 16, 232, 12
+  PUSHBUTTON    "&Register"
+    IDD_REGBTN      4, 32,  40, 14
+  PUSHBUTTON    "&Unregister"
+    IDD_UNREGBTN   48, 32,  40, 14
+  DEFPUSHBUTTON "Close"
+    IDOK          196, 32,  40, 14
+  CTEXT         ""
+    IDD_REPORT      0, 50, 240, 11, SS_SUNKEN
+}
+
+/* Manifest file: Themes and Vista security */
+1 24 "Assets\RegInprocSvr.manifest"

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * menu-file.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is menu-file.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: FILEMENU
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>File Menu</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		File Menu
+	</h1>
+
+	<p>
+		The file menu provides the following options:
+	</p>
+
+	<table class="menu" cellspacing="1" cellpadding="0">
+    	<tr>
+    		<td class="item">
+    			New&nbsp;Default<br>
+    			(<span class="smallcaps">Ctrl+N</span>)
+    		</td>
+    		<td class="desc">
+    			Creates a new, untitled, project file containing the current
+    			default project (if any). If a project is currently in memory it
+    			is cleared. You can save any project as the default by using
+    			<span class="menuref">File | Make Default</span> menu option
+    			(see below).
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			New&nbsp;Blank<br>
+    			(<span class="smallcaps">Shift+Ctrl+N</span>)	
+    		</td>
+    		<td class="desc">
+    			Creates a new, untitled, blank project. If a project is
+    			currently in memory it is cleared.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Open<br>
+    			(<span class="smallcaps">Ctrl+O</span>)
+    		</td>
+    		<td class="desc">
+    			Opens an <span class="prog">SIBuilder</span> file from disk.
+    			This menu option displays the
+    			<a href="dlg-openproject.htm">Open Project</a>
+    			standard Windows dialog box. You should choose a
+    			<span class="file">.sip</span> or <span class="file">.sib</span>
+    			file to open. The newly opened file replaces any current
+    			project. If an old style <span class="file">.sib</span>, or a
+    			release 2 <span class="file">.sip</span> file is opened then its
+    			file name is not stored and the project should be saved under
+    			another name. It can be saved only as a release 3
+    			<span class="file">.sip</span> file. You can use the
+    			<span class="menu">Tools | Convert</span> menu option to convert
+    			release 1 <span class="file">.sib</span> files into
+    			<span class="file">.sip</span> files before opening them.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Save<br>
+    			(<span class="smallcaps">Ctrl+S</span>)
+    		</td>
+    		<td class="desc">
+    			Writes the current project file to disk. If the current project
+    			has not yet been saved then this command acts in the same way as
+    			<span class="menuref">Save As</span>.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Save&nbsp;As<br>
+    			(<span class="smallcaps">Ctrl+A</span>)
+    		</td>
+    		<td class="desc">
+    			Saves the current project under a new name. The
+    			<a href="dlg-saveproject.htm">Save Project</a>
+    			standard Windows save dialog box is displayed. You should
+    			provide a file name with extension
+    			<span class="file">.sip</span>. This extension is appended by
+    			default if no extension is given. The path you specify must
+    			exist. You are warned if the file name you specify already
+    			exists. <span class="prog">SIBuilder 3</span> cannot save to
+    			<span class="file">.sib</span> files.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Make&nbsp;Default
+    		</td>
+    		<td class="desc">
+    			Makes the current project the
+    			<a href="def-defaultproject.htm">default project</a>. 
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Clear&nbsp;Default
+    		</td>
+    		<td class="desc">
+    			Clears the current
+    			<a href="def-defaultproject.htm">default project</a>
+    			When this menu option is chosen the <span class="menuref">File |
+    			New Default</span> and <span class="menuref">File | New
+    			Blank</span> menu options have the same effect until a new
+    			default project is specified by chosing
+    			<span class="menuref">File | Make Default</span> once more.
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class="item">
+    			Exit
+    		</td>
+    		<td class="desc">
+    			This option closes <span class="prog">SIBuilder</span>.
+    		</td>
+    	</tr>
+    </table>
+</body>
+
+</html>

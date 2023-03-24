@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-registry.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-registry.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_REGISTRY
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Registry Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Registry Page
+	</h1>
+
+	<p>
+		The Registry page is used to specify what modifications are to be made
+		to the registry by the installer and uninstaller. The installer can add
+		new registry keys and data items and the uninstaller can optionally
+		delete keys (and their associated data items).
+	</p>
+
+	<p>
+		The keys and values that are to be processed by the installer are
+		displayed in a tree. Keys are labelled with folder icons and data items
+		are displayed using icons that indicate their data type.
+	</p>
+
+	<p>
+		When a key or data item is selected with the mouse a
+		<a href="def-infopopups.htm">pop-up information window</a>
+		may appear that displays relevant information about the selected item.
+		These pop-up windows can be prevented from appearing using the
+		<a href="dlg-options.htm">Options</a> dialog box.
+	</p>
+
+	<h2>
+		About Keys and Data Items
+	</h2>
+
+	<p>
+		Each key has two main properties &ndash; its name and how it is treated
+		by the uninstaller. The uninstall options are:
+	</p>
+
+	<ul class="unspaced">
+		<li>
+			the key is always deleted
+		</li>
+		<li>
+			the key is never deleted
+		</li>
+		<li>
+			the key is deleted only if empty
+		</li>
+	</ul>
+
+	<p>
+		All the registry data formats &ndash; string, expand string, binary and
+		integer &ndash; are supported. The data formats are:
+	</p>
+	
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Integer</span>
+			</td>
+			<td>
+				Stores any 32 bit quantity as a <var>DWORD</var> value
+				(0..FFFFFFFF hex). Since the registry has no true
+				<var>Boolean</var> type, use the <var>Integer</var> type with 1
+				for true and 0 for false.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Binary</span>
+			</td>
+			<td>
+				Any binary data. <span class="prog">SIBuilder</span> imposes a
+				maximum length of 2Kb on this data, in keeping with Windows
+				guidelines.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">String</span>
+			</td>
+			<td>
+				A nul-terminated string , again with a maximum length of 2Kb. If
+				<a href="def-pathmacros.htm">path pacros</a>
+				are included in a string entry then
+				<span class="prog">SIBuilder</span> can optionally expand the
+				macro on installation. In this way installation paths etc. can
+				be stored in the registry.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Expanded&nbsp;String</span>
+			</td>
+			<td>
+				This data type is the same a the <var>String</var> type except
+				that Windows expands any environment variables contained in the
+				string (environment variables are delimited by % characters).
+				<span class="prog">SIBuilder</span> can also expand
+				<a href="def-pathmacros.htm">path pacros</a>
+				within the string, however the treatment of any path macros
+				embedded in environment variables is not defined and should be
+				avoided.
+			</td>
+		</tr>
+	</table>
+
+	<h2>
+		Editing the Keys and Data Items
+	</h2>
+
+	<p>
+		There are various commands available for working with the registry tree.
+		They are all available from the buttons down the right side of the page.
+		Those commands which operate on individual keys and values are also
+		available on the registry tree's context menu. The template and import
+		commands can also be accessed from the
+		<a href="infopane.htm">info pane</a>.
+		The commands are:
+	</p>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Add&nbsp;Key</span>
+			</td>
+			<td>
+				Adds a new key as a subkey of the selected key. The
+				<a href="dlg-editregkey.htm">Edit Registry Key Properties</a>
+				dialog box is displayed in which the details of the key are
+				entered.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Edit&nbsp;Key</span>
+			</td>
+			<td>
+				Edits the details of the selected key using the
+				<a href="dlg-editregkey.htm">Edit Registry Key Properties</a>
+				dialog box.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Delete&nbsp;Key</span>
+			</td>
+			<td>
+				Deletes the selected key.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Add&nbsp;Data&nbsp;Item</span>
+			</td>
+			<td>
+				Adds a new data item to the selected key. The
+				<a href="dlg-editregvalue.htm">Edit Registry Value</a>
+				dialog box is displayed in which the details of the data item
+				are entered.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Edit&nbsp;Data&nbsp;Item</span>
+			</td>
+			<td>
+				Edits the details of the selected data item using the
+				<a href="dlg-editregvalue.htm">Edit Registry Value</a>
+				dialog box.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Delete&nbsp;Data&nbsp;Item</span>
+			</td>
+			<td>
+				Deletes the selected data item.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Import</span>
+			</td>
+			<td>
+				Imports a Windows registry file and adds the keys and values
+				imported to the registry tree. The user is prompted whenever the
+				imported file would overwrite existing keys and values. Keys and
+				values in the file that are flagged for deletion are ignored.
+				Registry files exported from the Windows
+				<span class="prog">RegEdit</span> program up to version 5 are
+				supported. The
+				<a href="dlg-importregfile.htm">Import Registry File</a>
+				dialog box is used to get the file name from the user. All keys
+				created during the import will be deleted by the uninstaller
+				only if they are empty.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Export</span>
+			</td>
+			<td>
+				Exports the current contents of project's registry tree as a
+				Windows registry file. The
+				<a href="dlg-exportregfile.htm">Export Registry File</a>
+				dialog box is used to get the name and type of the exported
+				file. Files can be exported in <span class="prog">RegEdit</span>
+				v4 or v5 format.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Templates</span>
+			</td>
+			<td>
+				Displays the
+				<a href="dlg-chooseregtplt.htm">Choose Registry Template</a>
+				dialog box to enable the user to select and modify a predefined
+				registry template. The selected template is then merged with the
+				registry tree. All keys so created will be deleted by the
+				uninstaller only if they are empty.
+			</td>
+		</tr>
+	</table>
+
+	<p>
+		Note that the root keys are not editable.
+	</p>	
+</body>
+
+</html>

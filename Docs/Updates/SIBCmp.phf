@@ -1,0 +1,315 @@
+@PROJECT_NAME           SIBCmp.dpk
+@PROJECT_DESC           Package file for custom SIBuilder components.
+@ROOT                   ..\..\Src\Pkg
+@COPYRIGHT              Copyright © Peter Johnson, 2002-2008
+@AUTHOR                 P.D.Johnson, LLANARTH, Ceredigion, Wales, UK.
+                        (www.delphidabbler.com)
+@HISTORY(
+  @REVISION(
+    @VERSION            1.0 (build 1)
+    @DATE               29/12/2002
+    @COMPILERS          + Delphi 4.0
+    @COMMENTS           Original version of component package.
+    @FILES(
+      @NEW(
+        @FILE           SIBilderCmp.dpk
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           CmpActionComboBox.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           CmpBrowseEdit.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           CmpButtonList.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           CmpFileEditors.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           CmpGroupBox.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.3
+      )
+      @NEW(
+        @FILE           ..\..\..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.5
+      )
+      @NEW(
+        @FILE           ..\..\..\Shared\Params\Registry.inc
+        @VERSION        1.3
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            1.1 (build 2)
+    @DATE               23/02/2003
+    @COMMENTS           Added new TBrowseEdit control.
+    @COMPILERS          + Delphi 4.0
+    @FILES(
+      @UPDATED(
+        @FILE           CmpBrowseEdit.pas
+        @VERSION        1.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.0 (build 3)
+    @DATE               19/11/2003
+    @COMMENTS           Added new hot text components and supporting units.
+    @COMPILERS          + Delphi 4.0
+    @FILES(
+      @UPDATED(
+        @FILE           SIBilderCmp.dpk
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           CmpHotText.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UFontEx.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UHotTextDoc.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UHotTextLink.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UHotTextParaStyle.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UHotTextParser.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UHotTextView.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ULists.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UStacks.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           UTaggedTextLexer.pas
+        @VERSION        1.0
+      )
+      @NEW(
+        @FILE           ..\..\..\Shared\Utils\UStringProcs.pas
+        @VERSION        2.1
+      )
+      @NEW(
+        @FILE           ..\..\..\..\DevTools\CmpHotTextPE.pas
+        @VERSION        1.0
+        @DATE           16/11/2003
+        @COMMENTS       Property editor for hot text component.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1 (build 4)
+    @COMMENTS           + Renamed component library.
+                        + Removed hot text property editor.
+                        + Modified appearance of button list component.
+                        + Moved to own Pkg directory from sub-folder of
+                          SIBuilder source directory.
+                        + Removed unused units.
+    @COMPILERS          + Delphi 7
+    @DATE               25/11/2005
+    @FILES(
+      @REMOVED          ..\..\..\Shared\Params\UCommonTypes.pas
+      @REMOVED          ..\..\..\Shared\Utils\UFileProcs.pas
+      @REMOVED          ..\..\..\Shared\Utils\UStringProcs.pas
+      @REMOVED          ..\..\..\..\DevTools\CmpHotTextPE.pas
+      @UPDATED(
+        @FILE           SIBCmp.dpk
+        @VERSION        1.2
+        @RENAMED_FROM   SIBilderCmp.dpk
+      )
+      @UPDATED(
+        @FILE           CmpButtonList.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\Shared\Params\Registry.inc
+        @VERSION        1.3
+        @COMMENTS       Relative path changed. Unit not changed.
+        @RENAMED_FROM   ..\..\..\Shared\Params\Registry.inc
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.1 (build 5)
+    @COMPILERS          + Delphi 7
+    @COMMENTS           + Added back in units mistakenly thought of as unused.
+                        + Changed reference to DelphiDabbler library components.
+    @DATE               15/01/2006
+    @FILES(
+      @UPDATED(
+        @FILE           SIBCmp.dpk
+        @VERSION        1.3
+      )
+      @NEW(
+        @FILE           ..\Shared\Params\UCommonTypes.pas
+        @VERSION        1.3
+      )
+      @NEW(
+        @FILE           ..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.6
+      )
+      @NEW(
+        @FILE           ..\Shared\Utils\UStringProcs.pas
+        @VERSION        2.1
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.2 (build 6)
+    @COMMENTS           + Removed dependencies on DelphiDabbler component
+                          package and removed package from requirement list.
+                        + Removed unrequired VCL packages from requirement list.
+    @COMPILERS          + Delphi 7
+    @DATE               25/03/2007
+    @FILES(
+      @UPDATED(
+        @FILE           SIBCmp.dpk
+        @VERSION        1.4
+      )
+      @UPDATED(
+        @FILE           CmpFileEditors.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           ..\Shared\Params\Registry.inc
+        @VERSION        1.4
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.3 (build 7)
+    @COMMENTS           + Provided build batch file.
+                        + Fixed minor error reporting bug in tagged text lexical
+                          analyser.
+                        + Refactoring: replaced include file with units.
+                        + Included version information in package.
+                        + Moved some string literals to resource strings.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+    @DATE               24/02/2008
+    @FILES(
+      @UPDATED(
+        @FILE           SIBCmp.dpk
+        @VERSION        1.5
+      )
+      @NEW(
+        @FILE           Build.bat
+        @VERSION        1.0
+      )
+      @UPDATED(
+        @FILE           UHotTextDoc.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UHotTextLink.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UHotTextParser.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UHotTextView.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UStacks.pas
+        @VERSION        1.1
+      )
+      @UPDATED(
+        @FILE           UTaggedTextLexer.pas
+        @VERSION        1.1
+      )
+      @NEW(
+        @FILE           VSIBCmp.vi
+        @DATE           10/02/2008
+        @COMMENTS       Version information file for SIBuilder design time
+                        component package.
+      )
+      @UPDATED(
+        @FILE           ..\Shared\Params\URegistry.pas
+        @VERSION        2.0
+        @RENAMED_FROM   ..\Shared\Params\Registry.inc
+      )
+      @UPDATED(
+        @FILE           ..\Shared\Utils\UFileProcs.pas
+        @VERSION        1.7
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.3 (build 8)
+    @DATE               01/03/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VSIBCmp.vi
+        @DATE           01/03/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.3 (build 9)
+    @DATE               10/04/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VSIBCmp.vi
+        @DATE           10/04/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+  @REVISION(
+    @VERSION            2.1.3 (build 10)
+    @DATE               16/09/2008
+    @COMMENTS           Unchanged other than to update product and build number
+                        in version information.
+    @COMPILERS          + Delphi 7
+                        + Version Information Editor v2.11.2
+                        + Borland Resource Compiler 5.4
+    @FILES(
+      @UPDATED(
+        @FILE           VSIBCmp.vi
+        @DATE           16/09/2008
+        @COMMENTS       Updated product and build number.
+      )
+    )
+  )
+)

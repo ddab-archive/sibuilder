@@ -1,0 +1,17 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>Programs</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Specify any programs to be run by the installer and/or uninstaller. Also nominate
+<font color=clGreen style=underline><link cmd="HelpOutProcCOMSvrs">Delphi
+COM server applications</link></font> for registration.</p>
+
+</parafont>
+
+</body>
+</hottext>

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * wizard.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is wizard.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: USERINTERFACE
+-->
+
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Wizard</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		The Project Wizard
+	</h1>
+
+	<p>
+		To create an installation project you must provide various pieces of
+		information. You enter the information into various pages of a wizard.
+		These pages are reached from the main display by either
+		selecting the required page from the page selector at the left of the
+		screen or by using the <span class="ui">Next</span> and
+		<span class="ui">Previous</span> buttons at the bottom right of the
+		window. The pages or the wizard are:
+	</p>
+
+	<ul class="spaced">
+		<li>
+			<a href="page-welcome.htm"
+				style="font-weight:bold;"
+			>Welcome Page</a><br>
+			Gives a brief overview of <span class="prog">SIBuilder</span> and
+			provides a means of jumping off to some useful start-up tasks. This
+			page may be hidden by clearing the <span class="ui">Include welcome
+			page</span> check box in the
+			<a href="dlg-options.htm">Options</a>
+			dialog box.
+		</li>
+		<li>
+			<a href="page-details.htm"
+				style="font-weight:bold;"
+			>Project Details Page</a><br>
+			Essential basic general information about the project is entered on
+			this page.
+		</li>
+		<li>
+			<a href="page-license.htm"
+				style="font-weight:bold;"
+			>License Info Page</a><br>
+			Used to define any license that is displayed by the installer. 
+		</li>
+		<li>
+			<a href="page-os.htm"
+				style="font-weight:bold;"
+			>Target OS Page</a><br>
+			Used to define the operating systems on which the installer will
+			run.
+		</li>
+		<li>
+			<a href="page-files.htm"
+				style="font-weight:bold;"
+			>Files Page</a> <br>
+			Where the files to be installed and the folders they are to be
+			installed into in are specified.
+		</li>
+		<li>
+			<a href="page-programs.htm"
+				style="font-weight:bold;"
+			>Programs Page</a><br>
+			Used to specify any additional programs to be run by the installer
+			and/or uninstaller.
+		</li>
+		<li>
+			<a href="page-registry.htm"
+				style="font-weight:bold;"
+			>Registry Page</a><br>
+			Used to specify what modifications are to be made to the registry.
+		</li>
+		<li>
+			<a href="page-build.htm"
+				style="font-weight:bold;"
+			>Build Installer Page</a><br>
+			Builds the install program using the information entered on the
+			previous pages.
+		</li>
+	</ul>
+
+	<p>
+		Brief instructions and common actions are optionally displayed at the
+		top of the project wizard in the 
+		<a href="infopane.htm">Info Pane</a>.
+	</p>
+
+</body>
+
+</html>

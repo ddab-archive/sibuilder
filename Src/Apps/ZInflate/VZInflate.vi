@@ -1,0 +1,28 @@
+[Fixed File Info]
+File Version #=1, 0, 1, 13
+Product Version #=3, 4, 2, 0
+File OS=4
+File Type=2
+File Sub-Type=0
+File Flags Mask=63
+File Flags=0
+[Variable File Info]
+Language=2057
+Character Set=1252
+[String File Info]
+Comments=This DLL may be freely distributed subject to the terms and conditions of the license included in the program distribution.
+Company Name=DelphiDabbler
+File Description=SITools library that inflates compressed data using ZLib.
+File Version=v<#F1>.<#F2>.<#F3> build <#F4>
+Internal Name=<SHORTFNAME>
+Legal Copyright=Copyright © P D Johnson, 2002-<YEAR>.
+Legal Trademark=
+Original File Name=ZInflate.dll
+Private Build=
+Product Name=SITools: ZLib inflation library.
+Product Version=Release <#P1>.<#P2>.<#P3><SPECIALBUILD>
+Special Build=
+[Configuration Details]
+Identifier=
+NumRCComments=0
+

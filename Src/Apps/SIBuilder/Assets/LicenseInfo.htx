@@ -1,0 +1,17 @@
+<hottext version=1.0>
+<body>
+
+<parafont name='Arial' size=9>
+
+<p><b>License Information</b></p>
+
+<p><font size=4> </font></p>
+
+<p li=24>Here you provide details of any
+<font color=clGreen style=underline><link cmd="HelpAboutLic">license</link></font> you
+would like to be displayed to users at the start of the installation process.</p>
+
+</parafont>
+
+</body>
+</hottext>

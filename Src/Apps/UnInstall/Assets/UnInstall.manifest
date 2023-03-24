@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+ * UnInstall.manifest
+ *
+ * Manifest file specifying elavation required to enable uninstaller to run on
+ * Vista.
+ *
+ * Based on a sample manifest in "Windows Vista User Account Control (UAC) and
+ * Delphi" by Fredrik Haglund, CodeGear and content of Delphi 7's WindowsXP.res.
+ *
+ * v1.0 of 11 Apr 2008  - Original version. Requires administrator privileges.
+-->
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+    type="win32"
+    name="UnInstall"
+    version="1.0.0.0"
+    processorArchitecture="*"
+  />
+  <description>
+    Console based application installer.
+  </description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel
+          level="requireAdministrator"
+        />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+

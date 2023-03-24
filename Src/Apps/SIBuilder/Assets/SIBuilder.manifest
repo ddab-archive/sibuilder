@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+ * SIBuilder.manifest
+ *
+ * Manifest file notifying Vista not to elevate SIBuilder.
+ *
+ * Based on a sample manifest in "Windows Vista User Account Control (UAC) and
+ * Delphi" by Fredrik Haglund, CodeGear and content of Delphi 7's WindowsXP.res.
+ *
+ * v1.0 of 11 Apr 2008  - Original version. Vista trust information. Requires no
+ *                        elevation.
+-->
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+    type="win32"
+    name="sIBuilder"
+    version="1.0.0.0"
+    processorArchitecture="*"
+  />
+  <description>
+    Installer creation tool.
+  </description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel
+          level="asInvoker"
+        />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>
+

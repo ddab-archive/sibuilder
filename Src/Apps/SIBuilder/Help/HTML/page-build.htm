@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-build.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-build.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_BUILDPROJECT
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Build Installer Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Build Installer Page
+	</h1>
+
+	<p>
+		This final page is used to build the install program using all
+		information entered on the previous pages.
+	</p>
+
+	<p>
+		Before the project is built the
+		<a href="def-compression.htm">compression method</a>
+		to be used compress the install files is selected using the
+		<span class="ui">Compression</span> drop down list. 
+	</p>
+
+	<p>
+		The project can be built by clicking the <span class="ui">Build</span>
+		button. The page is then disabled and the build progress panel is raised
+		up while the build takes place. The build, the progress of which is
+		displayed on the raised panel, has several key stages:
+	</p>
+	
+	<ol class="spaced">
+		<li>
+			If you have not saved your project then you will be asked to do so
+			and the
+			<a href="dlg-saveproject.htm">Save Project</a>
+			dialog box will be displayed. If the project has already been saved
+			it is re-saved to update the project file before building takes
+			place. 
+		</li>
+		<li>
+			The project is then verified to check for any errors, such as
+			missing files.
+		</li>
+		<li>
+			The data that will be embedded in the install program is then
+			assembled and compressed as required. This is the longest phase of
+			the build.
+		</li>
+		<li>
+			The install program is finally created. The install file is given
+			the name specified on the
+			<a href="page-details.htm">Project Details page</a> and is stored in
+			the same folder as the project file.
+		</li>
+	</ol>
+
+	<p>
+		If any errors are encountered a message is displayed identifying the
+		error. If the project is successfully built then a confirmation message
+		is displayed.
+	</p>
+
+	<p>
+		Once the project has been saved a report of the files contained in the
+		project can be produced. Generate the report, which is stored in the
+		same folder as the project file, by clicking the
+		<span class="ui">Report</span> button. The report is produced either in
+		plain text or HTML, according to the settings made in the
+		<a href="dlg-options.htm">Options</a>
+		dialog box. The report can be viewed in your default text editor or
+		browser (depending on type) by clicking the <span class="ui">View
+		Report</span> button. 
+	</p>
+
+	<p>
+		That's it! The install program is created and ready for distribution.
+		However, you are advised to test the installation before distributing
+		it. See
+		<a href="install-progs.htm">Using Install and UnInstall</a>
+		for further information.
+	</p>
+</body>
+
+</html>

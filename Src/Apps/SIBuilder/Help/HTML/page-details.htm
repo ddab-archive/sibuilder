@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * page-details.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is page-details.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_PROJECTDETAILS
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Project Details Page</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Project Details Page
+	</h1>
+
+	<p>
+		The project details page is where essential basic general information
+		about the project is provided.
+	</p>
+
+	<p>
+		This page should always be completed first when starting a new project
+		&ndash; in fact starting a new project or opening an existing one always
+		activates this page. It is not possible to leave the page until all
+		required items have been provided.
+	</p>
+
+	<p>
+		The page is split into four sections. The purpose and use of each
+		section is described below.
+	</p>
+
+	<h2>
+		Project Identification
+	</h2>
+	
+	<p>
+		The project ID identifies your project to
+		<span class="prog">SIBuilder</span> and must be provided. Enter a brief,
+		unique, identifier for the project in the <span class="ui">Project
+		ID</span> edit box. The ID must be a valid
+		<a href="def-pascalidents.htm">Pascal identifier</a>.
+		Examples of appropriate IDs include &quot;<kbd>MyProject</kbd>&quot;
+		and &quot;<kbd>SIBuilder1</kbd>&quot;.
+	</p>
+
+	<p>
+		A longer, descriptive, name for the project must also be provided. This
+		name is used to identify the project to human readers, for example, by
+		the Add/Remove programs Control Panel applet. This name is compulsory
+		and should be entered in the <span class="ui">Project Name</span> edit
+		box.
+	</p>
+
+	<h2>
+		Installation Path
+	</h2>
+
+	<p>
+		The Installation Path is the main (or root) folder on the target system
+		in which the project is to be installed. A path can be entered either by
+		typing it into the edit box or by clicking the button at the right end
+		of the edit box and choosing a path from the
+		<a href="dlg-folder.htm">Choose folder</a>
+		dialog box that is then displayed. The installation path can contain any
+		<a href="def-pathmacros.htm">path macro</a> except <kbd>[Install
+		Files]</kbd>.
+	</p>
+
+	<p>
+		Whether the installation path may be edited by the person installing the
+		program is specified by checking or clearing the
+		<span class="ui">Editing of installation path permitted?</span> check
+		box. If this check box is checked then the <span class="ui">Ask user for
+		path on installation?</span> check box becomes available. Checking it
+		causes the install program to pause and ask the user to enter the
+		required path. If this box is left clear then the only way for the user
+		to change the installation path is to pass it as a command line
+		parameter to the install program.
+	</p>
+
+	<h2>
+		Install Program Info
+	</h2>
+
+	<p>
+		The name to be used for the install file is entered in the
+		<span class="ui">Install program name</span> edit box. This is
+		<span class="file">Install.exe</span> by default. The install file is
+		created in the same folder as the project file, so no path should be
+		specified.
+	</p>
+
+	<p>
+		Determine whether <span class="prog">SIBuilder</span> will create an
+		uninstall program by checking or clearing the <span class="ui">Create
+		uninstall program?</span> check box. If created, the uninstall program is
+		always named <span class="file">UnInstall.exe</span>.
+	</p>
+
+	<h2>
+		Previous Installations
+	</h2>
+
+	<p>
+		The installer can require other applications to be uninstalled before
+		the installation continues. The identifiers of the programs to be
+		uninstalled are entered in the <span class="ui">Uninstall
+		projects(s)</span> edit box &ndash; multiple identifiers are separated
+		by semi-colons. As an alternative a list of identifiers can be specified
+		by clicking the <span class="ui">Edit</span> button embedded in the edit
+		control and using the 
+		<a href="dlg-uninstprojects.htm">Edit Projects to be Uninstalled</a>
+		dialog box to enter the identifiers. The identifiers to specify are
+		those that are used to identify a program to the WIndows Add/Remove
+		programs control panel applet in the Windows registry.
+	</p>
+
+	<p>
+		The install program can also detect if a previous
+		(<span class="prog">SIBuilder</span> generated) installation already
+		exists in the folder it is being installed into. If this is the case the
+		installer can uninstall the previous installation before performing its
+		own installation. This is the default behaviour and is required by some
+		project options. The installer can be prevented from uninstalling
+		previous installations by clearing the <span class="ui">Uninstall
+		previous installations</span> in same folder check box.
+	</p>
+
+	<p>
+		When all entries have been made it is possible to move to other pages.
+		If there any missing or invalid entries on this page then a message will
+		be displayed and the page cannot be changed.
+	</p>
+
+</body>
+
+</html>

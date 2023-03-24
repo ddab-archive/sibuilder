@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * extra-shortcutter.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is extra-shortcutter.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: EXTRA_SHORTCUTTER
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Shortcutter</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Extra Program 2: Shortcutter
+	</h1>
+
+	<p>
+		This program enables you to create shortcuts (aka shell links) from
+		<span class="prog">SIBuilder</span>. The program creates or deletes a
+		shortcut depending on the parameters passed to it.
+	</p>
+
+	<p>
+		<span class="prog">Shortcutter</span> can be used in
+		<span class="prog">SIBuilder's</span>
+		<a href="page-programs.htm">Programs page</a>
+		to create a shortcut as part of an installation. To do this provide
+		parameters as specified below. The <kbd>[Desktop]</kbd> and
+		<kbd>[Programs Menu]</kbd>
+		<a href="def-pathmacros.htm">path macros</a>
+		can be used to place shortcuts on the desktop or start menu. The program
+		can also be used to delete shortcuts on uninstallation. To use
+		<span class="prog">Shortcutter</span> in this way include it in your
+		install project on <span class="prog">SIBuilder's</span>
+		<a href="page-files.htm">Files page</a>.
+	</p>
+	
+	<h2>
+		Creating a shortcut:
+	</h2>
+
+	<p>
+		To create a shortcut run <span class="prog">Shortcutter</span> with the
+		following parameters:
+	</p>
+	
+	<div class="indent para-space">
+		<kbd>Shortcutter.exe &lt;ShorcutFile&gt;
+		&lt;LinkedFile&gt;</kbd>
+		<div class="indent">
+  			<kbd>&lt;WorkingDirectory&gt; &lt;Description&gt;
+  			&lt;IconFile&gt; &lt;IconIndex&gt;<br>
+  			&lt;Argument1&gt; &lt;Argument2&gt; ... &lt;ArgumentN&gt;</kbd>
+  		</div>
+  		<div>
+			(all on one line)
+		</div>
+	</div>
+
+	<h3>
+		Description of parameters
+	</h3>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">&lt;ShortcutFile&gt;</span>
+			</td>
+			<td>
+				Name of the shortcut file to be created. This must have a
+				<span class="file">.lnk</span> extension. This parameter is
+				required.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;LinkedFile&gt;</span>
+			</td>
+			<td>
+				Name of the file to be referenced by the shortcut. This
+				parameter is required.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;WorkingDirectory&gt;</span>
+			</td>
+			<td>
+				Working directory of any program started by shortcut. Optional.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;Description&gt;</span>
+			</td>
+			<td>
+				Description of shortcut. Optional.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;IconFile&gt;</span>
+			</td>
+			<td>
+				File from which shortcut's icon is taken. Optional.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;IconIndex&gt;</span>
+			</td>
+			<td>
+				Index of the required icon in <IconFile>. Must be a valid
+				non-negative number, otherwise zero is assumed. Optional.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">&lt;ArgumentX&gt;</span>
+			</td>
+			<td>
+				Zero or more parameters to pass to the program started by the
+				shortcut. Optional. Omit if not required.
+			</td>
+		</tr>
+	</table>
+
+	<h3>
+		Notes
+	</h3>
+	
+	<ol class="unspaced">
+		<li>
+			Any parameters containing spaces should be enclosed in double
+			quotes.
+		</li>
+		<li>
+			An <kbd>*</kbd> (asterisk) may be specified for any optional
+			parameter other than <kbd>&lt;ArgumentX&gt;</kbd> to indicate that
+			no value is being specified.
+		</li>
+	</ol>
+
+	<h2>
+		Deleting a shortcut
+	</h2>
+
+	<p>
+		To delete a shortcut use this command line:
+	</p>
+
+	<div class="indent para-space">
+		<kbd>Shortcutter.exe &lt;ShorcutFile&gt;</kbd>
+	</div>
+
+	<h3>
+		Description of parameters
+	</h3>
+
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">&lt;ShortcutFile&gt;</span>
+			</td>
+			<td>
+				Name of file to be delected. This parameter is required. There
+				must be no other parameters.
+			</td>
+		</tr>
+	</table>
+
+	<h3>
+		Notes
+	</h3>
+
+	<p>
+		Note that <kbd>&lt;ShortcutFile&gt;</kbd> is checked to see if it is a
+		valid shortcut file and is only deleted if so.
+	</p>
+
+</body>
+
+</html>

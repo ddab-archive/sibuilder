@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-chooseregtplt.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-chooseregtplt.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_REGTEMPLATE
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Choose Registry Template Dialog</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Choose Registry Template Dialog Box
+	</h1>
+
+	<p>
+		This dialog box appears when the <span class="ui">Templates</span>
+		button is clicked on the
+		<a href="page-registry.htm">Registry page</a>.
+		It is used to select one of the pre-defined
+		<a href="def-regtemplates.htm">registry templates</a>
+		and to assign values to the registry &quot;macros&quot; or placeholders
+		within the template.
+	</p>
+
+	<p>
+		The keys contained in the chosen template are then added to the registry
+		tree on the registry page. New keys created in this way will be deleted
+		by the uninstaller only if the keys are empty.
+	</p>
+
+	<p>
+		All available templates are listed in the <span class="ui">Choose
+		template</span> drop down list. When the required template is selected
+		from the list it is displayed in the dialog. 
+	</p>
+
+	<p>
+		The template can be accepted as-is, or, if it contains
+		<a href="regtpltmacros.htm">registry template macros</a>
+		it can be customised by providing values for the macros. Macros appear
+		as blue hotlinks in the template. A description of the macro will be
+		provided as a tool tip if the mouse cursor is paused over the
+		<a href="def-hottext.htm">hotlink</a>.
+	</p> 
+
+	<p>
+		The macro can be given a new value by clicking the hotlink. A popup menu
+		will be displayed which contains a list of previous values assigned to
+		the macro, the macro name itself and a <span class="ui">New Value</span>
+		option. Selecting one of the values or the macro name will cause it to
+		replace the current macro value. Clicking <span class="ui">New
+		Value</span> will display the
+		<a href="dlg-newregmacrovalue.htm">New Registry Macro Value</a>
+		dialog box where a new value can be entered. The template will be
+		updated to display the new value. When the template has the required
+		values click <span class="ui">OK</span> to update the registry tree.
+	</p>
+
+	<p>
+		The current values associated with any macro can be edited by clicking
+		the <span class="ui">Edit Macro Values</span> button and making the
+		required changes in the
+		<a href="dlg-editregmacro.htm">Edit Registry Template Macros</a>
+		dialog box.
+	</p>
+</body>
+
+</html>

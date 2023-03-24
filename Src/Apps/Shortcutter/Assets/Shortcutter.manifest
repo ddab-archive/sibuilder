@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+ * Shortcutter.manifest
+ *
+ * Manifest file specifying same elavation as caller required to run Shortcutter
+ * on Vista.
+ *
+ * Based on a sample manifest in "Windows Vista User Account Control (UAC) and
+ * Delphi" by Fredrik Haglund, CodeGear and content of Delphi 7's WindowsXP.res.
+ *
+ * v1.0 of 11 Apr 2008  - Original version. Requires same elevation as invoker.
+-->
+
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+    type="win32"
+    name="Shortcutter"
+    version="1.0.0.0"
+    processorArchitecture="*"
+  />
+  <description>
+    Console app that creates shortcuts.
+  </description>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel
+          level="asInvoker"
+        />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+</assembly>

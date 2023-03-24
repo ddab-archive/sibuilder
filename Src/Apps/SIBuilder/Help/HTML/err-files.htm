@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * err-files.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 01 Mar 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is err-files.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_ERR_FILES (renamed from IDH_POPUP_FILEERR)
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Error - Files</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		File Errors
+	</h1>
+
+	<p>
+		<span class="prog">SIBuilder</span> has detected one or more problems
+		on the
+		<a href="page-files.htm">Files page</a>. The offending files are marked
+		with the
+		<img src="../Images/bomb.gif"
+			style="width:16px;height:16px;vertical-align:middle;"
+			alt="bomb symbol"
+		> symbol in the tree view. The likely causes of the problems, and
+		possible solutions, are listed below:
+	</p>
+	
+	<ol class="spaced lower-roman">
+		<li>
+			<div>
+				The source for the given file does not exist on the host system.
+			</div>
+			<div class="para-space">
+				<em>Solution:</em> The entry should be deleted and possibly
+				replaced with the correct path to the file.
+			</div>
+		</li>
+		<li>
+			<div>
+				The file is flagged as a shared DLL but the project does not
+				permit uninstallation of pre-existing programs in the same
+				folder. This is problematic since overwriting an existing
+				project may cause a previously counted shared DLL to be
+				overwritten without its usage count being decreased. This will
+				cause the count to get out if sync with the number of programs
+				actually using the DLL.
+			</div>
+			<div class="para-space">
+				<em>Solutions:</em>
+				<ol class="unspaced lower-alpha no-para-space">
+					<li>
+						edit the file to remove the <span class="ui">Shared
+						DLL</span> flag;
+					</li>
+					<li>
+						go to the
+						<a href="page-details.htm">Project Details page</a>
+						and check the <span class="ui">Uninstall previous
+						installations in same folder</span> check box.
+					</li>
+				</ol>
+			</div>
+		</li>
+	</ol>
+</body>
+
+</html>

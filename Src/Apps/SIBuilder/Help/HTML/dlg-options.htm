@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!--
+ * dlg-options.htm
+ *
+ * HTML topic for use by HTML Help file.
+ *
+ * v1.0 of 29 Feb 2008 - Original version.
+ *
+ *
+ * ***** BEGIN LICENSE BLOCK *****
+ *
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ *
+ * The Original Code is dlg-options.htm
+ *
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ *
+ * Portions created by the Initial Developer are Copyright (C) 2008 Peter
+ * Johnson. All Rights Reserved.
+ *
+ * Contributor(s): None
+ *
+ * ***** END LICENSE BLOCK *****
+-->
+
+<!--
+	Adapted from topic in old WinHelp file
+	Topic id: IDH_DLG_OPTIONS
+-->
+
+<html>
+	
+<head>
+	<meta
+		http-equiv="Content-Type"
+		content="text-html; charset=Windows-1252"
+	>
+	<title>Options Dialog Box</title>
+	<link
+		rel="stylesheet"
+		href="../css/main.css"
+		type="text/css"
+	>
+</head>
+
+<body>
+	<h1>
+		Options Dialog Box
+	</h1>
+
+	<p>
+		This dialog box is displayed by selecting the
+		<span class="menuref">Tools | Options</span> menu item. It is used
+		configure <span class="prog">SIBuilder</span>. The dialog is grouped
+		into two main areas: Build Options and Display Options.
+	</p>
+
+	<h2>
+		Build Options
+	</h2>
+
+	<h3>
+		Default compression	
+	</h3>
+
+	<p>
+		This combo box lists all available
+		<a href="def-compression.htm">compression systems</a>
+		that can be used to compress files when creating install files &ndash;
+		along with the <span class="ui">(none)</span> option that enables
+		uncompressed install files to be created. Normally
+		<span class="prog">SIBuilder</span> will use the compression system
+		defined in the project file. The selection made here will be used when a
+		new project is created or if the compressor specified by a project is
+		not available on this system. The compressor can be changed on a project
+		by project basis on the
+		<a href="page-build.htm">Build Installer page</a>.
+	</p>
+
+	<h3>
+		Report kinds
+	</h3>
+	
+	<p>
+		This combo box lists the formats that are available for reporting on
+		project builds. There are two options: plain text reports or HTML
+		reports. The <span class="ui">Report</span> button on the
+		<a href="page-build.htm">Build Installer page</a>
+		will create reports of the type selected here.
+	</p>
+
+	<h2>
+		Display Options
+	</h2>
+
+	<h3>
+		Include welcome page
+	</h3>
+
+	<p>
+		When this item is checked the
+		<a href="page-welcome.htm">Welcome page</a>
+		is displayed whenever the program starts up and its button appears in
+		the page selector control. When unchecked the welcome page is not
+		displayed on start-up and its button is not displayed in the page
+		selector.
+	</p>
+
+	<h3>
+		Show info pane
+	</h3>
+
+	<p>
+		The
+		<a href="infopane.htm">info pane</a>
+		is displayed at the top of the program window if this box is checked and
+		is hidden if unchecked.
+	</p>
+
+	<h3>
+		Info pane colour
+	</h3>
+
+	<p>
+		This combo box is only enabled if <span class="ui">Show info pane</span>
+		is checked. Use the combo box to choose the colour of the info pane.
+		Options are:
+	</p>
+	
+	<table cellspacing="0">
+		<tr>
+			<td>
+				<span class="label">Window&nbsp;pane&nbsp;colour</span>
+			</td>
+			<td>
+				Displays the info bar in the current window colour (often
+				white).
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Window&nbsp;background&nbsp;colour</span>
+			</td>
+			<td>
+				Displays the info pane in the same colour as a dialog box
+				&ndash; it blends into the program's main window.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<span class="label">Custom...</span>
+			</td>
+			<td>
+				Displays the
+				<a href="dlg-infopanecolour.htm">Info Pane Custom Colour</a>
+				dialog box to enable the user to choose any required colour for
+				the info pane.
+			</td>
+		</tr>
+	</table>
+
+	<h3>
+		Display pop-up information windows for
+	</h3>
+
+	<p>
+		These check boxes enable the user to decide which
+		<a href="def-infopopups.htm">pop-up information windows</a>
+		to display when certain kinds of items are selected in various pages.
+	</p>
+</body>
+
+</html>

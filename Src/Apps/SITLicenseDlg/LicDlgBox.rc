@@ -1,0 +1,61 @@
+/* ##
+  @PROJECT_NAME             SI Tools
+  @PROJECT_DESC             Simple program installation tools - project manager
+                            and creator with installation and un-installation
+                            programs.
+  @FILE                     LicDlgBox.rc
+  @COMMENTS                 Defines license dialog box resource for
+                            SITLicenseDlg COM object
+  @HISTORY(
+    @REVISION(
+      @VERSION              1.0
+      @DATE                 21/01/2001
+      @COMMENTS             Original version.
+    )
+  )
+*/
+
+
+/*
+ * ***** BEGIN LICENSE BLOCK *****
+ * 
+ * Version: MPL 1.1
+ * 
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+ * 
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for
+ * the specific language governing rights and limitations under the License.
+ * 
+ * The Original Code is LicDlgBox.rc.
+ * 
+ * The Initial Developer of the Original Code is Peter Johnson
+ * (http://www.delphidabbler.com/).
+ * 
+ * Portions created by the Initial Developer are Copyright (C) 2001 Peter
+ * Johnson. All Rights Reserved.
+ * 
+ * ***** END LICENSE BLOCK *****
+ */
+
+
+#include "LicDlgBox.inc"
+
+
+/* The License Dialog Box */
+
+LICENSEDLG DIALOG 20 20 180 120
+  STYLE WS_POPUP | WS_CAPTION | DS_MODALFRAME | WS_SYSMENU
+  CAPTION "License"
+  FONT 8 "MS Sans Serif"
+{
+  LTEXT         "Please read the license below"  IDD_LABEL, 0, 0, 180, 16
+  EDITTEXT IDD_EDIT, 0, 12, 160, 40,
+    ES_LEFT | WS_BORDER | WS_VSCROLL | ES_MULTILINE | ES_READONLY
+  CONTROL "", IDD_BEVEL, "static", SS_ETCHEDHORZ, 0, 0, 10, 10
+  DEFPUSHBUTTON "&Accept"   IDOK,     0, 0,  40, 14
+  PUSHBUTTON    "&Decline"  IDCANCEL, 0, 0,  40, 14
+  PUSHBUTTON    "&Help"     IDB_HELP, 0, 0,  40, 14
+}
