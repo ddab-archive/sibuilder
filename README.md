@@ -34,3 +34,9 @@ The original source tree did not have a centralised change log. Instead changes 
 In addition, each source code file has its changes noted in header comments.
 
 As noted above, `CHANGELOG.txt` was not added until this repository was created.
+
+## License
+
+The executable code is covered by the EULA described in `Docs/SIBuilder.lic`.
+
+Much of the source code released under the [Mozilla Public License v1.1](https://www.mozilla.org/MPL/1.1/).
